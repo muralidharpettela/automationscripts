@@ -96,7 +96,7 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
     num_no_match_found = 0
     match_of_stock_cells_count = 0
     for i, product_website in enumerate(json_data_dict):
-        products_kassen_system_dict = {"id": 0, "weight": "0", "stock_quantity": 0, "price": 0, "regular_price": 0,
+        products_kassen_system_dict = {"id": 0, "weight": "0", "stock_quantity": 0, "regular_price": 0,
                                        "sale_price": None,
                                        "tax_class": None, }
         for j, product_kassen_system in enumerate(kassen_system_data_dict["product_names"]):
@@ -108,7 +108,7 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
                 # stock update
                 products_kassen_system_dict['stock_quantity'] = kassen_system_data_dict["stock"][j].value
                 # price update
-                products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
+                #products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
                 # regular price update
                 products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
                 # sale price
@@ -120,8 +120,8 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
                 else:
                     products_kassen_system_dict['tax_class'] = "Tax 19 Per"
 
-                #print(wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json())
-                #wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json()
+                # print(wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json())
+                # wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json()
                 products_list.append(products_kassen_system_dict)
                 match_of_stock_cells_count = match_of_stock_cells_count + 1
                 break
@@ -136,6 +136,12 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
     return match_of_stock_cells_count, num_no_match_found
 
 
+def chunks(l, n):
+    """Yield successive n-sized chunks from l."""
+    for i in range(0, len(l), n):
+        yield l[i:i + n]
+
+
 def main():
     import timeit
 
@@ -145,28 +151,18 @@ def main():
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)
-    #json_string = json.dumps({"update": products_list})
-    def chunks(l, n):
-        """Yield successive n-sized chunks from l."""
-        for i in range(0, len(l), n):
-            yield l[i:i + n]
-
+    # json_string = json.dumps({"update": products_list})
     MAX_API_BATCH_SIZE = 100
-
     for batch in chunks(products_list, MAX_API_BATCH_SIZE):
         print(len(batch))
         print(wcapi.put("products/batch", {"update": batch}).json())
-    #with open("products_all.json", "w") as jsonfile:
-        #jsonfile.write(json_string)
-    #jsonfile.close()
+    # with open("products_all.json", "w") as jsonfile:
+    # jsonfile.write(json_string)
+    # jsonfile.close()
     print("Total no of Rows/Products in Source file from Shop File:{}".format(mr_s))
     print("Total no of Rows/Products in Destination file in Website:{}".format(len(json_data)))
     print("Number of Products Matched:{}".format(match_of_stock_cells_count))
-    # print("Number of Products Stock Changed:{}".format(num_of_product_stock_changed))
-    # print("Number of Products Price Changed:{}".format(num_of_product_price_changed))
-    # print("Number of Products Tax Class Changed:{}".format(num_of_tax_class_changed))
     print("Number of Products are no matched:{}".format(num_no_match_found))
-    # print("Number of Products Sale Price Changed:{}".format(num_of_sale_price_updates))
     stop = timeit.default_timer()
 
     print('Time: ', stop - start)
