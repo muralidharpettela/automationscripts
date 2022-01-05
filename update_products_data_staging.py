@@ -108,12 +108,14 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
                 # stock update
                 products_kassen_system_dict['stock_quantity'] = kassen_system_data_dict["stock"][j].value
                 # price update
-                #products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
-                # regular price update
-                products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
+                # products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
                 # sale price
-                if kassen_system_data_dict["sale_price"][j].value:
-                    products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["sale_price"][j].value)
+                if kassen_system_data_dict["sale_price"][j].value != 0:
+                    products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["price"][j].value)
+                    products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["sale_price"][j].value)
+                else:
+                    # regular price update
+                    products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
                 # tax class update
                 if kassen_system_data_dict["tax_class"][j].value == 7:
                     products_kassen_system_dict['tax_class'] = "Tax 7 Per"
@@ -142,12 +144,12 @@ def chunks(l, n):
         yield l[i:i + n]
 
 
-def main():
+def main(path_of_xlsx):
     import timeit
 
     start = timeit.default_timer()
 
-    ws1, mr_s, mc_s = load_kassen_system_excel_file(filepath_kassen_system)
+    ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_xlsx)
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)
