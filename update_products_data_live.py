@@ -3,7 +3,7 @@ from woocommerce import API
 import json
 
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_31122021.xlsx"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05012022.xlsx"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -108,12 +108,14 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
                 # stock update
                 products_kassen_system_dict['stock_quantity'] = kassen_system_data_dict["stock"][j].value
                 # price update
-                #products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
-                # regular price update
-                products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
+                # products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
                 # sale price
-                if kassen_system_data_dict["sale_price"][j].value:
-                    products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["sale_price"][j].value)
+                if kassen_system_data_dict["sale_price"][j].value != 0:
+                    products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["price"][j].value)
+                    products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["sale_price"][j].value)
+                else:
+                    # regular price update
+                    products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
                 # tax class update
                 if kassen_system_data_dict["tax_class"][j].value == 7:
                     products_kassen_system_dict['tax_class'] = "Tax 7 Per"
