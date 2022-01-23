@@ -3,10 +3,10 @@ from woocommerce import API
 from benedict import benedict
 import json
 wcapi = API(
-    url="https://www.staging4.lotus-grocery.eu/",
-    consumer_key="ck_ae5271d4aef30767be04eca894f5289b24ddebd6",
-    consumer_secret="cs_7fcb2ea53e0cdce73247f4f3b91ef0a5aea1f6eb",
-    timeout=30
+    url="https://www.lotus-grocery.eu/",
+    consumer_key="ck_a1a83db1a7931bc4c965bf0e3d281ac63bea7264",
+    consumer_secret="cs_3fd453e8a22d1d3da2a1376c1d8906130f6de1e4",
+    timeout=1000
 )
 
 page = 1
