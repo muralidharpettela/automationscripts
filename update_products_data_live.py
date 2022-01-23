@@ -6,7 +6,7 @@ import sys
 from openpyxl.workbook import Workbook
 import yagmail
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.xlsx"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.csv"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -202,7 +202,7 @@ def main():
         # with open("products_all.json", "w") as jsonfile:
         # jsonfile.write(json_string)
         # jsonfile.close()
-        subject = '[Staging] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
+        subject = '[Live] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
             "%d/%m/%Y %H:%M:%S")
         message = "This is an automated mail, receives this mail once the stock updates successfully. " \
                   "The statistics are as follows:\n\n\n" \
@@ -214,7 +214,7 @@ def main():
                                                    num_no_match_found, timeit.default_timer() - start)
         send_email(subject, message)
     except:
-        subject = '[Staging] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
+        subject = '[Live] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
             "%d/%m/%Y %H:%M:%S")
         message = "Stock update not successful. Please re-run the scripts again"
         send_email(subject, message)

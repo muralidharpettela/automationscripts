@@ -3,10 +3,11 @@ import watchdog.observers
 import time
 from update_products_data_staging import main
 
+
 class Handler(watchdog.events.PatternMatchingEventHandler):
     def __init__(self):
         # Set the patterns for PatternMatchingEventHandler
-        watchdog.events.PatternMatchingEventHandler.__init__(self, patterns=['*.xlsx'],
+        watchdog.events.PatternMatchingEventHandler.__init__(self, patterns=['*.csv'],
                                                              ignore_directories=True, case_sensitive=False)
     def on_created(self, event):
         print("Watchdog received created event - % s." % event.src_path)
