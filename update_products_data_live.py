@@ -1,9 +1,11 @@
 import openpyxl as xl
 from woocommerce import API
 import json
-
+import csv
+import sys
+from openpyxl.workbook import Workbook
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05012022.xlsx"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.xlsx"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -18,6 +20,30 @@ wcapi = API(
     timeout=1000
 )
 
+
+
+def csv_to_excel(input_csv_file, delimiter=";"):
+    if not ".csv" in input_csv_file:
+        sys.stderr.write("Error: File does not have the ending \".csv\".\n")
+        sys.exit(2)
+
+    input_fh = open(input_csv_file, encoding="ISO-8859-1")
+    workbook = Workbook()
+    #sheet = workbook.create_sheet(0)
+    sheet = workbook.active
+
+    for row_index, row in enumerate(csv.reader(open(input_csv_file, encoding="ISO-8859-1"), delimiter=delimiter)):
+        for col_index, col in enumerate(row):
+            if row_index > 0:
+                if col_index == 2 or col_index == 3 or col_index == 4 or col_index == 5:
+                    sheet.cell(row=row_index + 1, column=col_index + 1).value = float(col.replace(",", "."))
+                else:
+                    sheet.cell(row=row_index + 1, column=col_index + 1).value = col
+            else:
+                sheet.cell(row=row_index + 1, column=col_index + 1).value = col
+
+    workbook.save(open(input_csv_file.replace(".csv", ".xlsx"), "wb"))
+    return input_csv_file.replace(".csv", ".xlsx")
 
 # Source coming from shop
 # Destination products in website sheet
@@ -148,8 +174,8 @@ def main():
     import timeit
 
     start = timeit.default_timer()
-
-    ws1, mr_s, mc_s = load_kassen_system_excel_file(filepath_kassen_system)
+    path_of_excel = csv_to_excel(filepath_kassen_system)
+    ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_excel)
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)

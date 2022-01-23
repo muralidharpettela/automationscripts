@@ -1,9 +1,11 @@
 import openpyxl as xl
 from woocommerce import API
 import json
-
+import csv
+import sys
+from openpyxl.workbook import Workbook
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_31122021.xlsx"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.csv"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -13,11 +15,34 @@ no_match_products_txt = open("no_match_products.txt", "w+")
 
 wcapi = API(
     url="https://www.staging4.lotus-grocery.eu/",
-    consumer_key="ck_ae5271d4aef30767be04eca894f5289b24ddebd6",
-    consumer_secret="cs_7fcb2ea53e0cdce73247f4f3b91ef0a5aea1f6eb",
+    consumer_key="ck_54f1c0d3cbc119670a8bc8cbb2a6835c0da94eda",
+    consumer_secret="cs_e5e28b2e60e685c213b2ed5bcd67a5f83509fea5",
     timeout=1000
 )
 
+
+def csv_to_excel(input_csv_file, delimiter=";"):
+    if not ".csv" in input_csv_file:
+        sys.stderr.write("Error: File does not have the ending \".csv\".\n")
+        sys.exit(2)
+
+    input_fh = open(input_csv_file, encoding="ISO-8859-1")
+    workbook = Workbook()
+    #sheet = workbook.create_sheet(0)
+    sheet = workbook.active
+
+    for row_index, row in enumerate(csv.reader(open(input_csv_file, encoding="ISO-8859-1"), delimiter=delimiter)):
+        for col_index, col in enumerate(row):
+            if row_index > 0:
+                if col_index == 2 or col_index == 3 or col_index == 4 or col_index == 5:
+                    sheet.cell(row=row_index + 1, column=col_index + 1).value = float(col.replace(",", "."))
+                else:
+                    sheet.cell(row=row_index + 1, column=col_index + 1).value = col
+            else:
+                sheet.cell(row=row_index + 1, column=col_index + 1).value = col
+
+    workbook.save(open(input_csv_file.replace(".csv", ".xlsx"), "wb"))
+    return input_csv_file.replace(".csv", ".xlsx")
 
 # Source coming from shop
 # Destination products in website sheet
@@ -144,12 +169,12 @@ def chunks(l, n):
         yield l[i:i + n]
 
 
-def main(path_of_xlsx):
+def main():
     import timeit
 
     start = timeit.default_timer()
-
-    ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_xlsx)
+    path_of_excel = csv_to_excel(filepath_kassen_system)
+    ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_excel)
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)
