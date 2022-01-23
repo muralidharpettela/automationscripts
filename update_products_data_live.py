@@ -4,6 +4,7 @@ import json
 import csv
 import sys
 from openpyxl.workbook import Workbook
+import yagmail
 ##############
 filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.xlsx"
 json_file_path = "products.json"
@@ -28,7 +29,7 @@ def csv_to_excel(input_csv_file, delimiter=";"):
 
     input_fh = open(input_csv_file, encoding="ISO-8859-1")
     workbook = Workbook()
-    #sheet = workbook.create_sheet(0)
+    # sheet = workbook.create_sheet(0)
     sheet = workbook.active
 
     for row_index, row in enumerate(csv.reader(open(input_csv_file, encoding="ISO-8859-1"), delimiter=delimiter)):
@@ -43,6 +44,7 @@ def csv_to_excel(input_csv_file, delimiter=";"):
 
     workbook.save(open(input_csv_file.replace(".csv", ".xlsx"), "wb"))
     return input_csv_file.replace(".csv", ".xlsx")
+
 
 # Source coming from shop
 # Destination products in website sheet
@@ -159,7 +161,7 @@ def match_products_and_update(json_data_dict, kassen_system_data_dict):
                     no_match_products_txt.write(product_website['name'])
                     no_match_products_txt.write("\n")
                     num_no_match_found = num_no_match_found + 1
-
+    no_match_products_txt.close()
     return match_of_stock_cells_count, num_no_match_found
 
 
@@ -167,6 +169,19 @@ def chunks(l, n):
     """Yield successive n-sized chunks from l."""
     for i in range(0, len(l), n):
         yield l[i:i + n]
+
+
+def send_email(subject, message):
+    user = 'lotusgroceryingolstadt2@gmail.com'
+    app_password = 'ofanobixbzpvcpqz'  # a token for gmail
+    to = 'info@lotus-grocery.eu'  # To send a group of recipients, simply change ‘to’ to a list.
+
+    subject = subject
+    content = [message, "./no_match_products.txt"]
+
+    with yagmail.SMTP(user, app_password) as yag:
+        yag.send(to, subject, content)
+        print('Sent email successfully')
 
 
 def main():
@@ -180,12 +195,29 @@ def main():
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)
     # json_string = json.dumps({"update": products_list})
     MAX_API_BATCH_SIZE = 100
-    for batch in chunks(products_list, MAX_API_BATCH_SIZE):
-        print(len(batch))
-        print(wcapi.put("products/batch", {"update": batch}).json())
-    # with open("products_all.json", "w") as jsonfile:
-    # jsonfile.write(json_string)
-    # jsonfile.close()
+    try:
+        for batch in chunks(products_list, MAX_API_BATCH_SIZE):
+            print(len(batch))
+            print(wcapi.put("products/batch", {"update": batch}).json())
+        # with open("products_all.json", "w") as jsonfile:
+        # jsonfile.write(json_string)
+        # jsonfile.close()
+        subject = '[Staging] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
+            "%d/%m/%Y %H:%M:%S")
+        message = "This is an automated mail, receives this mail once the stock updates successfully. " \
+                  "The statistics are as follows:\n\n\n" \
+                  "Total no of Rows/Products in Source file from Shop File:{}\n " \
+                  "Total no of Rows/Products in Destination file in Website:{}\n" \
+                  "Number of Products Matched:{}\n" \
+                  "Number of Products are no matched:{}\n" \
+                  "Time elasped:{} seconds".format(mr_s, len(json_data), match_of_stock_cells_count,
+                                                   num_no_match_found, timeit.default_timer() - start)
+        send_email(subject, message)
+    except:
+        subject = '[Staging] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
+            "%d/%m/%Y %H:%M:%S")
+        message = "Stock update not successful. Please re-run the scripts again"
+        send_email(subject, message)
     print("Total no of Rows/Products in Source file from Shop File:{}".format(mr_s))
     print("Total no of Rows/Products in Destination file in Website:{}".format(len(json_data)))
     print("Number of Products Matched:{}".format(match_of_stock_cells_count))

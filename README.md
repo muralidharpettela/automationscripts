@@ -1,1 +1,5 @@
 # automationscripts
+
+yagmail
+
+ofanobixbzpvcpqz
