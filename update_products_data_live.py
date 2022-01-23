@@ -21,7 +21,6 @@ wcapi = API(
 )
 
 
-
 def csv_to_excel(input_csv_file, delimiter=";"):
     if not ".csv" in input_csv_file:
         sys.stderr.write("Error: File does not have the ending \".csv\".\n")
