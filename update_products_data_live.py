@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import openpyxl as xl
 from woocommerce import API
 import json

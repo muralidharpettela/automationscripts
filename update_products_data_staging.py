@@ -188,11 +188,12 @@ def send_email(subject, message):
         print('Sent email successfully')
 
 
-def main():
+def main(src_path):
     import timeit
 
     start = timeit.default_timer()
-    path_of_excel = csv_to_excel(filepath_kassen_system)
+    # path_of_excel = csv_to_excel(filepath_kassen_system)
+    path_of_excel = csv_to_excel(src_path)
     ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_excel)
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
