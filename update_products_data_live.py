@@ -8,7 +8,7 @@ import sys
 from openpyxl.workbook import Workbook
 import yagmail
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_28012022.csv"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_290122.csv"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -211,7 +211,7 @@ def main():
                   "Total no of Rows/Products in Source file from Shop File:{}\n " \
                   "Total no of Rows/Products in Destination file in Website:{}\n" \
                   "Number of Products Matched:{}\n" \
-                  "Number of Products are no matched:{}\n" \
+                  "Number of Products are not matched:{}\n" \
                   "Time elasped:{} seconds".format(mr_s, len(json_data), match_of_stock_cells_count,
                                                    num_no_match_found, timeit.default_timer() - start)
         send_email(subject, message)
@@ -223,7 +223,7 @@ def main():
     print("Total no of Rows/Products in Source file from Shop File:{}".format(mr_s))
     print("Total no of Rows/Products in Destination file in Website:{}".format(len(json_data)))
     print("Number of Products Matched:{}".format(match_of_stock_cells_count))
-    print("Number of Products are no matched:{}".format(num_no_match_found))
+    print("Number of Products are not matched:{}".format(num_no_match_found))
     stop = timeit.default_timer()
 
     print('Time: ', stop - start)
