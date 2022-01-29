@@ -8,7 +8,7 @@ import sys
 from openpyxl.workbook import Workbook
 import yagmail
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_26012022.csv"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_28012022.csv"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
