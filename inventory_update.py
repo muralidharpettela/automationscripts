@@ -3,12 +3,12 @@ import math
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-filename_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_30122021.xlsx"
+filename_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_290122.xlsx"
 wb1 = xl.load_workbook(filename_kassen_system)
 ws1 = wb1.worksheets[0]
 
 # opening the destination excel file
-filename_website = r"/Users/muralidharpettela/Downloads/Lotus_website_products_all.xlsx"
+filename_website = r"/Users/muralidharpettela/Downloads/upload_products_31012022.xlsx"
 wb2 = xl.load_workbook(filename_website)
 ws2 = wb2.worksheets[0]
 

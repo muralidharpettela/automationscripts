@@ -1,5 +1,180 @@
 [
   {
+    "id": 8387,
+    "name": "Topop - 500 ml Jamun Juice",
+    "sku": "Topop_500_ml_Jamun_Juice"
+  },
+  {
+    "id": 8386,
+    "name": "Parlre- G - 150 g Hide and Seek",
+    "sku": "Parlre-_G_150_g_Hide_and_Seek"
+  },
+  {
+    "id": 8384,
+    "name": "TRS - 50 g Phool Makhana",
+    "sku": "TRS_50_g_Phool_Makhana"
+  },
+  {
+    "id": 8383,
+    "name": "TRS - 100 g Turmeric Powder",
+    "sku": "TRS_100_g_Turmeric_Powder"
+  },
+  {
+    "id": 8382,
+    "name": "TRS - 100 g White Seasame Seeds",
+    "sku": "TRS_100_g_White_Seasame_Seeds"
+  },
+  {
+    "id": 8381,
+    "name": "Topop - 500 ml Amla Juice",
+    "sku": "Topop_500_ml_Amla_Juice"
+  },
+  {
+    "id": 8380,
+    "name": "Topop - 1 kg Buckwheat Flour",
+    "sku": "Topop_1_kg_Buckwheat_Flour"
+  },
+  {
+    "id": 8379,
+    "name": "Rubicon - 288 ml Mango Juice",
+    "sku": "Rubicon_288_ml_Mango_Juice"
+  },
+  {
+    "id": 8378,
+    "name": "Rasna - 500 g Instant Mango",
+    "sku": "Rasna_500_g_Instant_Mango"
+  },
+  {
+    "id": 8376,
+    "name": "Priya - 300 g Gongura Pickle",
+    "sku": "Priya_300_g_Gongura_Pickle"
+  },
+  {
+    "id": 8377,
+    "name": "Priya - 300 g Mango Avakayi Pickle",
+    "sku": "Priya_300_g_Mango_Avakayi_Pickle"
+  },
+  {
+    "id": 8375,
+    "name": "Priya - 1 kg Wheat Rava Special",
+    "sku": "Priya_1_kg_Wheat_Rava_Special"
+  },
+  {
+    "id": 8374,
+    "name": "Patanjali - 60 Neem Ghanavati Tablets",
+    "sku": "Patanjali_60_Neem_Ghanavati_Tablets"
+  },
+  {
+    "id": 8372,
+    "name": "MTR - 100 g Bisebele Bath Powder",
+    "sku": "MTR_100_g_Bisebele_Bath_Powder"
+  },
+  {
+    "id": 8373,
+    "name": "MTR - 300 g Bhindi Masala",
+    "sku": "MTR_300_g_Bhindi_Masala"
+  },
+  {
+    "id": 8371,
+    "name": "Madrasmunch - 200 g Kodubale",
+    "sku": "Madrasmunch_200_g_Kodubale"
+  },
+  {
+    "id": 8370,
+    "name": "KPRA - 50 g Malvani Masala",
+    "sku": "KPRA_50_g_Malvani_Masala"
+  },
+  {
+    "id": 8369,
+    "name": "Kingfisher - 330 ml Bier",
+    "sku": "Kingfisher_330_ml_Bier"
+  },
+  {
+    "id": 8368,
+    "name": "Haldiram - 300 g Kaju Katli",
+    "sku": "Haldiram_300_g_Kaju_Katli"
+  },
+  {
+    "id": 8367,
+    "name": "Haldiram - 1 kg Rasmalai",
+    "sku": "Haldiram_1_kg_Rasmalai"
+  },
+  {
+    "id": 8366,
+    "name": "Ganesh Bhel - 200 g Panipuri Papad",
+    "sku": "Ganesh_Bhel_200_g_Panipuri_Papad"
+  },
+  {
+    "id": 8365,
+    "name": "Ganesh Bhel - 150 g Pani Puri Imly Chutney",
+    "sku": "Ganesh_Bhel_150_g_Pani_Puri_Imly_Chutney"
+  },
+  {
+    "id": 8364,
+    "name": "Ganesh Bhel - 150 g Green Pani Puri Chutney",
+    "sku": "Ganesh_Bhel_150_g_Green_Pani_Puri_Chutney"
+  },
+  {
+    "id": 8363,
+    "name": "Everest - 100 g Rasam Powder",
+    "sku": "Everest_100_g_Rasam_Powder"
+  },
+  {
+    "id": 8362,
+    "name": "Everest - 100 g Pav Bhaji Masala",
+    "sku": "Everest_100_g_Pav_Bhaji_Masala"
+  },
+  {
+    "id": 8361,
+    "name": "Everest - 100 g Garam Masala",
+    "sku": "Everest_100_g_Garam_Masala"
+  },
+  {
+    "id": 8360,
+    "name": "Everest - 100 g Dry Mango Powder",
+    "sku": "Everest_100_g_Dry_Mango_Powder"
+  },
+  {
+    "id": 8359,
+    "name": "Everest - 100 g Chilli Powder",
+    "sku": "Everest_100_g_Chilli_Powder"
+  },
+  {
+    "id": 8358,
+    "name": "Chings - 50 g Schezwan Masala",
+    "sku": "Chings_50_g_Schezwan_Masala"
+  },
+  {
+    "id": 8357,
+    "name": "Chings - 50 g Hakka Noodles Masala",
+    "sku": "Chings_50_g_Hakka_Noodles_Masala"
+  },
+  {
+    "id": 8356,
+    "name": "Chhedas - 170 g Nadayali Mix",
+    "sku": "Chhedas_170_g_Nadayali_Mix"
+  },
+  {
+    "id": 8355,
+    "name": "Annam - 5 kg Red Parboiled Rice",
+    "sku": "Annam_5_kg_Red_Parboiled_Rice"
+  },
+  {
+    "id": 8354,
+    "name": "Adisha - 320 g Tamrind Paste",
+    "sku": "Adisha_320_g_Tamrind_Paste"
+  },
+  {
+    "id": 8353,
+    "name": "Adisha - 200 g Puffed Rice (Murmura)",
+    "sku": "Adisha_200_g_Puffed_Rice_(Murmura)"
+  },
+  {
+    "id": 8352,
+    "name": "Adisha - 200 g Coriander and Mint Chutney",
+    "sku": "Adisha_200_g_Coriander_and_Mint_Chutney"
+  },
+  {
     "id": 8264,
     "name": "Chhedas - 170 g Tomato Banana Chips",
     "sku": "Chhedas - 170 g Tomato Banana Chips"
@@ -11,7 +186,7 @@
   },
   {
     "id": 8255,
-    "name": "Chhedas - 170 g Long  Masala Banana Chips",
+    "name": "Chhedas - 170 g Long Masala Banana Chips",
     "sku": "Chhedas - 170 g Long Masala Banana Chips"
   },
   {
@@ -21,7 +196,7 @@
   },
   {
     "id": 7938,
-    "name": "Budhani Bros \u2013 54 g Potato Wafers",
+    "name": "Budhani - 54 g Potato Waffers Salted",
     "sku": "10"
   },
   {
@@ -30,24 +205,24 @@
     "sku": "Prestige_3_l_Gasket"
   },
   {
-    "id": 7934,
-    "name": "Pooja Bell - 1 Piece",
-    "sku": "Pooja_Bell_1_Piece"
-  },
-  {
     "id": 7935,
     "name": "Prakash - 25 g Kolhapuri Misal Rassa Masala",
     "sku": "Prakash_25_g_Kolhapuri_Misal_Rassa_Masala"
   },
   {
-    "id": 7930,
-    "name": "Patanjali - 200 ml Shampoo (Anti Dandruff)",
-    "sku": "Patanjali_200_ml_Shampoo_(Anti_Dandruff)"
+    "id": 7934,
+    "name": "Pooja Bell - 1 Piece",
+    "sku": "Pooja_Bell_1_Piece"
   },
   {
     "id": 7931,
     "name": "Patanjali - 200 ml Shampoo (Natural)",
     "sku": "Patanjali_200_ml_Shampoo_(Natural)"
+  },
+  {
+    "id": 7929,
+    "name": "KTC - 1 l Sunflower Oil",
+    "sku": "KTC_1_l_Sunflower_Oil"
   },
   {
     "id": 7933,
@@ -60,14 +235,9 @@
     "sku": "Patanjali_200_ml_Shampoo_(Reetha)"
   },
   {
-    "id": 7929,
-    "name": "KTC - 1 l Sunflower Oil",
-    "sku": "KTC_1_l_Sunflower_Oil"
-  },
-  {
-    "id": 7928,
-    "name": "Katdare - 100 g Kanda Lasung Masala",
-    "sku": "Katdare_100_g_Kanda_Lasung_Masala"
+    "id": 7930,
+    "name": "Patanjali - 200 ml Shampoo (Anti Dandruff)",
+    "sku": "Patanjali_200_ml_Shampoo_(Anti_Dandruff)"
   },
   {
     "id": 7925,
@@ -85,9 +255,9 @@
     "sku": "Iodex_40_g_Pain_Balm"
   },
   {
-    "id": 7922,
-    "name": "Chitale - 250 g Bakarwadi",
-    "sku": "Chitale_250_g_Bakarwadi"
+    "id": 7928,
+    "name": "Katdare - 100 g Kanda Lasung Masala",
+    "sku": "Katdare_100_g_Kanda_Lasung_Masala"
   },
   {
     "id": 7921,
@@ -95,14 +265,19 @@
     "sku": "Britannia_560_g_Milk_Rusks"
   },
   {
-    "id": 7923,
-    "name": "Double Horse - 500 g Tamarind",
-    "sku": "Double_Horse_500_g_Tamarind"
+    "id": 7922,
+    "name": "Chitale - 250 g Bakarwadi",
+    "sku": "Chitale_250_g_Bakarwadi"
   },
   {
     "id": 7924,
     "name": "Ganesh Bhel - 150 g Banana Chips",
     "sku": "Ganesh_Bhel_150_g_Banana_Chips"
+  },
+  {
+    "id": 7923,
+    "name": "Double Horse - 500 g Tamarind",
+    "sku": "Double_Horse_500_g_Tamarind"
   },
   {
     "id": 7919,
@@ -116,7 +291,7 @@
   },
   {
     "id": 7007,
-    "name": "Maruti \u2013 Stainless Steel Kitchen Press (15 Jalies \u2013 6 Icing Nozzles with Recipe Book)",
+    "name": "Maruti \u2013 Stainless Steel Kitchen Press",
     "sku": "Maruti_Kitchen_Press"
   },
   {
@@ -240,14 +415,9 @@
     "sku": "Annam_1_kg_Bombay_Rava"
   },
   {
-    "id": 6846,
-    "name": "Balaji - 135 g Chat Chaska Potato Chips",
-    "sku": "Balaji_135_g_Chat_Chaska_Potato_Chips"
-  },
-  {
-    "id": 6848,
-    "name": "Balaji - 65 g Flaming Hot",
-    "sku": "Balaji_65_g_Flaming_Hot"
+    "id": 6845,
+    "name": "Balaji - 135 g Tomato Twist Potato Chips",
+    "sku": "Balaji_135_g_Tomato_Twist_Potato_Chips"
   },
   {
     "id": 6847,
@@ -255,9 +425,14 @@
     "sku": "Balaji_65_g_Masala_Masti"
   },
   {
-    "id": 6845,
-    "name": "Balaji - 135 g Tomato Twist Potato Chips",
-    "sku": "Balaji_135_g_Tomato_Twist_Potato_Chips"
+    "id": 6848,
+    "name": "Balaji - 65 g Flaming Hot",
+    "sku": "Balaji_65_g_Flaming_Hot"
+  },
+  {
+    "id": 6846,
+    "name": "Balaji - 135 g Chat Chaska Potato Chips",
+    "sku": "Balaji_135_g_Chat_Chaska_Potato_Chips"
   },
   {
     "id": 6849,
@@ -270,11 +445,6 @@
     "sku": "Balaji_300_g_Gathiya"
   },
   {
-    "id": 6843,
-    "name": "Balaji - 400 g Khatta Mitha Mix",
-    "sku": "Balaji_400_g_Khatta_Mitha_Mix"
-  },
-  {
     "id": 6842,
     "name": "Balaji - 400 g Classic Sev",
     "sku": "Balaji_400_g_Classic_Sev"
@@ -285,14 +455,19 @@
     "sku": "Balaji_250_g_Masala_Sev_Murmura"
   },
   {
-    "id": 6844,
-    "name": "Balaji - 150 g Masala Masti Potato Chips",
-    "sku": "Balaji_150_g_Masala_Masti_Potato_Chips"
+    "id": 6843,
+    "name": "Balaji - 400 g Khatta Mitha Mix",
+    "sku": "Balaji_400_g_Khatta_Mitha_Mix"
   },
   {
     "id": 6840,
     "name": "Balaji - 250 g Chana Jor Garam",
     "sku": "Balaji_250_g_Chana_Jor_Garam"
+  },
+  {
+    "id": 6844,
+    "name": "Balaji - 150 g Masala Masti Potato Chips",
+    "sku": "Balaji_150_g_Masala_Masti_Potato_Chips"
   },
   {
     "id": 6836,
@@ -305,14 +480,14 @@
     "sku": "Balaji_190_g_Ratlami_Sev"
   },
   {
-    "id": 6835,
-    "name": "Balaji - 200 g Chana Dal",
-    "sku": "Balaji_200_g_Chana_Dal"
-  },
-  {
     "id": 6837,
     "name": "Balaji - 190 g Tikha Mitha Mix",
     "sku": "Balaji_190_g_Tikha_Mitha_Mix"
+  },
+  {
+    "id": 6835,
+    "name": "Balaji - 200 g Chana Dal",
+    "sku": "Balaji_200_g_Chana_Dal"
   },
   {
     "id": 6834,
@@ -325,14 +500,14 @@
     "sku": "Adisha_1_kg_Rangoli"
   },
   {
-    "id": 6665,
-    "name": "Aachi - 400 g Vermicelli",
-    "sku": "Aachi_400_g_Vermicelli"
-  },
-  {
     "id": 6667,
     "name": "MTR - 440 g Roasted Vermicelli",
     "sku": "MTR_440_g_Roasted_Vermicelli"
+  },
+  {
+    "id": 6665,
+    "name": "Aachi - 400 g Vermicelli",
+    "sku": "Aachi_400_g_Vermicelli"
   },
   {
     "id": 6669,
@@ -345,14 +520,19 @@
     "sku": "Chings_55_g_Hot_and_Sour_Soup"
   },
   {
+    "id": 6663,
+    "name": "Chings - 55 g Sweet Corn Soup",
+    "sku": "Chings_55_g_Sweet_Corn_Soup"
+  },
+  {
     "id": 6661,
     "name": "Chings - 55 g Mix Veg Soup",
     "sku": "Chings_55_g_Mix_Veg_Soup"
   },
   {
-    "id": 6663,
-    "name": "Chings - 55 g Sweet Corn Soup",
-    "sku": "Chings_55_g_Sweet_Corn_Soup"
+    "id": 6655,
+    "name": "Chings - 55 g Tomato Soup",
+    "sku": "Chings_55_g_Tomato_Soup"
   },
   {
     "id": 6653,
@@ -363,11 +543,6 @@
     "id": 6657,
     "name": "Chings - 55 g Manchow Soup",
     "sku": "Chings_55_g_Manchow_Soup"
-  },
-  {
-    "id": 6655,
-    "name": "Chings - 55 g Tomato Soup",
-    "sku": "Chings_55_g_Tomato_Soup"
   },
   {
     "id": 6649,
@@ -385,14 +560,14 @@
     "sku": "MTR_200_g_Inst._Rice_Idly_Mix"
   },
   {
-    "id": 6643,
-    "name": "MTR - 500 g Khaman Dhokla Mix",
-    "sku": "MTR_500_g_Khaman_Dhokla_Mix"
-  },
-  {
     "id": 6641,
     "name": "MTR - 200 g Puliogare Powder",
     "sku": "MTR_200_g_Puliogare_Powder"
+  },
+  {
+    "id": 6643,
+    "name": "MTR - 500 g Khaman Dhokla Mix",
+    "sku": "MTR_500_g_Khaman_Dhokla_Mix"
   },
   {
     "id": 6645,
@@ -400,14 +575,14 @@
     "sku": "MTR_200_g_Inst._Dosa_Mix"
   },
   {
-    "id": 6637,
-    "name": "MTR - 200 g Vangibath Powder",
-    "sku": "MTR_200_g_Vangibath_Powder"
-  },
-  {
     "id": 6635,
     "name": "MTR - 100 g Chutney Powder",
     "sku": "MTR_100_g_Chutney_Powder"
+  },
+  {
+    "id": 6637,
+    "name": "MTR - 200 g Vangibath Powder",
+    "sku": "MTR_200_g_Vangibath_Powder"
   },
   {
     "id": 6639,
@@ -425,14 +600,14 @@
     "sku": "MTR_100_g_Tomato_Rice_Powder"
   },
   {
-    "id": 6629,
-    "name": "MTR - 200 g Badam Milk Powder",
-    "sku": "MTR_200_g_Badam_Milk_Powder"
-  },
-  {
     "id": 6627,
     "name": "MTR - 500 g Dosa Mix",
     "sku": "MTR_500_g_Dosa_Mix"
+  },
+  {
+    "id": 6629,
+    "name": "MTR - 200 g Badam Milk Powder",
+    "sku": "MTR_200_g_Badam_Milk_Powder"
   },
   {
     "id": 6621,
@@ -450,14 +625,14 @@
     "sku": "Adisha_200_g_Instant_Dhkola_Mix"
   },
   {
-    "id": 6617,
-    "name": "Aachi - 200 g Jalebi Mix",
-    "sku": "Aachi_200_g_Jalebi_Mix"
-  },
-  {
     "id": 6615,
     "name": "Aachi - 200 g Tomato Rice Powder",
     "sku": "Aachi_200_g_Tomato_Rice_Powder"
+  },
+  {
+    "id": 6617,
+    "name": "Aachi - 200 g Jalebi Mix",
+    "sku": "Aachi_200_g_Jalebi_Mix"
   },
   {
     "id": 6619,
@@ -465,14 +640,14 @@
     "sku": "Aachi_200_g_Rava_Upma_Mix"
   },
   {
-    "id": 6613,
-    "name": "Aachi - 200 g Puliotharai Powder",
-    "sku": "Aachi_200_g_Puhliora_Powder"
-  },
-  {
     "id": 6611,
     "name": "Aachi - 200 g Rava Idli Mix",
     "sku": "Aachi_200_g_Rav_Idli_Mix"
+  },
+  {
+    "id": 6613,
+    "name": "Aachi - 200 g Puliotharai Powder",
+    "sku": "Aachi_200_g_Puhliora_Powder"
   },
   {
     "id": 6609,
@@ -495,9 +670,9 @@
     "sku": "Adisha_150_g_Roasted_Dhanadal"
   },
   {
-    "id": 6601,
-    "name": "Adisha - 150 g Aam Pak",
-    "sku": "Adisha_150_g_Aam_Pak"
+    "id": 6599,
+    "name": "Adisha - 100 g Dry Paan (Gulkand)",
+    "sku": "Adisha_100_g_Dry_Paan_(Gulkand)"
   },
   {
     "id": 6601,
@@ -516,7 +691,7 @@
   },
   {
     "id": 6583,
-    "name": "Aachi - 300 g Mango Avakyi",
+    "name": "Aachi - 300 g Mango Avakayi Pickle",
     "sku": "Aachi_300_g_Mango_Avakyi"
   },
   {
@@ -525,14 +700,14 @@
     "sku": "Aachi_300_g_Green_Chilli_Pickle"
   },
   {
-    "id": 6577,
-    "name": "TRS - 1 kg Urid Beans",
-    "sku": "TRS_1_kg_Urid_Beans"
-  },
-  {
     "id": 6579,
     "name": "TRS - 300 g Roasted Chickpeas (Daria)",
     "sku": "TRS_300_g_Roasted_Chickpeas_(Daria)"
+  },
+  {
+    "id": 6577,
+    "name": "TRS - 1 kg Urid Beans",
+    "sku": "TRS_1_kg_Urid_Beans"
   },
   {
     "id": 6581,
@@ -545,19 +720,14 @@
     "sku": "TRS_2_kg_Green_Lentils"
   },
   {
-    "id": 6571,
-    "name": "TRS - 100 g Baking Powder",
-    "sku": "TRS_100_g_Baking_Powder"
-  },
-  {
     "id": 6573,
     "name": "TRS - 25 g Green Food Colour",
     "sku": "TRS_25_g_Green_Food_Colour"
   },
   {
-    "id": 6567,
-    "name": "TRS - 450 g Sarson Ka Saag",
-    "sku": "TRS_450_g_Sarson_Ka_Saag"
+    "id": 6571,
+    "name": "TRS - 100 g Baking Powder",
+    "sku": "TRS_100_g_Baking_Powder"
   },
   {
     "id": 6569,
@@ -565,14 +735,19 @@
     "sku": "TRS_300_g_Dessicated_Coconut"
   },
   {
-    "id": 6563,
-    "name": "TRS - 750 g Soya Chunks",
-    "sku": "TRS_750_g_Soya_Chunks"
+    "id": 6567,
+    "name": "TRS - 450 g Sarson Ka Saag",
+    "sku": "TRS_450_g_Sarson_Ka_Saag"
   },
   {
     "id": 6561,
     "name": "TRS - 100 g Bicarbonate Soda",
     "sku": "TRS_100_g_Bicarbonate_Soda"
+  },
+  {
+    "id": 6563,
+    "name": "TRS - 750 g Soya Chunks",
+    "sku": "TRS_750_g_Soya_Chunks"
   },
   {
     "id": 6565,
@@ -585,14 +760,14 @@
     "sku": "TRS_300_g_Sabudana_(Tapicoa)"
   },
   {
-    "id": 6555,
-    "name": "TRS - 300 g Coconut Powder",
-    "sku": "TRS_300_g_Coconut_Powder"
-  },
-  {
     "id": 6557,
     "name": "TRS - 200 g Tamrind",
     "sku": "TRS_200_g_Tamrind"
+  },
+  {
+    "id": 6555,
+    "name": "TRS - 300 g Coconut Powder",
+    "sku": "TRS_300_g_Coconut_Powder"
   },
   {
     "id": 6547,
@@ -640,14 +815,14 @@
     "sku": "TRS_50_g_Extra_Hot_Crushed_Chilies"
   },
   {
-    "id": 6531,
-    "name": "TRS - 100 g Cumin Seeds",
-    "sku": "TRS_100_g_Cumin_Seeds"
-  },
-  {
     "id": 6533,
     "name": "TRS - 100 g Fennel Seeds",
     "sku": "TRS_100_g_Fennel_Seeds"
+  },
+  {
+    "id": 6531,
+    "name": "TRS - 100 g Cumin Seeds",
+    "sku": "TRS_100_g_Cumin_Seeds"
   },
   {
     "id": 6535,
@@ -660,14 +835,14 @@
     "sku": "TRS_100_g_Poppy_Seeds_(KuKus)"
   },
   {
-    "id": 6525,
-    "name": "Aachi - 100 g Fennel Seeds",
-    "sku": "Aachi_100_g_Fennel_Seeds"
-  },
-  {
     "id": 6527,
     "name": "Aachi - 50 g Kasuri Methi",
     "sku": "Aachi_50_g_Kasuri_Methi"
+  },
+  {
+    "id": 6525,
+    "name": "Aachi - 100 g Fennel Seeds",
+    "sku": "Aachi_100_g_Fennel_Seeds"
   },
   {
     "id": 6523,
@@ -685,14 +860,14 @@
     "sku": "TRS_100_g_Hot_Madras_Curry_Powder"
   },
   {
-    "id": 6513,
-    "name": "MTR - 200 g Sambar Powder",
-    "sku": "MTR_200_g_Sambar_Powder"
-  },
-  {
     "id": 6511,
     "name": "Suhana - 500 g Kitchen King Masala",
     "sku": "Suhana_500_g_Kitchen_King_Masala"
+  },
+  {
+    "id": 6513,
+    "name": "MTR - 200 g Sambar Powder",
+    "sku": "MTR_200_g_Sambar_Powder"
   },
   {
     "id": 6515,
@@ -705,14 +880,14 @@
     "sku": "Suhana_100_g_Madras_Curry_Powder_(Hot)"
   },
   {
-    "id": 6509,
-    "name": "Suhana - 100 g Chicken Masala",
-    "sku": "Suhana_100_g_Chicken_Masala"
-  },
-  {
     "id": 6507,
     "name": "Suhana - 500 g Meat Masala",
     "sku": "Suhana_500_g_Meat_Masala"
+  },
+  {
+    "id": 6509,
+    "name": "Suhana - 100 g Chicken Masala",
+    "sku": "Suhana_100_g_Chicken_Masala"
   },
   {
     "id": 6503,
@@ -740,6 +915,11 @@
     "sku": "TRS_100_g_Cumin_Powder"
   },
   {
+    "id": 6493,
+    "name": "TRS - 100 g Coriander Powder",
+    "sku": "TRS_100_g_Coriander_Powder"
+  },
+  {
     "id": 6489,
     "name": "Suhana - 200 g Turmeric Powder",
     "sku": "Suhana_200_g_Turmeric_Powder"
@@ -750,14 +930,9 @@
     "sku": "TRS_50_g_Cloves_Powder"
   },
   {
-    "id": 6493,
-    "name": "TRS - 100 g Coriander Powder",
-    "sku": "TRS_100_g_Coriander_Powder"
-  },
-  {
-    "id": 6485,
-    "name": "Suhana - 400 g Coriander Powder",
-    "sku": "Suhana_400_g_Coriander_Powder"
+    "id": 6487,
+    "name": "Suhana - 500 g Deggi Mirch Powder",
+    "sku": "Suhana_500_g_Deggi_Mirch_Powder"
   },
   {
     "id": 6483,
@@ -765,9 +940,9 @@
     "sku": "Suhana_200_g_Coriander_Powder"
   },
   {
-    "id": 6487,
-    "name": "Suhana - 500 g Deggi Mirch Powder",
-    "sku": "Suhana_500_g_Deggi_Mirch_Powder"
+    "id": 6485,
+    "name": "Suhana - 400 g Coriander Powder",
+    "sku": "Suhana_400_g_Coriander_Powder"
   },
   {
     "id": 6481,
@@ -798,11 +973,6 @@
     "id": 6465,
     "name": "Adisha - 400 g Puffed Rice (Murmura)",
     "sku": "Adisha_400_g_Puffed_Rice_(Murmura)"
-  },
-  {
-    "id": 6357,
-    "name": "Hawkins - 3 Liter Hevibase Induction Compatible Pressure Cooker",
-    "sku": "Hawkins_3_l_Pressure_Cooker"
   },
   {
     "id": 6359,
@@ -840,9 +1010,9 @@
     "sku": "Prestige_1_Set_Nakshtra_Mixer"
   },
   {
-    "id": 6354,
-    "name": "Preeti Blueleaf - Mixer Grinder (750 W)",
-    "sku": "Preethi_Mixer_Grinder"
+    "id": 6355,
+    "name": "Prestige - Super Idli Cooker",
+    "sku": "Prestige_Super_Idli_Cooker"
   },
   {
     "id": 6356,
@@ -850,19 +1020,9 @@
     "sku": "Hawkins_2_l_Pressure_Cooker"
   },
   {
-    "id": 6355,
-    "name": "Prestige - Super Idli Cooker",
-    "sku": "Prestige_Super_Idli_Cooker"
-  },
-  {
     "id": 6346,
     "name": "Red Mandir - LxBxH=45x24x53 cm",
     "sku": "Red_Mandir_L_x_B_x_H_=_45_x_24_x_53_cm"
-  },
-  {
-    "id": 6349,
-    "name": "Prestige - 3 Liter Pressure Cooker",
-    "sku": "Prestige_3_l_Pressure_Cooker"
   },
   {
     "id": 6347,
@@ -873,6 +1033,11 @@
     "id": 6350,
     "name": "Prestige - 240 mm Paniyarakkal Tawa",
     "sku": "Prestige_240_mm_Paniyarakkal_Tawa"
+  },
+  {
+    "id": 6349,
+    "name": "Prestige - 3 Liter Pressure Cooker",
+    "sku": "Prestige_3_l_Pressure_Cooker"
   },
   {
     "id": 6345,
@@ -915,14 +1080,14 @@
     "sku": "TRS_190_ml_Rose_Water"
   },
   {
-    "id": 6327,
-    "name": "Aachi - 1 kg Finger Millet",
-    "sku": "Aachi_1_kg_Finger_Millet_(Ragi)"
-  },
-  {
     "id": 6326,
     "name": "Aachi - 1 kg Barnyard Millet",
     "sku": "Aachi_1_kg_Barnyard_Millets"
+  },
+  {
+    "id": 6327,
+    "name": "Aachi - 1 kg Finger Millet",
+    "sku": "Aachi_1_kg_Finger_Millet_(Ragi)"
   },
   {
     "id": 6324,
@@ -935,14 +1100,14 @@
     "sku": "Adisha_1_kg_Ragi_Flour"
   },
   {
-    "id": 6254,
-    "name": "Maggi - 72 g Masala Noodles",
-    "sku": "Maggi_72_g_Masala_Noodles"
-  },
-  {
     "id": 6253,
     "name": "Maggi - 72 g Atta Noodles",
     "sku": "Maggi_72_g_Atta_Noodles"
+  },
+  {
+    "id": 6254,
+    "name": "Maggi - 72 g Masala Noodles",
+    "sku": "Maggi_72_g_Masala_Noodles"
   },
   {
     "id": 6255,
@@ -970,14 +1135,14 @@
     "sku": "Priya_300_g_Veg_ Curry_Paste"
   },
   {
-    "id": 6250,
-    "name": "Priya - 300 g Green Tamarind Pickle",
-    "sku": "Priya_300_g_Green_Tamarind_Pickle"
-  },
-  {
     "id": 6249,
     "name": "Priya - 300 g Lime Pickle",
     "sku": "Priya_300_g_Lime_Pickle"
+  },
+  {
+    "id": 6250,
+    "name": "Priya - 300 g Green Tamarind Pickle",
+    "sku": "Priya_300_g_Green_Tamarind_Pickle"
   },
   {
     "id": 6246,
@@ -988,11 +1153,6 @@
     "id": 6247,
     "name": "TRS - 400 g Fried Onions",
     "sku": "TRS_400_g_Fried_Onions"
-  },
-  {
-    "id": 6245,
-    "name": "Rajesh - 400 g Coriander Seeds",
-    "sku": "Rajesh_400_g_Corainder_Seeds"
   },
   {
     "id": 6244,
@@ -1070,6 +1230,11 @@
     "sku": "Cotton_Strings_1_Packet_Long"
   },
   {
+    "id": 5357,
+    "name": "Annam - 1 Packet Cotton Wicks",
+    "sku": "Annam_1_Packet_Cotton_Wicks"
+  },
+  {
     "id": 5355,
     "name": "Sandal - 100 g Pooja Chandan Powder",
     "sku": "Sandal_100_g_Pooja_Chandan_Powder"
@@ -1080,9 +1245,9 @@
     "sku": "Cotton_Garlands_1_Piece_for_Idols"
   },
   {
-    "id": 5357,
-    "name": "Annam - 1 Packet Cotton Wicks",
-    "sku": "Annam_1_Packet_Cotton_Wicks"
+    "id": 5352,
+    "name": "Deepamstand - 670 g Brass (H:40 cm)",
+    "sku": "Deepamstand_670_g_Brass_(H:40_cm)"
   },
   {
     "id": 5353,
@@ -1093,11 +1258,6 @@
     "id": 5354,
     "name": "Deepam - 45 g Brass (H:5 cm)",
     "sku": "Deepam_45_g_Brass_(H:5_cm)"
-  },
-  {
-    "id": 5352,
-    "name": "Deepamstand - 670 g Brass (H:40 cm)",
-    "sku": "Deepamstand_670_g_Brass_(H:40_cm)"
   },
   {
     "id": 5349,
@@ -1303,11 +1463,6 @@
     "id": 5307,
     "name": "Pravin - 60 g Roasted Makhana (Salt & Pepper)",
     "sku": "Pravin_60_g_Roasted_Makhani_(Salt_&amp;_Pepper)"
-  },
-  {
-    "id": 5308,
-    "name": "Pravin - 60 g Roasted Makhana (Salted)",
-    "sku": "Pravin_60_g_Roasted_Makhani_(Salted)"
   },
   {
     "id": 5309,
@@ -1780,14 +1935,14 @@
     "sku": "Aachi_200_g_Murruku_Mix"
   },
   {
-    "id": 4685,
-    "name": "Aachi - 200 g Multi Grain Porridge Mix",
-    "sku": "Aachi_200_g_Multi_Grain_Porridge_Mix"
-  },
-  {
     "id": 4683,
     "name": "Aachi - 200 g Moong Dal Halwa Mix",
     "sku": "Aachi_200_g_Moong_Dal_Halwa_Mix"
+  },
+  {
+    "id": 4685,
+    "name": "Aachi - 200 g Multi Grain Porridge Mix",
+    "sku": "Aachi_200_g_Multi_Grain_Porridge_Mix"
   },
   {
     "id": 4681,
@@ -1865,11 +2020,6 @@
     "sku": "Dettol_125_ml_Antiseptic_Liquid"
   },
   {
-    "id": 4646,
-    "name": "Patanjali - 200 ml Shampoo",
-    "sku": "Patanjali_200_ml_Shampoo"
-  },
-  {
     "id": 4648,
     "name": "Dabur - 100 ml Cloves Toothpaste",
     "sku": "Dabur_100_ml_Cloves_Toothpaste"
@@ -1930,11 +2080,6 @@
     "sku": "Dabur_140_ml_Styling_Hair_Cream"
   },
   {
-    "id": 4622,
-    "name": "Dabur - 200 ml Vatika Henna Shampoo",
-    "sku": "Dabur_200_ml_Vatika_Henna_Shampoo"
-  },
-  {
     "id": 4617,
     "name": "Mysore - 75 g Sandal Soap",
     "sku": "Mysore_75_g_Sandal_Soap"
@@ -1988,11 +2133,6 @@
     "id": 4600,
     "name": "Suhana - 200 g Crisps Punjabi",
     "sku": "Suhana_200_g_Crisps_Punjabi"
-  },
-  {
-    "id": 4598,
-    "name": "Suhana - 200 g Crisps Red Chilli",
-    "sku": "Suhana_100_g_Crisps_Red_Chilli"
   },
   {
     "id": 4596,
@@ -2751,7 +2891,7 @@
   },
   {
     "id": 4259,
-    "name": "Bournvita - 500 g (MHD: 31.01.2022)",
+    "name": "Bournvita - 500 g",
     "sku": "Bournvita_500_g_"
   },
   {
@@ -2816,7 +2956,7 @@
   },
   {
     "id": 4231,
-    "name": "Heera - 25 g Green Food Colouring Powder",
+    "name": "Heera - 25 g Green Food Colour",
     "sku": "Heera_25_g_Green_Food_Colouring_Powder"
   },
   {
@@ -3896,7 +4036,7 @@
   },
   {
     "id": 3778,
-    "name": "Pilsburry - 2 kg Chakki Atta",
+    "name": "Pilsburry - 2 kg Chakki Fresh Atta",
     "sku": "Pilsburry_2_kg_Chakki_Atta"
   },
   {
@@ -3906,7 +4046,7 @@
   },
   {
     "id": 3776,
-    "name": "Adisha - 5 kg Chakki Fresh Whole Wheat Flour Atta",
+    "name": "Adisha - 5 kg Chakki Fresh Whole Wheat Flour",
     "sku": "Adisha_5_kg_Chakki_Fresh_Whole_Wheat_Atta"
   },
   {

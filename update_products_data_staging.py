@@ -1,15 +1,14 @@
 from datetime import datetime
 
-import openpyxl as xl
 from woocommerce import API
 import json
 import csv
 import sys
 from openpyxl.workbook import Workbook
 import yagmail
-
 ##############
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22012022.csv"
+
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_01022022.csv"
 json_file_path = "products.json"
 kassen_system_data_dict = {"product_names": list, "stock": list, "price": list, "sale_price": list, "tax_class": list}
 products_list = list()
@@ -23,10 +22,7 @@ wcapi = API(
     consumer_secret="cs_e5e28b2e60e685c213b2ed5bcd67a5f83509fea5",
     timeout=1000
 )
-
-
 def csv_to_excel(input_csv_file, delimiter=";"):
-
     if not ".csv" in input_csv_file:
         sys.stderr.write("Error: File does not have the ending \".csv\".\n")
         sys.exit(2)
@@ -46,16 +42,16 @@ def csv_to_excel(input_csv_file, delimiter=";"):
             else:
                 sheet.cell(row=row_index + 1, column=col_index + 1).value = col
 
-    workbook.save(open(input_csv_file.replace(".csv", ".xlsx"), "wb"))
-    return input_csv_file.replace(".csv", ".xlsx")
+    #workbook.save(open(input_csv_file.replace(".csv", ".xlsx"), "wb"))
+    return workbook
 
 
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-def load_kassen_system_excel_file(filename_kassen_system_path):
-    wb1 = xl.load_workbook(filename_kassen_system_path)
-    ws1 = wb1.worksheets[0]
+def load_kassen_system_excel_file(workbook):
+    #wb1 = xl.load_workbook(filename_kassen_system_path)
+    ws1 = workbook.worksheets[0]
     # calculate total number of rows and
     # columns in source excel file
     mr_s = ws1.max_row
@@ -178,7 +174,7 @@ def chunks(l, n):
 def send_email(subject, message):
     user = 'lotusgroceryingolstadt2@gmail.com'
     app_password = 'ofanobixbzpvcpqz'  # a token for gmail
-    to = 'info@lotus-grocery.eu' # To send a group of recipients, simply change ‘to’ to a list.
+    to = 'info@lotus-grocery.eu'  # To send a group of recipients, simply change ‘to’ to a list.
 
     subject = subject
     content = [message, "./no_match_products.txt"]
@@ -188,13 +184,12 @@ def send_email(subject, message):
         print('Sent email successfully')
 
 
-def main(src_path):
+def main():
     import timeit
 
     start = timeit.default_timer()
-    # path_of_excel = csv_to_excel(filepath_kassen_system)
-    path_of_excel = csv_to_excel(src_path)
-    ws1, mr_s, mc_s = load_kassen_system_excel_file(path_of_excel)
+    workbook = csv_to_excel(filepath_kassen_system)
+    ws1, mr_s, mc_s = load_kassen_system_excel_file(workbook)
     json_data = load_json_data_website_products(json_file_path)
     kassen_system_data = assign_data_from_ks(ws1)
     match_of_stock_cells_count, num_no_match_found = match_products_and_update(json_data, kassen_system_data)
@@ -207,7 +202,8 @@ def main(src_path):
         # with open("products_all.json", "w") as jsonfile:
         # jsonfile.write(json_string)
         # jsonfile.close()
-        subject = '[Staging] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        subject = '[Live] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
+            "%d/%m/%Y %H:%M:%S")
         message = "This is an automated mail, receives this mail once the stock updates successfully. " \
                   "The statistics are as follows:\n\n\n" \
                   "Total no of Rows/Products in Source file from Shop File:{}\n " \
@@ -215,10 +211,11 @@ def main(src_path):
                   "Number of Products Matched:{}\n" \
                   "Number of Products are no matched:{}\n" \
                   "Time elasped:{} seconds".format(mr_s, len(json_data), match_of_stock_cells_count,
-                                                                  num_no_match_found, timeit.default_timer() - start)
+                                                   num_no_match_found, timeit.default_timer() - start)
         send_email(subject, message)
     except:
-        subject = '[Staging] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        subject = '[Live] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
+            "%d/%m/%Y %H:%M:%S")
         message = "Stock update not successful. Please re-run the scripts again"
         send_email(subject, message)
     print("Total no of Rows/Products in Source file from Shop File:{}".format(mr_s))

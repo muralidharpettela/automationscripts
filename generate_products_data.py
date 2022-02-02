@@ -1,11 +1,11 @@
 import openpyxl as xl
 from os import listdir
 from os.path import isfile, join
-images_path = r"/Users/muralidharpettela/Downloads/"
+images_path = r"/Users/muralidharpettela/"
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-filename_excel_path = r"/Users/muralidharpettela/Downloads/Book1.xlsx"
+filename_excel_path = r"/Users/muralidharpettela/Downloads/upload_products_31012022.xlsx"
 wb1 = xl.load_workbook(filename_excel_path)
 ws1 = wb1.worksheets[0]
 
@@ -90,11 +90,11 @@ for i, name in enumerate(col_name):
     # sold individually
     ws1['W'][temp].value = 0
     # image
-    if (name.value + ".jpg") in onlyfiles:
-        print("Match:{}".format(name.value))
-        index = onlyfiles.index(name.value + ".jpg")
-        del onlyfiles[index]
-        ws1['AD'][temp].value = str("https://www.lotus-grocery.eu/wp-content/uploads/2021/12/") + str(name.value) + ".jpg"
+    # if (name.value + ".jpg") in onlyfiles:
+    #     print("Match:{}".format(name.value))
+    #     index = onlyfiles.index(name.value + ".jpg")
+    #     del onlyfiles[index]
+    #     ws1['AD'][temp].value = str("https://www.lotus-grocery.eu/wp-content/uploads/2021/12/") + str(name.value) + ".jpg"
     # position
     ws1['AM'][temp].value = 0
     # category
