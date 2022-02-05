@@ -1,7 +1,7 @@
 import watchdog.events
 import watchdog.observers
 import time
-from update_products_data_staging import main
+from update_products_data_staging import StagingUpdateProducts
 
 
 class Handler(watchdog.events.PatternMatchingEventHandler):
@@ -16,7 +16,8 @@ class Handler(watchdog.events.PatternMatchingEventHandler):
 
     def on_modified(self, event):
         print("Watchdog received modified event - % s." % event.src_path)
-        main(event.src_path)
+        staging_products_update = StagingUpdateProducts(event.src_path)
+        staging_products_update.process()
     # Event is modified, you can process it now
 
 
