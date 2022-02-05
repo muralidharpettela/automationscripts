@@ -20,7 +20,7 @@ while True:
 all_products = list()
 for product_list_100 in products:
     for each_product in product_list_100:
-        dict_you_want = benedict(each_product).subset(keys=['id', 'name', 'sku'])
+        dict_you_want = benedict(each_product).subset(keys=['id', 'name', 'sku', "weight"])
         all_products.append(dict_you_want)
 json_string = json.dumps(all_products)
 with open("products.json", "w") as jsonfile:

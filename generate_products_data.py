@@ -5,7 +5,7 @@ images_path = r"/Users/muralidharpettela/"
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-filename_excel_path = r"/Users/muralidharpettela/Downloads/upload_products_31012022.xlsx"
+filename_excel_path = r"/Users/muralidharpettela/Downloads/upload_products03022022.xlsx"
 wb1 = xl.load_workbook(filename_excel_path)
 ws1 = wb1.worksheets[0]
 
