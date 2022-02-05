@@ -59,7 +59,7 @@ class LiveUpdateProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_04022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05022022.csv"
     live_products_update = LiveUpdateProducts(filepath_kassen_system)
     live_products_update.process()
 

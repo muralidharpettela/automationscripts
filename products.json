@@ -1,5 +1,221 @@
 [
   {
+    "id": 8602,
+    "name": "500 g - Sweetpotato",
+    "sku": "500_g_Sweetpotato",
+    "weight": "0"
+  },
+  {
+    "id": 8601,
+    "name": "500 g - Snake Gaurd",
+    "sku": "500_g_Snake_Gaurd",
+    "weight": "0"
+  },
+  {
+    "id": 8599,
+    "name": "500 g - Karela (Bitter Gourd)",
+    "sku": "500_g_Karela_(Bitter_Gourd)",
+    "weight": "0"
+  },
+  {
+    "id": 8598,
+    "name": "500 g - Gauva",
+    "sku": "500_g_Gauva",
+    "weight": "0"
+  },
+  {
+    "id": 8600,
+    "name": "500 g - Ridgegourd",
+    "sku": "500_g_Ridgegourd",
+    "weight": "0"
+  },
+  {
+    "id": 8597,
+    "name": "500 g - Chikkoo (Sapota)",
+    "sku": "500_g_Chikkoo_(Sapota)",
+    "weight": "0"
+  },
+  {
+    "id": 8593,
+    "name": "250 g - Raw Mangoes",
+    "sku": "250_g_Raw_Mangoes",
+    "weight": "0"
+  },
+  {
+    "id": 8594,
+    "name": "250 g - Small Red Onions",
+    "sku": "250_g_Small_Red_Onions",
+    "weight": "0"
+  },
+  {
+    "id": 8596,
+    "name": "500 g - Chayote",
+    "sku": "500_g_Chayote",
+    "weight": "0"
+  },
+  {
+    "id": 8595,
+    "name": "250 g - Tindoora",
+    "sku": "250_g_Tindoora",
+    "weight": "0"
+  },
+  {
+    "id": 8590,
+    "name": "250 g - Long Beans",
+    "sku": "250_g_Long_Beans",
+    "weight": "0"
+  },
+  {
+    "id": 8591,
+    "name": "250 g - Okra (Ladys Finger)",
+    "sku": "250_g_Okra_(Lady's_Finger)",
+    "weight": "0"
+  },
+  {
+    "id": 8592,
+    "name": "250 g - Papdi (Broad Beans)",
+    "sku": "250_g_Papdi_(Broad_Beans)",
+    "weight": "0"
+  },
+  {
+    "id": 8586,
+    "name": "250 g - Ginger",
+    "sku": "250_g_Ginger",
+    "weight": "0"
+  },
+  {
+    "id": 8588,
+    "name": "250 g - Green Chillies",
+    "sku": "250_g_Green_Chillies",
+    "weight": "0"
+  },
+  {
+    "id": 8587,
+    "name": "250 g - Green Brinjal",
+    "sku": "250_g_Green_Brinjal",
+    "weight": "0"
+  },
+  {
+    "id": 8589,
+    "name": "250 g - Guwar Beans",
+    "sku": "250_g_Guwar_Beans",
+    "weight": "0"
+  },
+  {
+    "id": 8583,
+    "name": "250 g - Brinjal Blue Round",
+    "sku": "250_g_Brinjal_Blue_Round",
+    "weight": "0"
+  },
+  {
+    "id": 8585,
+    "name": "250 g - Garlic",
+    "sku": "250_g_Garlic",
+    "weight": "0"
+  },
+  {
+    "id": 8584,
+    "name": "250 g - Drumsticks",
+    "sku": "250_g_Drumsticks",
+    "weight": "0"
+  },
+  {
+    "id": 8580,
+    "name": "20 g - Curry Leaves",
+    "sku": "20_g_Curry_Leaves",
+    "weight": "0"
+  },
+  {
+    "id": 8579,
+    "name": "1 kg - Suran (Elephant Yam)",
+    "sku": "1_kg_Suran_(Elephant_Yam)",
+    "weight": "0"
+  },
+  {
+    "id": 8581,
+    "name": "250 g - Amla",
+    "sku": "250_g_Amla",
+    "weight": "0"
+  },
+  {
+    "id": 8582,
+    "name": "250 g - Arbi (Tara Root)",
+    "sku": "250_g_Arbi_(Tara_Root)",
+    "weight": "0"
+  },
+  {
+    "id": 8576,
+    "name": "1 - Piece Papaya Fruit (Approx. 1200 g)",
+    "sku": "1_Piece_Papaya_Fruit_(Approx._1200_g)",
+    "weight": "0"
+  },
+  {
+    "id": 8577,
+    "name": "1 - Piece Pooja Coconut",
+    "sku": "1_Piece_Pooja_Coconut",
+    "weight": "0"
+  },
+  {
+    "id": 8578,
+    "name": "1 kg - Raw Banana",
+    "sku": "1_kg_Raw_Banana",
+    "weight": "0"
+  },
+  {
+    "id": 8574,
+    "name": "1 - Piece Kola (Ash Gourd) (Approx. 1200 g)",
+    "sku": "1_Piece_Kola_(Approx._1200_g)",
+    "weight": "0"
+  },
+  {
+    "id": 8572,
+    "name": "1 - Piece Coconut",
+    "sku": "1_Piece_Coconut",
+    "weight": "0"
+  },
+  {
+    "id": 8573,
+    "name": "1 - Piece Green Lemon",
+    "sku": "1_Piece_Green_Lemon",
+    "weight": "0"
+  },
+  {
+    "id": 8575,
+    "name": "1 - Piece Lauki (Bottle Gourd) (Approx. 800 g)",
+    "sku": "1_Piece_Lauki_(Approx._800_g)",
+    "weight": "0"
+  },
+  {
+    "id": 8569,
+    "name": "1 - Bunch Mint",
+    "sku": "1_Bunch_Mint",
+    "weight": "0"
+  },
+  {
+    "id": 8570,
+    "name": "1 - Pack Murunga Leaves",
+    "sku": "1_Pack_Murunga_Leaves",
+    "weight": "0"
+  },
+  {
+    "id": 8571,
+    "name": "1 - Pack Sweet Tamrind",
+    "sku": "1_Pack_Sweet_Tamrind",
+    "weight": "0"
+  },
+  {
+    "id": 8568,
+    "name": "1 - Bunch Methi",
+    "sku": "1_Bunch_Methi",
+    "weight": "0"
+  },
+  {
+    "id": 8567,
+    "name": "1 - Bunch Coriander",
+    "sku": "1_Bunch_Coriander",
+    "weight": "0"
+  },
+  {
     "id": 8520,
     "name": "TRS - 200 g Puffed Rice (Murmura)",
     "sku": "TRS_200_g_Puffed_Rice_(Murmura)",
@@ -19,7 +235,7 @@
   },
   {
     "id": 8515,
-    "name": "Samahan - 1 Stueck Tea Pouch",
+    "name": "Samahan - 1 Tea Pouch",
     "sku": "Samahan_1_St\u00fcck_Tea_Pouch",
     "weight": "0.01"
   },
@@ -159,7 +375,7 @@
     "id": 8495,
     "name": "Idayam - 1 l Gingely Oil",
     "sku": "Idayam_1_l_Gingely_Oil",
-    "weight": "1"
+    "weight": "1.0"
   },
   {
     "id": 8496,
@@ -261,7 +477,7 @@
     "id": 8382,
     "name": "TRS - 100 g White Seasame Seeds",
     "sku": "TRS_100_g_White_Seasame_Seeds",
-    "weight": "0.1"
+    "weight": "0"
   },
   {
     "id": 8381,
@@ -492,6 +708,18 @@
     "weight": "0"
   },
   {
+    "id": 7932,
+    "name": "Patanjali - 200 ml Shampoo (Reetha)",
+    "sku": "Patanjali_200_ml_Shampoo_(Reetha)",
+    "weight": "0.2"
+  },
+  {
+    "id": 7933,
+    "name": "Pooja - Thali Decorated (Medium)",
+    "sku": "Pooja_Thali_Decorated_(Medium)",
+    "weight": "0"
+  },
+  {
     "id": 7931,
     "name": "Patanjali - 200 ml Shampoo (Natural)",
     "sku": "Patanjali_200_ml_Shampoo_(Natural)",
@@ -502,18 +730,6 @@
     "name": "KTC - 1 l Sunflower Oil",
     "sku": "KTC_1_l_Sunflower_Oil",
     "weight": "1.0"
-  },
-  {
-    "id": 7933,
-    "name": "Pooja - Thali Decorated (Medium)",
-    "sku": "Pooja_Thali_Decorated_(Medium)",
-    "weight": "0"
-  },
-  {
-    "id": 7932,
-    "name": "Patanjali - 200 ml Shampoo (Reetha)",
-    "sku": "Patanjali_200_ml_Shampoo_(Reetha)",
-    "weight": "0.2"
   },
   {
     "id": 7930,
@@ -534,16 +750,16 @@
     "weight": "0.25"
   },
   {
-    "id": 7927,
-    "name": "Iodex - 40 g Pain Balm",
-    "sku": "Iodex_40_g_Pain_Balm",
-    "weight": "0.04"
-  },
-  {
     "id": 7928,
     "name": "Katdare - 100 g Kanda Lasung Masala",
     "sku": "Katdare_100_g_Kanda_Lasung_Masala",
     "weight": "0.1"
+  },
+  {
+    "id": 7927,
+    "name": "Iodex - 40 g Pain Balm",
+    "sku": "Iodex_40_g_Pain_Balm",
+    "weight": "0.04"
   },
   {
     "id": 7921,
@@ -558,16 +774,16 @@
     "weight": "0.25"
   },
   {
-    "id": 7924,
-    "name": "Ganesh Bhel - 150 g Banana Chips",
-    "sku": "Ganesh_Bhel_150_g_Banana_Chips",
-    "weight": "0.15"
-  },
-  {
     "id": 7923,
     "name": "Double Horse - 500 g Tamarind",
     "sku": "Double_Horse_500_g_Tamarind",
     "weight": "0.5"
+  },
+  {
+    "id": 7924,
+    "name": "Ganesh Bhel - 150 g Banana Chips",
+    "sku": "Ganesh_Bhel_150_g_Banana_Chips",
+    "weight": "0.15"
   },
   {
     "id": 7919,
@@ -1110,16 +1326,16 @@
     "weight": "0.1"
   },
   {
-    "id": 6569,
-    "name": "TRS - 300 g Dessicated Coconut",
-    "sku": "TRS_300_g_Dessicated_Coconut",
-    "weight": "0.3"
-  },
-  {
     "id": 6567,
     "name": "TRS - 450 g Sarson Ka Saag",
     "sku": "TRS_450_g_Sarson_Ka_Saag",
     "weight": "0.45"
+  },
+  {
+    "id": 6569,
+    "name": "TRS - 300 g Dessicated Coconut",
+    "sku": "TRS_300_g_Dessicated_Coconut",
+    "weight": "0.3"
   },
   {
     "id": 6561,
@@ -1146,27 +1362,21 @@
     "weight": "0.3"
   },
   {
-    "id": 6557,
-    "name": "TRS - 200 g Tamrind",
-    "sku": "TRS_200_g_Tamrind",
-    "weight": "0.2"
-  },
-  {
     "id": 6555,
     "name": "TRS - 300 g Coconut Powder",
     "sku": "TRS_300_g_Coconut_Powder",
     "weight": "0.3"
   },
   {
+    "id": 6557,
+    "name": "TRS - 200 g Tamrind",
+    "sku": "TRS_200_g_Tamrind",
+    "weight": "0.2"
+  },
+  {
     "id": 6547,
     "name": "Adisha - 500 g Sabudana (Tapioca)",
     "sku": "Adisha_500_g_Sabudana_(Tapioca)",
-    "weight": "0.5"
-  },
-  {
-    "id": 6549,
-    "name": "Adisha - 500 g Jaggery Powder",
-    "sku": "Adisha_500_g_Jaggery_Powder",
     "weight": "0.5"
   },
   {
@@ -1176,22 +1386,28 @@
     "weight": "0.9"
   },
   {
+    "id": 6549,
+    "name": "Adisha - 500 g Jaggery Powder",
+    "sku": "Adisha_500_g_Jaggery_Powder",
+    "weight": "0.5"
+  },
+  {
     "id": 6553,
     "name": "Adisha - 500 g Jaggery Cubes",
     "sku": "Adisha_500_g_Jaggery_Cube",
     "weight": "0.5"
   },
   {
-    "id": 6545,
-    "name": "Adisha - 450 g Jaggery",
-    "sku": "Adisha_450_g_Jaggery",
-    "weight": "0.45"
-  },
-  {
     "id": 6543,
     "name": "Adisha - 100 g Phool Makhana",
     "sku": "Adisha_100_g_Phool_Makhana",
     "weight": "0.1"
+  },
+  {
+    "id": 6545,
+    "name": "Adisha - 450 g Jaggery",
+    "sku": "Adisha_450_g_Jaggery",
+    "weight": "0.45"
   },
   {
     "id": 6541,
@@ -1710,12 +1926,6 @@
     "weight": "0"
   },
   {
-    "id": 5357,
-    "name": "Annam - 1 Packet Cotton Wicks",
-    "sku": "Annam_1_Packet_Cotton_Wicks",
-    "weight": "0"
-  },
-  {
     "id": 5355,
     "name": "Sandal - 100 g Pooja Chandan Powder",
     "sku": "Sandal_100_g_Pooja_Chandan_Powder",
@@ -1725,6 +1935,12 @@
     "id": 5356,
     "name": "Cotton Garlands - 1 Piece for Idols",
     "sku": "Cotton_Garlands_1_Piece_for_Idols",
+    "weight": "0"
+  },
+  {
+    "id": 5357,
+    "name": "Annam - 1 Packet Cotton Wicks",
+    "sku": "Annam_1_Packet_Cotton_Wicks",
     "weight": "0"
   },
   {
@@ -1755,7 +1971,7 @@
     "id": 5350,
     "name": "Durga - 2.76 kg Brass Idol Wall Mountable (H:28 cm)",
     "sku": "Durga_2.76_kg_Brass_Idol_Wall_Mountable_(H:28_cm)",
-    "weight": "2.76"
+    "weight": "76.0"
   },
   {
     "id": 5351,
@@ -1767,7 +1983,7 @@
     "id": 5346,
     "name": "Ganesha - 2.4 kg Brass Idol (H:19 cm)",
     "sku": "Ganesha_2.4_kg_Brass_Idol_(H:19_cm)",
-    "weight": "2.4"
+    "weight": "4.0"
   },
   {
     "id": 5347,
@@ -1779,7 +1995,7 @@
     "id": 5348,
     "name": "Ganesha - 2.2 kg Brass Idol (H:26 cm)",
     "sku": "Ganesha_2.2_kg_Brass_Idol_(H:26_cm)",
-    "weight": "2.2"
+    "weight": "2.0"
   },
   {
     "id": 5343,
@@ -1791,13 +2007,13 @@
     "id": 5344,
     "name": "Ganesha - 2.17 kg Brass Idol (H:21 cm)",
     "sku": "Ganesha_2.17_kg_Brass_Idol_(H:21_cm)",
-    "weight": "2.17"
+    "weight": "17.0"
   },
   {
     "id": 5345,
     "name": "Krishna With Cow - 2.28 kg Brass Idol (H:19 cm)",
     "sku": "Krishna_With_Cow_2.28_kg_Brass_Idol_(H:19_cm)",
-    "weight": "2.28"
+    "weight": "28.0"
   },
   {
     "id": 5340,
@@ -3399,7 +3615,7 @@
     "id": 4373,
     "name": "TRS - 1.5 kg Pink Peanuts",
     "sku": "TRS_1.5_kg_Pink_Peanuts",
-    "weight": "1.5"
+    "weight": "5.0"
   },
   {
     "id": 4371,
@@ -4989,7 +5205,7 @@
     "id": 3815,
     "name": "TRS - 1.5 kg White Rice Flour",
     "sku": "TRS_1.5_kg_White_Rice_Flour",
-    "weight": "1.5"
+    "weight": "5.0"
   },
   {
     "id": 3817,
@@ -5025,7 +5241,7 @@
     "id": 3797,
     "name": "Annam - 1.5 kg White Rice Flour",
     "sku": "Annam_1.5_kg_White_Rice_Flour",
-    "weight": "1.5"
+    "weight": "5.0"
   },
   {
     "id": 3793,
@@ -5151,7 +5367,7 @@
     "id": 3755,
     "name": "Royal Thai - 4.5 kg Mila Grosa Rice",
     "sku": "Royal_Thai_4.5_kg_Mila_Grosa_Rice",
-    "weight": "4.5"
+    "weight": "5.0"
   },
   {
     "id": 3751,

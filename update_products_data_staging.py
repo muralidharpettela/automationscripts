@@ -59,6 +59,6 @@ class StagingUpdateProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_03022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05022022.csv"
     staging_products_update = StagingUpdateProducts(filepath_kassen_system)
     staging_products_update.process()
