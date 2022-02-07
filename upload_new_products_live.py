@@ -4,9 +4,10 @@ from os.path import isfile, join
 from common_functions import CommonFunctions
 from woocommerce import API
 import base64, requests, json
+from datetime import datetime
 import re
 import os
-
+import timeit
 
 class UploadProducts(CommonFunctions):
     def __init__(self, kassen_system_filepath, new_products_excel_filepath, images_path):
@@ -17,13 +18,19 @@ class UploadProducts(CommonFunctions):
         self.kassen_system_dict, row, col = self.load_kassen_system_excel_file(self.workbook)
         self.col_name, self.col_category = self.load_new_products_excel(new_products_excel_filepath)
         self.wcapi = API(
-            url="https://www.staging4.lotus-grocery.eu/",
-            consumer_key="ck_54f1c0d3cbc119670a8bc8cbb2a6835c0da94eda",
-            consumer_secret="cs_e5e28b2e60e685c213b2ed5bcd67a5f83509fea5",
+            url="https://www.lotus-grocery.eu/",
+            consumer_key="ck_a1a83db1a7931bc4c965bf0e3d281ac63bea7264",
+            consumer_secret="cs_3fd453e8a22d1d3da2a1376c1d8906130f6de1e4",
             timeout=1000
         )
+        # flags for checking conditions, No image matched and no matching found in KS
+        self.match_found_in_ks = False
+        self.image_matched = False
         self.all_products_data_list = list()
-
+        self.no_image_products = open("no_image_products.txt", "w+")
+        self.num_no_match_found = 0
+        self.match_of_stock_cells_count = 0
+        self.num_no_image_match_found = 0
 
     def load_new_products_excel(self, new_products_excel_filepath):
         new_products_workbook = xl.load_workbook(new_products_excel_filepath)
@@ -73,11 +80,11 @@ class UploadProducts(CommonFunctions):
             self.products_without_weight_txt.write("\n")
 
     def match_products_and_update(self, product_name, product_dict, kassen_system_data_dict):
-        num_no_match_found = 0
-        match_of_stock_cells_count = 0
+
         for j, product_kassen_system in enumerate(kassen_system_data_dict["product_names"]):
             # check the sort id source and destination are same, if yes update the stock of destination with stock of source
             if str(product_name).rstrip() == str(product_kassen_system.value).rstrip():
+                self.match_found_in_ks = True
                 # stock update
                 product_dict['stock_quantity'] = kassen_system_data_dict["stock"][j].value
                 # price update
@@ -95,17 +102,15 @@ class UploadProducts(CommonFunctions):
                     product_dict['tax_class'] = "Tax 7 Per"
                 else:
                     product_dict['tax_class'] = "Tax 19 Per"
-                match_of_stock_cells_count = match_of_stock_cells_count + 1
+                self.match_of_stock_cells_count = self.match_of_stock_cells_count + 1
                 break
-
             if (j == len(kassen_system_data_dict["product_names"]) - 1):
                 if str(product_name) not in self.no_match_products_list:
+                    self.match_found_in_ks = False
                     self.no_match_products_list.append(product_name)
                     self.no_match_products_txt.write(product_name)
                     self.no_match_products_txt.write("\n")
-                    num_no_match_found = num_no_match_found + 1
-
-        return match_of_stock_cells_count, num_no_match_found
+                    self.num_no_match_found = self.num_no_match_found + 1
 
     def assign_category(self, category, products_dict):
         # category
@@ -195,11 +200,29 @@ class UploadProducts(CommonFunctions):
         return link
 
     def upload_image_append_link(self, path, product_json):
-        hed = self.header("muralidhar", "e2Yk Ba0a 3RbH vTyl PQUo WDfk")  # username, application password
-        link = self.upload_image_to_wordpress(path, 'https://www.staging4.lotus-grocery.eu/', hed)
+        hed = self.header("muralidhar", "yjd5 xuKN 6PPr 0nLI PWRD WPKf")  # username, application password
+        link = self.upload_image_to_wordpress(path, 'https://www.lotus-grocery.eu/', hed)
         product_json['images'][0]['src'] = link
-    def process(self):
 
+    def find_match_upload(self, new_product_name, product_dict):
+        extensions = ('.jpg', '.jpeg', '.png')
+        for j, filename in enumerate(self.onlyfiles):
+            if any(filename.endswith(extension) for extension in extensions):
+                if os.path.splitext(filename)[0] == new_product_name.value:
+                    filepath = os.path.join(self.images_path, filename)
+                    print(filepath)
+                    self.upload_image_append_link(filepath, product_dict)
+                    self.image_matched = True
+                    break
+                if (j == len(self.onlyfiles) - 1):
+                    self.image_matched = False
+                    self.no_image_products.write(filename)
+                    self.no_image_products.write("\n")
+                    self.num_no_image_match_found = self.num_no_image_match_found + 1
+
+    def process(self):
+        start = timeit.default_timer()
+        product_uploaded_successfully = 0
         for new_product_name, new_product_category in zip(self.col_name, self.col_category):
             product_dict = {"name": None,
                             "type": "simple",
@@ -226,27 +249,64 @@ class UploadProducts(CommonFunctions):
             # weight calculate
             self._calculate_weight(new_product_name.value, product_dict)
             # regular price, sale price, stock, tax class
-            match_of_stock_cells_count, num_no_match_found = self.match_products_and_update(new_product_name.value, product_dict, self.kassen_system_dict)
+            self.match_products_and_update(new_product_name.value, product_dict, self.kassen_system_dict)
             self.assign_category(new_product_category.value, product_dict)
             # image
-            extensions = ('.jpg', '.jpeg', '.png')
-            for filename in self.onlyfiles:
-                if any(filename.endswith(extension) for extension in extensions):
-                    if os.path.splitext(filename)[0] == new_product_name.value:
-                        filepath = os.path.join(self.images_path, filename)
-                        print(filepath)
-                        self.upload_image_append_link(filepath, product_dict)
-                        break
-            print(self.wcapi.post("products", product_dict).json())
-            self.all_products_data_list.append(product_dict)
+            self.find_match_upload(new_product_name, product_dict)
+            if self.match_found_in_ks == True and self.image_matched == True:
+                #print(self.wcapi.post("products", product_dict).json())
+                product_uploaded_successfully = product_uploaded_successfully + 1
+                self.all_products_data_list.append(product_dict)
         self.no_match_products_txt.close()
-        self.products_without_weight_txt.close()
+        self.no_image_products.close()
+        MAX_API_BATCH_SIZE = 50
+
+        def chunks(l, n):
+            """Yield successive n-sized chunks from l."""
+            for i in range(0, len(l), n):
+                yield l[i:i + n]
+
+        try:
+            for batch in chunks(self.all_products_data_list, MAX_API_BATCH_SIZE):
+                print(len(batch))
+                print(self.wcapi.put("products/batch", {"create": batch}).json())
+            subject = '[Live] lotus-grocery.eu - new products uploaded ' + datetime.now().strftime(
+                "%d/%m/%Y %H:%M:%S")
+            prod = [prod['name'] for prod in self.all_products_data_list]
+            message = "This is an automated mail, receives this mail, when new products are uploaded. " \
+                      "The statistics are as follows:\n\n\n" \
+                      "Total no of Products target to upload:{}\n " \
+                      "Total no of Products uploaded successfully:{}\n" \
+                      "Number of Products Matched their names in KS:{}\n" \
+                      "Number of Products not Matched their names in KS:{}\n" \
+                      "Number of Products images are not matched:{}\n" \
+                      "Time elasped:{} seconds\n"\
+                      "Uploaded products are:{}".format(len(self.col_name), product_uploaded_successfully, self.match_of_stock_cells_count,
+                                                       self.num_no_match_found, self.num_no_image_match_found,
+                                                       timeit.default_timer() - start, "\n".join(prod))
+            content = [message, "./no_match_products.txt", "./no_image_products.txt"]
+            self.send_email(subject, content)
+        except:
+            subject = '[Live] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
+                "%d/%m/%Y %H:%M:%S")
+            message = "products update not successful. Please re-run the scripts again"
+            content = [message]
+            self.send_email(subject, content)
+        print("Total no of Products target to upload:{}".format(len(self.col_name)))
+        print("Total no of Products uploaded successfully:{}".format(product_uploaded_successfully))
+        print("Number of Products Matched their names in KS:{}".format(self.match_of_stock_cells_count))
+        print("Number of Products not Matched their names in KS:{}".format(self.num_no_match_found))
+        print("Number of Products images are not matched:{}".format(self.num_no_image_match_found))
+
+        stop = timeit.default_timer()
+
+        print('Time: ', stop - start)
         print("Finished")
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_04022022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/test_upload.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/New_Images"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_07022022.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()
