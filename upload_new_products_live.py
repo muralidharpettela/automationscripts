@@ -182,6 +182,10 @@ class UploadProducts(CommonFunctions):
             products_dict["categories"][0]["id"] = 106
         elif category == "HI":
             products_dict["categories"][0]["id"] = 107
+        elif category == "VEG":
+            products_dict["categories"][0]["id"] = 132
+        elif category == "AB":
+            products_dict["categories"][0]["id"] = 134
         else:
             products_dict["categories"][0]["id"] = "None"
 
@@ -216,7 +220,7 @@ class UploadProducts(CommonFunctions):
                     break
                 if (j == len(self.onlyfiles) - 1):
                     self.image_matched = False
-                    self.no_image_products.write(filename)
+                    self.no_image_products.write(new_product_name.value)
                     self.no_image_products.write("\n")
                     self.num_no_image_match_found = self.num_no_image_match_found + 1
 
@@ -305,7 +309,7 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_07022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09022022.csv"
     new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
     images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)

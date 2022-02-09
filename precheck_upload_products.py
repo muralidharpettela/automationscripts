@@ -215,9 +215,9 @@ class UploadProducts(CommonFunctions):
                     #self.upload_image_append_link(filepath, product_dict)
                     self.image_matched = True
                     break
-                if (j == len(self.onlyfiles) - 1):
+                if (j == (len(self.onlyfiles)-1)):
                     self.image_matched = False
-                    self.no_image_products.write(filename)
+                    self.no_image_products.write(new_product_name.value)
                     self.no_image_products.write("\n")
                     self.num_no_image_match_found = self.num_no_image_match_found + 1
 
@@ -276,7 +276,7 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_07022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09022022.csv"
     new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
     images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)

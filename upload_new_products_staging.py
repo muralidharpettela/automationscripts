@@ -183,6 +183,10 @@ class UploadProducts(CommonFunctions):
             products_dict["categories"][0]["id"] = 106
         elif category == "HI":
             products_dict["categories"][0]["id"] = 107
+        elif category == "VEG":
+            products_dict["categories"][0]["id"] = 132
+        elif category == "AB":
+            products_dict["categories"][0]["id"] = 134
         else:
             products_dict["categories"][0]["id"] = "None"
 
@@ -217,7 +221,7 @@ class UploadProducts(CommonFunctions):
                     break
                 if (j == len(self.onlyfiles) - 1):
                     self.image_matched = False
-                    self.no_image_products.write(filename)
+                    self.no_image_products.write(new_product_name.value)
                     self.no_image_products.write("\n")
                     self.num_no_image_match_found = self.num_no_image_match_found + 1
 
