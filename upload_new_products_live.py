@@ -237,6 +237,7 @@ class UploadProducts(CommonFunctions):
                             "stock_quantity": 0,
                             "sale_price": None,
                             "tax_class": None,
+                            "manage_stock":True,
                             "categories": [
                                 {
                                     "id": 0
@@ -273,7 +274,7 @@ class UploadProducts(CommonFunctions):
         try:
             for batch in chunks(self.all_products_data_list, MAX_API_BATCH_SIZE):
                 print(len(batch))
-                print(self.wcapi.put("products/batch", {"create": batch}).json())
+                print(self.wcapi.post("products/batch", {"create": batch}).json())
             subject = '[Live] lotus-grocery.eu - new products uploaded ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
             prod = [prod['name'] for prod in self.all_products_data_list]
@@ -309,7 +310,7 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_10022022_2.csv"
     new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
     images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)

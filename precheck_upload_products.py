@@ -9,6 +9,7 @@ import re
 import os
 import timeit
 
+
 class UploadProducts(CommonFunctions):
     def __init__(self, kassen_system_filepath, new_products_excel_filepath, images_path):
         super().__init__(kassen_system_filepath, " ")
@@ -31,7 +32,6 @@ class UploadProducts(CommonFunctions):
         self.num_no_match_found = 0
         self.match_of_stock_cells_count = 0
         self.num_no_image_match_found = 0
-
 
     def load_new_products_excel(self, new_products_excel_filepath):
         new_products_workbook = xl.load_workbook(new_products_excel_filepath)
@@ -276,7 +276,7 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09022022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_10022022_2.csv"
     new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
     images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)

@@ -238,6 +238,7 @@ class UploadProducts(CommonFunctions):
                             "stock_quantity": 0,
                             "sale_price": None,
                             "tax_class": None,
+                            "manage_stock": True,
                             "categories": [
                                 {
                                     "id": 0
@@ -274,7 +275,7 @@ class UploadProducts(CommonFunctions):
         try:
             for batch in chunks(self.all_products_data_list, MAX_API_BATCH_SIZE):
                 print(len(batch))
-                print(self.wcapi.put("products/batch", {"create": batch}).json())
+                print(self.wcapi.post("products/batch", {"create": batch}).json())
             subject = '[Staging] lotus-grocery.eu - new products uploaded ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
             prod = [prod['name'] for prod in self.all_products_data_list]
