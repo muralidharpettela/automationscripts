@@ -113,7 +113,7 @@ class CommonFunctions():
                 if str(product_website['name']).rstrip() == str(product_kassen_system.value).rstrip():
                     products_kassen_system_dict['id'] = product_website["id"]
                     # calculate weight
-                    if not float(product_website['weight']) > 0:
+                    if float(product_website['weight']) == 0:
                         weight_updated_products = weight_updated_products + 1
                         self.calculate_weight(product_website, products_kassen_system_dict)
                     # stock update
