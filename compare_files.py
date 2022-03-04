@@ -1,6 +1,6 @@
 from update_products_data_staging import csv_to_excel, load_json_data_website_products, load_kassen_system_excel_file, assign_data_from_ks
 
-filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_26012022.csv"
+filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_04032022_1.csv"
 json_file_path = "products.json"
 no_match_products_list = list()
 no_match_products_txt = open("no_match_products.txt", "w+")

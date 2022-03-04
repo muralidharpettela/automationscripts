@@ -37,7 +37,7 @@
   },
   {
     "id": 9376,
-    "name": "Haldiram - 300 g RTE Dum Biryani",
+    "name": "Haldiram - 200 g RTE Dum Biryani",
     "sku": "Haldiram_300_g_RTE_Dum_Biryani",
     "weight": "0.3"
   },
@@ -228,12 +228,6 @@
     "weight": "0.15"
   },
   {
-    "id": 9278,
-    "name": "Peak - 397 g Condense Milk",
-    "sku": "Peak_397_g_Condense_Milk",
-    "weight": "0.397"
-  },
-  {
     "id": 9276,
     "name": "Balaji - 55 g Masala Wheels",
     "sku": "Balaji_55_g_Masala_Wheels",
@@ -286,12 +280,6 @@
     "name": "Chings - 150 g Hakka Noodles",
     "sku": "Chings_150_g_Hakka_Noodles",
     "weight": "0.15"
-  },
-  {
-    "id": 9258,
-    "name": "Bournvita - 500 g",
-    "sku": "Bournvita_500_g",
-    "weight": "0.5"
   },
   {
     "id": 9256,
@@ -589,7 +577,7 @@
   },
   {
     "id": 9021,
-    "name": "Sakthi - 200 g Fish Fry Masala",
+    "name": "Sakthi - 200 g Fish Curry Masala",
     "sku": "Sakthi_200_g_Fish_Curry_Masala",
     "weight": "0.2"
   },
@@ -1200,16 +1188,16 @@
     "weight": "1.0"
   },
   {
-    "id": 8582,
-    "name": "250 g - Arbi (Tara Root)",
-    "sku": "250_g_Arbi_(Tara_Root)",
-    "weight": "0.25"
-  },
-  {
     "id": 8581,
     "name": "250 g - Amla",
     "sku": "250_g_Amla",
     "weight": "0.25"
+  },
+  {
+    "id": 8580,
+    "name": "20 g - Curry Leaves",
+    "sku": "20_g_Curry_Leaves",
+    "weight": "0.02"
   },
   {
     "id": 8580,
@@ -6006,10 +5994,10 @@
     "weight": "0.1"
   },
   {
-    "id": 3892,
-    "name": "TRS - 1 kg Chilli Powder",
-    "sku": "TRS_400_g_Chilli_Powder",
-    "weight": "1.0"
+    "id": 3894,
+    "name": "TRS - 100 g Black Pepper Coarse",
+    "sku": "TRS_100_g_Black_Pepper_Coarse",
+    "weight": "0.1"
   },
   {
     "id": 3894,
