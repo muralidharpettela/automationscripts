@@ -1,5 +1,29 @@
 [
   {
+    "id": 9415,
+    "name": "200 g - Holi Colour Blue",
+    "sku": "200_g_Holi_Colour_Blue",
+    "weight": "0.2"
+  },
+  {
+    "id": 9413,
+    "name": "200 g - Holi Colour Green",
+    "sku": "200_g_Holi_Colour_Green",
+    "weight": "0.2"
+  },
+  {
+    "id": 9411,
+    "name": "200 g - Holi Colour Yellow",
+    "sku": "200_g_Holi_Colour_Yellow",
+    "weight": "0.2"
+  },
+  {
+    "id": 9409,
+    "name": "200 g - Holi Colour Red",
+    "sku": "200_g_Holi_Colour_Red",
+    "weight": "0.2"
+  },
+  {
     "id": 9388,
     "name": "Annam - 1 kg Ponni Raw Rice",
     "sku": "Annam_1_kg_Ponni_Raw_Rice",
@@ -39,7 +63,7 @@
     "id": 9376,
     "name": "Haldiram - 200 g RTE Dum Biryani",
     "sku": "Haldiram_300_g_RTE_Dum_Biryani",
-    "weight": "0.3"
+    "weight": "0.2"
   },
   {
     "id": 9374,
@@ -1188,16 +1212,16 @@
     "weight": "1.0"
   },
   {
+    "id": 8582,
+    "name": "250 g - Arbi (Tara Root)",
+    "sku": "250_g_Arbi_(Tara_Root)",
+    "weight": "0.25"
+  },
+  {
     "id": 8581,
     "name": "250 g - Amla",
     "sku": "250_g_Amla",
     "weight": "0.25"
-  },
-  {
-    "id": 8580,
-    "name": "20 g - Curry Leaves",
-    "sku": "20_g_Curry_Leaves",
-    "weight": "0.02"
   },
   {
     "id": 8580,
@@ -1770,10 +1794,10 @@
     "weight": "0.025"
   },
   {
-    "id": 7929,
-    "name": "KTC - 1 l Sunflower Oil",
-    "sku": "KTC_1_l_Sunflower_Oil",
-    "weight": "1.0"
+    "id": 7930,
+    "name": "Patanjali - 200 ml Shampoo (Anti Dandruff)",
+    "sku": "Patanjali_200_ml_Shampoo_(Anti_Dandruff)",
+    "weight": "0.2"
   },
   {
     "id": 7930,
@@ -2203,7 +2227,7 @@
   },
   {
     "id": 6635,
-    "name": "MTR - 100 g Chutney Powder",
+    "name": "MTR - 200 g Chutney Powder",
     "sku": "MTR_100_g_Chutney_Powder",
     "weight": "0.1"
   },
@@ -5994,10 +6018,10 @@
     "weight": "0.1"
   },
   {
-    "id": 3894,
-    "name": "TRS - 100 g Black Pepper Coarse",
-    "sku": "TRS_100_g_Black_Pepper_Coarse",
-    "weight": "0.1"
+    "id": 3892,
+    "name": "TRS - 1 kg Chilli Powder",
+    "sku": "TRS_400_g_Chilli_Powder",
+    "weight": "1.0"
   },
   {
     "id": 3894,
@@ -6163,7 +6187,7 @@
   },
   {
     "id": 3845,
-    "name": "Aachi - 200 g Pepper Powder",
+    "name": "Aachi - 100 g Pepper Powder",
     "sku": "Aachi_200_g_Pepper_Powder",
     "weight": "0.2"
   },
