@@ -104,10 +104,12 @@ class CommonFunctions():
         num_no_match_found = 0
         match_of_stock_cells_count = 0
         weight_updated_products = 0
+
         for i, product_website in enumerate(json_data_dict):
             products_kassen_system_dict = {"id": 0, "weight": "0", "stock_quantity": 0, "regular_price": 0,
                                            "sale_price": None,
-                                           "tax_class": None, }
+                                           "tax_class": None, 'attributes':[{'id': 3, 'name': 'Brand', 'position': 0, 'visible': True, 'variation': False, 'options': None}]
+                                           }
             for j, product_kassen_system in enumerate(kassen_system_data_dict["product_names"]):
                 # check the sort id source and destination are same, if yes update the stock of destination with stock of source
                 if str(product_website['name']).rstrip() == str(product_kassen_system.value).rstrip():
@@ -133,6 +135,11 @@ class CommonFunctions():
                         products_kassen_system_dict['tax_class'] = "Tax 7 Per"
                     else:
                         products_kassen_system_dict['tax_class'] = "Tax 19 Per"
+                    # product brand attribute
+                    result = re.search(r'^([a-zA-Z_\s\-]+[" "])', str(product_website['name']).rstrip())
+                    if result:
+                        products_kassen_system_dict['attributes'][0]['options'] = [result.group(1)[:-3]]
+                        print(result.group(1)[:-3])
 
                     # print(wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json())
                     # wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json()
