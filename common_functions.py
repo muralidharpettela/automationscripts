@@ -4,6 +4,8 @@ import csv
 import sys
 from openpyxl.workbook import Workbook
 import yagmail
+from datetime import datetime, date
+from dateutil.relativedelta import relativedelta
 
 
 class CommonFunctions():
@@ -60,6 +62,21 @@ class CommonFunctions():
         kassen_system_data_dict["tax_class"] = ws1['E'][1:]
 
         return kassen_system_data_dict, mr_s, mc_s
+
+    def load_kassen_system_expiry_excel_file(self, workbook):
+        # wb1 = xl.load_workbook(filename_kassen_system_path)
+        products_expiry_data_dict = {"product_names": list, "stock": list, "expiry_date":list}
+        ws1 = workbook.worksheets[0]
+        # calculate total number of rows and
+        # columns in source excel file
+        mr_s = ws1.max_row
+        mc_s = ws1.max_column
+        # column of sort id source file
+        products_expiry_data_dict["product_names"] = ws1['B'][1:]
+        products_expiry_data_dict["stock"] = ws1['D'][1:]
+        products_expiry_data_dict["expiry_date"] = ws1['E'][1:]
+
+        return products_expiry_data_dict, mr_s, mc_s
 
     def load_json_data_website_products(self):
         # load the json file
@@ -153,6 +170,74 @@ class CommonFunctions():
                     # print(wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json())
                     # wcapi.put("products/" + str(product_website["id"]), products_kassen_system_dict).json()
                     self.products_list.append(products_kassen_system_dict)
+                    match_of_stock_cells_count = match_of_stock_cells_count + 1
+                    break
+
+                if (j == len(kassen_system_data_dict["product_names"]) - 1):
+                    if str(product_website['name']) not in self.no_match_products_list:
+                        self.no_match_products_list.append(product_website['name'])
+                        self.no_match_products_txt.write(product_website['name'])
+                        self.no_match_products_txt.write("\n")
+                        num_no_match_found = num_no_match_found + 1
+        self.no_match_products_txt.close()
+        self.products_without_weight_txt.close()
+        return weight_updated_products, match_of_stock_cells_count, num_no_match_found
+
+    def load_json_data_website_products_mhd(self, json_file_path):
+        # load the json file
+        # Opening JSON file
+        f = open(json_file_path)
+        # returns JSON object as
+        # a dictionary
+        data = json.load(f)
+        return data
+
+    def match_products_and_update_mhd(self, json_data_dict, kassen_system_data_dict):
+        num_no_match_found = 0
+        match_of_stock_cells_count = 0
+        weight_updated_products = 0
+
+        for i, product_website in enumerate(json_data_dict):
+            for j, product_kassen_system in enumerate(kassen_system_data_dict["product_names"]):
+                # check the sort id source and destination are same, if yes update the stock of destination with stock of source
+                if str(product_website['name']).rstrip() == str(product_kassen_system.value).rstrip():
+                    products_kassen_system_dict = {"id": 0, 'attributes': [
+                        {'id': 3, 'name': 'Brand', 'position': 0, 'visible': True, 'variation': False, 'options': None},
+                        {"id": 5, "name": "MHD", "position": 1, "visible": True, "variation": False, "options": None}]}
+                    result = re.search(r'^([a-zA-Z_\s\-]+[" "])', str(product_website['name']).rstrip())
+                    if kassen_system_data_dict['stock'][j].value == 0:
+                        # check for existence of MHD attribute
+                        try:
+                            if product_website['attributes'][1]:
+                                # make to None, or delete MHD attribute
+                                if product_website['attributes'][1]['id'] == 5:
+                                    products_kassen_system_dict['id'] = product_website["id"]
+                                    if result:
+                                        products_kassen_system_dict['attributes'][0]['options'] = [result.group(1)[:-3]]
+                                    self.products_list.append(products_kassen_system_dict)
+                        except IndexError:
+                            print("Sorry, Index of MHD not available")
+                    if kassen_system_data_dict['expiry_date'][j].value:
+                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() <= (date.today() + relativedelta(months=+3)):
+                            products_kassen_system_dict['attributes'][1]["options"] = ["MHD: "+ kassen_system_data_dict['expiry_date'][j].value.date().strftime("%d-%m-%Y")]
+                            products_kassen_system_dict['id'] = product_website["id"]
+                            if result:
+                                products_kassen_system_dict['attributes'][0]['options'] = [result.group(1)[:-3]]
+                            self.products_list.append(products_kassen_system_dict)
+                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() >= (date.today() + relativedelta(months=+3)):
+                            # check for existence of MHD attribute
+                            # check for existence of MHD attribute
+                            try:
+                                if product_website['attributes'][1]:
+                                    # make to None, or delete MHD attribute
+                                    if product_website['attributes'][1]['id'] == 5:
+                                        products_kassen_system_dict['id'] = product_website["id"]
+                                        if result:
+                                            products_kassen_system_dict['attributes'][0]['options'] = [
+                                                result.group(1)[:-3]]
+                                        self.products_list.append(products_kassen_system_dict)
+                            except IndexError:
+                                print("Sorry, Index of MHD not available")
                     match_of_stock_cells_count = match_of_stock_cells_count + 1
                     break
 
