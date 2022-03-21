@@ -37,7 +37,7 @@ class ExpiryProducts(CommonFunctions):
     def download_onedrive_file(self):
         onedrive_direct_link = self.create_onedrive_directdownload()
         r = requests.get(onedrive_direct_link)
-        save_path = os.path.join(product_expiry_list_dir, "../products_expiry_list.xlsx")
+        save_path = os.path.join(product_expiry_list_dir, "products_expiry_list.xlsx")
         with open(save_path, 'wb') as f:
             f.write(r.content)
         return save_path
@@ -191,8 +191,8 @@ class ExpiryProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    kassen_system_excel_file_dir = r"C:\Users\e04ux6p\Downloads\ks_data"
-    product_expiry_list_dir = r"C:\Users\e04ux6p\Downloads\expiry_list_data"
-    onedrive_link = "https://1drv.ms/x/s!Auk2yZWl9__ZguNE2gKSuLVF55_waA?e=a5rfd9"
+    kassen_system_excel_file_dir = r"/Users/muralidharpettela/Downloads/ks_dir"
+    product_expiry_list_dir = r"/Users/muralidharpettela/Downloads/product_expiry"
+    onedrive_link = "https://1drv.ms/x/s!Auk2yZWl9__ZguNEYd6F4pIyaNjaZw"
     expiry_products = ExpiryProducts(kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link)
     expiry_products.process()
