@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/common/wp_credentials_live.json
+/common/wp_credentials_staging.json
