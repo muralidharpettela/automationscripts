@@ -1,13 +1,13 @@
 import openpyxl as xl
 from os import listdir
 from os.path import isfile, join
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 from woocommerce import API
-import base64, requests, json
-from datetime import datetime
+import base64, requests
 import re
 import os
 import timeit
+
 
 class UploadProducts(CommonFunctions):
     def __init__(self, kassen_system_filepath, new_products_excel_filepath, images_path):
@@ -17,21 +17,21 @@ class UploadProducts(CommonFunctions):
         self.workbook = self.csv_to_excel()
         self.kassen_system_dict, row, col = self.load_kassen_system_excel_file(self.workbook)
         self.col_name, self.col_category = self.load_new_products_excel(new_products_excel_filepath)
+        credentials = self.load_wp_credentials("/common/wp_credentials_staging.json")
         self.wcapi = API(
-            url="https://www.staging4.lotus-grocery.eu/",
-            consumer_key="ck_54f1c0d3cbc119670a8bc8cbb2a6835c0da94eda",
-            consumer_secret="cs_e5e28b2e60e685c213b2ed5bcd67a5f83509fea5",
+            url=credentials["url"],
+            consumer_key=credentials["consumer_key"],
+            consumer_secret=credentials["consumer_secret"],
             timeout=1000
         )
         # flags for checking conditions, No image matched and no matching found in KS
         self.match_found_in_ks = False
         self.image_matched = False
         self.all_products_data_list = list()
-        self.no_image_products = open("no_image_products.txt", "w+")
+        self.no_image_products = open("../no_image_products.txt", "w+")
         self.num_no_match_found = 0
         self.match_of_stock_cells_count = 0
         self.num_no_image_match_found = 0
-
 
     def load_new_products_excel(self, new_products_excel_filepath):
         new_products_workbook = xl.load_workbook(new_products_excel_filepath)
@@ -183,10 +183,6 @@ class UploadProducts(CommonFunctions):
             products_dict["categories"][0]["id"] = 106
         elif category == "HI":
             products_dict["categories"][0]["id"] = 107
-        elif category == "VEG":
-            products_dict["categories"][0]["id"] = 132
-        elif category == "AB":
-            products_dict["categories"][0]["id"] = 134
         else:
             products_dict["categories"][0]["id"] = "None"
 
@@ -216,10 +212,10 @@ class UploadProducts(CommonFunctions):
                 if os.path.splitext(filename)[0] == new_product_name.value:
                     filepath = os.path.join(self.images_path, filename)
                     print(filepath)
-                    self.upload_image_append_link(filepath, product_dict)
+                    #self.upload_image_append_link(filepath, product_dict)
                     self.image_matched = True
                     break
-                if (j == len(self.onlyfiles) - 1):
+                if (j == (len(self.onlyfiles)-1)):
                     self.image_matched = False
                     self.no_image_products.write(new_product_name.value)
                     self.no_image_products.write("\n")
@@ -238,7 +234,6 @@ class UploadProducts(CommonFunctions):
                             "stock_quantity": 0,
                             "sale_price": None,
                             "tax_class": None,
-                            "manage_stock": True,
                             "categories": [
                                 {
                                     "id": 0
@@ -265,39 +260,9 @@ class UploadProducts(CommonFunctions):
                 self.all_products_data_list.append(product_dict)
         self.no_match_products_txt.close()
         self.no_image_products.close()
-        MAX_API_BATCH_SIZE = 50
 
-        def chunks(l, n):
-            """Yield successive n-sized chunks from l."""
-            for i in range(0, len(l), n):
-                yield l[i:i + n]
+        #prod = [prod['name'] for prod in self.all_products_data_list]
 
-        try:
-            for batch in chunks(self.all_products_data_list, MAX_API_BATCH_SIZE):
-                print(len(batch))
-                print(self.wcapi.post("products/batch", {"create": batch}).json())
-            subject = '[Staging] lotus-grocery.eu - new products uploaded ' + datetime.now().strftime(
-                "%d/%m/%Y %H:%M:%S")
-            prod = [prod['name'] for prod in self.all_products_data_list]
-            message = "This is an automated mail, receives this mail, when new products are uploaded. " \
-                      "The statistics are as follows:\n\n\n" \
-                      "Total no of Products target to upload:{}\n " \
-                      "Total no of Products uploaded successfully:{}\n" \
-                      "Number of Products Matched their names in KS:{}\n" \
-                      "Number of Products not Matched their names in KS:{}\n" \
-                      "Number of Products images are not matched:{}\n" \
-                      "Time elasped:{} seconds\n"\
-                      "Uploaded products are:{}".format(len(self.col_name), product_uploaded_successfully, self.match_of_stock_cells_count,
-                                                       self.num_no_match_found, self.num_no_image_match_found,
-                                                       timeit.default_timer() - start, "\n".join(prod))
-            content = [message, "./no_match_products.txt", "./no_image_products.txt"]
-            self.send_email(subject, content)
-        except:
-            subject = '[Staging] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
-                "%d/%m/%Y %H:%M:%S")
-            message = "products update not successful. Please re-run the scripts again"
-            content = [message]
-            self.send_email(subject, content)
         print("Total no of Products target to upload:{}".format(len(self.col_name)))
         print("Total no of Products uploaded successfully:{}".format(product_uploaded_successfully))
         print("Number of Products Matched their names in KS:{}".format(self.match_of_stock_cells_count))
@@ -311,8 +276,8 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_07022022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/07022022.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/07022022_images"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_10032022.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/10032022_1.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/10032022"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()

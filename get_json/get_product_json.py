@@ -1,13 +1,25 @@
-
 from woocommerce import API
 from benedict import benedict
 import json
+
+def load_wp_credentials(json_file_path):
+    # load the json file
+    # Opening JSON file
+    f = open(json_file_path)
+    # returns JSON object as
+    # a dictionary
+    data = json.load(f)
+    return data
+
+
+credentials = load_wp_credentials("/common/wp_credentials_live.json")
 wcapi = API(
-    url="https://www.lotus-grocery.eu/",
-    consumer_key="ck_a1a83db1a7931bc4c965bf0e3d281ac63bea7264",
-    consumer_secret="cs_3fd453e8a22d1d3da2a1376c1d8906130f6de1e4",
+    url=credentials["url"],
+    consumer_key=credentials["consumer_key"],
+    consumer_secret=credentials["consumer_secret"],
     timeout=1000
 )
+
 
 page = 1
 products = []
@@ -23,7 +35,7 @@ for product_list_100 in products:
         dict_you_want = benedict(each_product).subset(keys=['id', 'name', 'sku', "weight"])
         all_products.append(dict_you_want)
 json_string = json.dumps(all_products)
-with open("products.json", "w") as jsonfile:
+with open("../products.json", "w") as jsonfile:
     jsonfile.write(json_string)
 jsonfile.close()
 

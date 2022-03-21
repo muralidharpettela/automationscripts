@@ -1,8 +1,7 @@
 import win32com.client
 import pythoncom
-import re
 import os
-from update_products_data_staging import StagingUpdateProducts
+from update_stock.update_products_data_live import LiveUpdateProducts
 
 
 class Handler_Class(object):
@@ -20,8 +19,8 @@ class Handler_Class(object):
                     for attachment in mail.Attachments:
                         saved_file_location = os.path.join(outputDir, attachment.FileName)
                         attachment.SaveAsFile(saved_file_location)
-                        staging_products_update = StagingUpdateProducts(saved_file_location)
-                        staging_products_update.process()
+                        live_products_update = LiveUpdateProducts(saved_file_location)
+                        live_products_update.process()
                         print(f"attachment saved")
                 except Exception as e:
                     print("Error when saving the attachment:" + str(e))

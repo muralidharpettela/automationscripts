@@ -1,4 +1,4 @@
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 import timeit
 from woocommerce import API
 from datetime import datetime
@@ -7,10 +7,11 @@ from datetime import datetime
 class StagingUpdateProducts(CommonFunctions):
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
+        credentials = self.load_wp_credentials("common/wp_credentials_staging.json")
         self.wcapi = API(
-            url="https://www.staging4.lotus-grocery.eu/",
-            consumer_key="ck_54f1c0d3cbc119670a8bc8cbb2a6835c0da94eda",
-            consumer_secret="cs_e5e28b2e60e685c213b2ed5bcd67a5f83509fea5",
+            url=credentials["url"],
+            consumer_key=credentials["consumer_key"],
+            consumer_secret=credentials["consumer_secret"],
             timeout=1000
         )
 

@@ -1,16 +1,18 @@
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 import timeit
 from woocommerce import API
 from datetime import datetime
 import openpyxl as xl
 
-class StagingUpdateProducts(CommonFunctions):
+
+class LiveUpdateProductsMHD(CommonFunctions):
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
+        credentials = self.load_wp_credentials("/common/wp_credentials_live.json")
         self.wcapi = API(
-            url="https://www.lotus-grocery.eu/",
-            consumer_key="ck_a1a83db1a7931bc4c965bf0e3d281ac63bea7264",
-            consumer_secret="cs_3fd453e8a22d1d3da2a1376c1d8906130f6de1e4",
+            url=credentials["url"],
+            consumer_key=credentials["consumer_key"],
+            consumer_secret=credentials["consumer_secret"],
             timeout=1000
         )
 
@@ -61,5 +63,5 @@ class StagingUpdateProducts(CommonFunctions):
 
 if __name__ == "__main__":
     filepath_kassen_system = r"C:\Users\e04ux6p\Downloads\products_expiry_list.xlsx"
-    staging_products_update = StagingUpdateProducts(filepath_kassen_system)
-    staging_products_update.process()
+    live_products_update = LiveUpdateProductsMHD(filepath_kassen_system)
+    live_products_update.process()

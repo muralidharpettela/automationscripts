@@ -1,4 +1,4 @@
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 import timeit
 
 

@@ -3,10 +3,10 @@ import base64
 import glob
 import os
 import requests
-from datetime import datetime, date
+from datetime import datetime
 from datetime import date
 from dateutil.relativedelta import relativedelta
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 
 
 class ExpiryProducts(CommonFunctions):
@@ -37,7 +37,7 @@ class ExpiryProducts(CommonFunctions):
     def download_onedrive_file(self):
         onedrive_direct_link = self.create_onedrive_directdownload()
         r = requests.get(onedrive_direct_link)
-        save_path = os.path.join(product_expiry_list_dir, "products_expiry_list.xlsx")
+        save_path = os.path.join(product_expiry_list_dir, "../products_expiry_list.xlsx")
         with open(save_path, 'wb') as f:
             f.write(r.content)
         return save_path
@@ -55,7 +55,7 @@ class ExpiryProducts(CommonFunctions):
         num_no_match_found = 0
 
         no_match_products_list = list()
-        no_match_products_txt = open("no_match_products.txt", "w+")
+        no_match_products_txt = open("../no_match_products.txt", "w+")
         for i, product_name_expiry_list in enumerate(product_expiry_dict['product_names']):
             for j, product_kassen_system in enumerate(kassen_system_data_dict['product_names']):
                 # check the sort id source and destination are same, if yes update the stock of destination with stock of source

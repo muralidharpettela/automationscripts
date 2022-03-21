@@ -15,8 +15,17 @@ class CommonFunctions():
 
         self.products_list = list()
         self.no_match_products_list = list()
-        self.no_match_products_txt = open("no_match_products.txt", "w+")
-        self.products_without_weight_txt = open("products_without_weight.txt", "w+")
+        self.no_match_products_txt = open("../no_match_products.txt", "w+")
+        self.products_without_weight_txt = open("../products_without_weight.txt", "w+")
+
+    def load_wp_credentials(self, json_file_path):
+        # load the json file
+        # Opening JSON file
+        f = open(json_file_path)
+        # returns JSON object as
+        # a dictionary
+        data = json.load(f)
+        return data
 
     def csv_to_excel(self):
         if not ".csv" in self.filepath_kassen_system:
@@ -219,7 +228,7 @@ class CommonFunctions():
                             print("Sorry, Index of MHD not available")
                     if kassen_system_data_dict['expiry_date'][j].value:
                         if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() <= (date.today() + relativedelta(months=+3)):
-                            products_kassen_system_dict['attributes'][1]["options"] = ["MHD: "+ kassen_system_data_dict['expiry_date'][j].value.date().strftime("%d-%m-%Y")]
+                            products_kassen_system_dict['attributes'][1]["options"] = ["MHD: " + kassen_system_data_dict['expiry_date'][j].value.date().strftime("%d-%m-%Y")]
                             products_kassen_system_dict['id'] = product_website["id"]
                             if result:
                                 products_kassen_system_dict['attributes'][0]['options'] = [result.group(1)[:-3]]

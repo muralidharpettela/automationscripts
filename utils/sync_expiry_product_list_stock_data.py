@@ -77,7 +77,7 @@ num_no_match_found = 0
 num_of_sale_price_updates = 0
 
 no_match_products_list = list()
-no_match_products_txt = open("no_match_products.txt", "w+")
+no_match_products_txt = open("../no_match_products.txt", "w+")
 for i, product_website in enumerate(product_names_website):
     for j, product_kassen_system in enumerate(product_names_kassen_system):
         # check the sort id source and destination are same, if yes update the stock of destination with stock of source

@@ -1,9 +1,9 @@
 import openpyxl as xl
 from os import listdir
 from os.path import isfile, join
-from common_functions import CommonFunctions
+from common.common_functions import CommonFunctions
 from woocommerce import API
-import base64, requests, json
+import base64, requests
 from datetime import datetime
 import re
 import os
@@ -17,17 +17,18 @@ class UploadProducts(CommonFunctions):
         self.workbook = self.csv_to_excel()
         self.kassen_system_dict, row, col = self.load_kassen_system_excel_file(self.workbook)
         self.col_name, self.col_category = self.load_new_products_excel(new_products_excel_filepath)
+        credentials = self.load_wp_credentials("/common/wp_credentials_live.json")
         self.wcapi = API(
-            url="https://www.lotus-grocery.eu/",
-            consumer_key="ck_a1a83db1a7931bc4c965bf0e3d281ac63bea7264",
-            consumer_secret="cs_3fd453e8a22d1d3da2a1376c1d8906130f6de1e4",
+            url=credentials["url"],
+            consumer_key=credentials["consumer_key"],
+            consumer_secret=credentials["consumer_secret"],
             timeout=1000
         )
         # flags for checking conditions, No image matched and no matching found in KS
         self.match_found_in_ks = False
         self.image_matched = False
         self.all_products_data_list = list()
-        self.no_image_products = open("no_image_products.txt", "w+")
+        self.no_image_products = open("../no_image_products.txt", "w+")
         self.num_no_match_found = 0
         self.match_of_stock_cells_count = 0
         self.num_no_image_match_found = 0
