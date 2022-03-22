@@ -12,7 +12,7 @@ def load_wp_credentials(json_file_path):
     return data
 
 
-credentials = load_wp_credentials("/common/wp_credentials_live.json")
+credentials = load_wp_credentials("../common/wp_credentials_live.json")
 wcapi = API(
     url=credentials["url"],
     consumer_key=credentials["consumer_key"],
@@ -35,7 +35,7 @@ for product_list_100 in products:
         dict_you_want = benedict(each_product).subset(keys=['id', 'name', 'sku', "weight"])
         all_products.append(dict_you_want)
 json_string = json.dumps(all_products)
-with open("../products.json", "w") as jsonfile:
+with open("products.json", "w") as jsonfile:
     jsonfile.write(json_string)
 jsonfile.close()
 

@@ -3,7 +3,7 @@ import timeit
 
 
 class CheckForMatchingProducts(CommonFunctions):
-    def __init__(self, filepath_kassen_system, json_file_path="products.json"):
+    def __init__(self, filepath_kassen_system, json_file_path="../update_stock/products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
 
     def process(self):
@@ -23,7 +23,7 @@ class CheckForMatchingProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09032022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22032022.csv"
     live_products_update = CheckForMatchingProducts(filepath_kassen_system)
     live_products_update.process()
 
