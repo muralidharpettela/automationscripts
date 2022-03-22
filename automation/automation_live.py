@@ -21,7 +21,7 @@ class Handler_Class(object):
                         saved_file_location = os.path.join(outputDir, attachment.FileName)
                         attachment.SaveAsFile(saved_file_location)
                         file_path = Path.cwd()
-                        products_json_path = os.path.join(file_path, "../update_stock/products.json")
+                        products_json_path = os.path.join(file_path, "update_stock/products.json")
                         live_products_update = LiveUpdateProducts(saved_file_location, products_json_path)
                         live_products_update.process()
                         print(f"attachment saved")
