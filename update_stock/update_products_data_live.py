@@ -7,7 +7,7 @@ from datetime import datetime
 class LiveUpdateProducts(CommonFunctions):
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
-        credentials = self.load_wp_credentials("/common/wp_credentials_live.json")
+        credentials = self.load_wp_credentials("../common/wp_credentials_live.json")
         self.wcapi = API(
             url=credentials["url"],
             consumer_key=credentials["consumer_key"],
@@ -41,7 +41,7 @@ class LiveUpdateProducts(CommonFunctions):
                       "Number of Products Weights updated:{}\n" \
                       "Time elasped:{} seconds".format(mr_s, len(json_data), match_of_stock_cells_count,
                                                        num_no_match_found, weight_updated_products, timeit.default_timer() - start)
-            content = [message, "./no_match_products.txt", "./products_without_weight.txt"]
+            content = [message, "../no_match_products.txt", "../products_without_weight.txt"]
             self.send_email(subject, content)
         except:
             subject = '[Live] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(

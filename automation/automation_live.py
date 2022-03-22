@@ -19,7 +19,7 @@ class Handler_Class(object):
                     for attachment in mail.Attachments:
                         saved_file_location = os.path.join(outputDir, attachment.FileName)
                         attachment.SaveAsFile(saved_file_location)
-                        live_products_update = LiveUpdateProducts(saved_file_location)
+                        live_products_update = LiveUpdateProducts(saved_file_location, "../update_stock/products.json")
                         live_products_update.process()
                         print(f"attachment saved")
                 except Exception as e:
