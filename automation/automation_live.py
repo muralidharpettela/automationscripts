@@ -1,6 +1,7 @@
 import win32com.client
 import pythoncom
 import os
+from pathlib import Path
 from update_stock.update_products_data_live import LiveUpdateProducts
 
 
@@ -19,7 +20,9 @@ class Handler_Class(object):
                     for attachment in mail.Attachments:
                         saved_file_location = os.path.join(outputDir, attachment.FileName)
                         attachment.SaveAsFile(saved_file_location)
-                        live_products_update = LiveUpdateProducts(saved_file_location, "../update_stock/products.json")
+                        file_path = Path.cwd()
+                        products_json_path = os.path.join(file_path, "../update_stock/products.json")
+                        live_products_update = LiveUpdateProducts(saved_file_location, products_json_path)
                         live_products_update.process()
                         print(f"attachment saved")
                 except Exception as e:
