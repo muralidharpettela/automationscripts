@@ -4,12 +4,12 @@ import sys
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-filename_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_04032022_1.csv"
+filename_kassen_system = r"/Users/muralidharpettela/Downloads/ks_dir/BK_Artikeldaten_25032022.csv"
 #wb1 = xl.load_workbook(filename_kassen_system)
 #ws1 = wb1.worksheets[0]
 
 # opening the destination excel file
-filename_website = r"/Users/muralidharpettela/Downloads/products_expiry_list.xlsx"
+filename_website = r"/Users/muralidharpettela/Downloads/product_expiry/products_expiry_list.xlsx"
 wb2 = xl.load_workbook(filename_website)
 ws2 = wb2.worksheets[0]
 

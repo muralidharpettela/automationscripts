@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 class LiveUpdateProducts(CommonFunctions):
-    def __init__(self, filepath_kassen_system, json_file_path="products.json"):
+    def __init__(self, filepath_kassen_system, json_file_path="update_stock/products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
         self.file_path = Path.cwd()
         credentials_file_path = os.path.join(self.file_path, "common/wp_credentials_live.json")
@@ -65,7 +65,7 @@ class LiveUpdateProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22032022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_23032022_1.csv"
     live_products_update = LiveUpdateProducts(filepath_kassen_system)
     live_products_update.process()
 

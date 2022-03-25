@@ -1,5 +1,23 @@
 [
   {
+    "id": 9487,
+    "name": "3 Roses - 250 g Tea Powder",
+    "sku": "3_Roses_250_g_Tea_Powder",
+    "weight": "0.25"
+  },
+  {
+    "id": 9485,
+    "name": "Pillsburry - 5 kg Multigrain Atta",
+    "sku": "Pillsburry_5_kg_Multigrain_Atta",
+    "weight": "5.0"
+  },
+  {
+    "id": 9483,
+    "name": "India Gate - 1 kg Classic Basmati Rice",
+    "sku": "India_Gate_1_kg_Classic_Basmati_Rice",
+    "weight": "1.0"
+  },
+  {
     "id": 9445,
     "name": "Rubicon - 288 ml Lychee Juice",
     "sku": "Rubicon_288_ml_Lychee_Juice",
@@ -255,7 +273,7 @@
     "id": 9326,
     "name": "Shan - 200 g Custard Powder (Strawberry)",
     "sku": "Shan_300_g_Custard_Powder_(Strawberry)",
-    "weight": "0.3"
+    "weight": "0.2"
   },
   {
     "id": 9324,
@@ -870,16 +888,16 @@
     "weight": "1.0"
   },
   {
-    "id": 8882,
-    "name": "Lijjat - 200 g Papad (Jeera)",
-    "sku": "Lijjat_200_g_Papad_(Jeera)",
-    "weight": "0.2"
-  },
-  {
     "id": 8884,
     "name": "Vanadevi - 100 g Asafteioda",
     "sku": "Vanadevi_100_g_Asafteioda",
     "weight": "0.1"
+  },
+  {
+    "id": 8882,
+    "name": "Lijjat - 200 g Papad (Jeera)",
+    "sku": "Lijjat_200_g_Papad_(Jeera)",
+    "weight": "0.2"
   },
   {
     "id": 8880,
@@ -888,15 +906,15 @@
     "weight": "0.1"
   },
   {
-    "id": 8876,
-    "name": "Pitambari - 100 g Shining Powder",
-    "sku": "Pitambari_100_g_Shining_Powder",
-    "weight": "0.1"
-  },
-  {
     "id": 8878,
     "name": "Telugu - 100 g Garam Masala",
     "sku": "Telugu_100_g_Garam_Masala",
+    "weight": "0.1"
+  },
+  {
+    "id": 8876,
+    "name": "Pitambari - 100 g Shining Powder",
+    "sku": "Pitambari_100_g_Shining_Powder",
     "weight": "0.1"
   },
   {
@@ -936,22 +954,22 @@
     "weight": "0.5"
   },
   {
-    "id": 8860,
-    "name": "Dabur - 100 g Neem Tooth Paste",
-    "sku": "Dabur_100_g_Neem_Tooth_Paste",
-    "weight": "0.1"
-  },
-  {
     "id": 8858,
     "name": "Heera - 40 g Camphor",
     "sku": "Heera_40_g_Camphor",
     "weight": "0.04"
   },
   {
+    "id": 8860,
+    "name": "Dabur - 100 g Neem Tooth Paste",
+    "sku": "Dabur_100_g_Neem_Tooth_Paste",
+    "weight": "0.1"
+  },
+  {
     "id": 8856,
     "name": "Shan - 200 g Custard Powder (Vanilla)",
     "sku": "Shan_300_g_Custard_Powder_(Vanilla)",
-    "weight": "0.3"
+    "weight": "0.2"
   },
   {
     "id": 8854,
@@ -987,7 +1005,7 @@
     "id": 8844,
     "name": "Shan - 200 g Custard Powder (Mango)",
     "sku": "Shan_300_g_Custard_Powder_(Mango)",
-    "weight": "0.3"
+    "weight": "0.2"
   },
   {
     "id": 8842,
@@ -1029,7 +1047,7 @@
     "id": 8830,
     "name": "Shan - 200 g Custard Powder (Banana)",
     "sku": "Shan_300_g_Custard_Powder_(Banana)",
-    "weight": "0.3"
+    "weight": "0.2"
   },
   {
     "id": 8828,
@@ -1140,6 +1158,12 @@
     "weight": "0.5"
   },
   {
+    "id": 8598,
+    "name": "500 g - Gauva",
+    "sku": "500_g_Gauva",
+    "weight": "0.5"
+  },
+  {
     "id": 8599,
     "name": "500 g - Karela (Bitter Gourd)",
     "sku": "500_g_Karela_(Bitter_Gourd)",
@@ -1152,15 +1176,21 @@
     "weight": "0.5"
   },
   {
-    "id": 8598,
-    "name": "500 g - Gauva",
-    "sku": "500_g_Gauva",
-    "weight": "0.5"
-  },
-  {
     "id": 8597,
     "name": "500 g - Chikkoo (Sapota)",
     "sku": "500_g_Chikkoo_(Sapota)",
+    "weight": "0.5"
+  },
+  {
+    "id": 8594,
+    "name": "250 g - Small Red Onions",
+    "sku": "250_g_Small_Red_Onions",
+    "weight": "0.25"
+  },
+  {
+    "id": 8596,
+    "name": "500 g - Chayote",
+    "sku": "500_g_Chayote",
     "weight": "0.5"
   },
   {
@@ -1170,22 +1200,10 @@
     "weight": "0.25"
   },
   {
-    "id": 8594,
-    "name": "250 g - Small Red Onions",
-    "sku": "250_g_Small_Red_Onions",
-    "weight": "0.25"
-  },
-  {
     "id": 8595,
     "name": "250 g - Tindoora",
     "sku": "250_g_Tindoora",
     "weight": "0.25"
-  },
-  {
-    "id": 8596,
-    "name": "500 g - Chayote",
-    "sku": "500_g_Chayote",
-    "weight": "0.5"
   },
   {
     "id": 8591,
@@ -1206,6 +1224,18 @@
     "weight": "0.25"
   },
   {
+    "id": 8586,
+    "name": "250 g - Ginger",
+    "sku": "250_g_Ginger",
+    "weight": "0.25"
+  },
+  {
+    "id": 8587,
+    "name": "250 g - Green Brinjal",
+    "sku": "250_g_Green_Brinjal",
+    "weight": "0.25"
+  },
+  {
     "id": 8588,
     "name": "250 g - Green Chillies",
     "sku": "250_g_Green_Chillies",
@@ -1218,15 +1248,9 @@
     "weight": "0.25"
   },
   {
-    "id": 8586,
-    "name": "250 g - Ginger",
-    "sku": "250_g_Ginger",
-    "weight": "0.25"
-  },
-  {
-    "id": 8587,
-    "name": "250 g - Green Brinjal",
-    "sku": "250_g_Green_Brinjal",
+    "id": 8585,
+    "name": "250 g - Garlic",
+    "sku": "250_g_Garlic",
     "weight": "0.25"
   },
   {
@@ -1242,12 +1266,6 @@
     "weight": "0.25"
   },
   {
-    "id": 8585,
-    "name": "250 g - Garlic",
-    "sku": "250_g_Garlic",
-    "weight": "0.25"
-  },
-  {
     "id": 8579,
     "name": "1 kg - Suran (Elephant Yam)",
     "sku": "1_kg_Suran_(Elephant_Yam)",
@@ -1260,15 +1278,15 @@
     "weight": "0.02"
   },
   {
-    "id": 8582,
-    "name": "250 g - Arbi (Tara Root)",
-    "sku": "250_g_Arbi_(Tara_Root)",
-    "weight": "0.25"
-  },
-  {
     "id": 8581,
     "name": "250 g - Amla",
     "sku": "250_g_Amla",
+    "weight": "0.25"
+  },
+  {
+    "id": 8582,
+    "name": "250 g - Arbi (Tara Root)",
+    "sku": "250_g_Arbi_(Tara_Root)",
     "weight": "0.25"
   },
   {
@@ -1278,28 +1296,16 @@
     "weight": "1.2"
   },
   {
-    "id": 8577,
-    "name": "1 - Piece Pooja Coconut",
-    "sku": "1_Piece_Pooja_Coconut",
-    "weight": "0"
-  },
-  {
     "id": 8578,
     "name": "1 kg - Raw Banana",
     "sku": "1_kg_Raw_Banana",
     "weight": "1.0"
   },
   {
-    "id": 8572,
-    "name": "1 - Piece Coconut",
-    "sku": "1_Piece_Coconut",
+    "id": 8577,
+    "name": "1 - Piece Pooja Coconut",
+    "sku": "1_Piece_Pooja_Coconut",
     "weight": "0"
-  },
-  {
-    "id": 8574,
-    "name": "1 - Piece Kola (Ash Gourd) (Approx. 1200 g)",
-    "sku": "1_Piece_Kola_(Approx._1200_g)",
-    "weight": "1.2"
   },
   {
     "id": 8573,
@@ -1308,10 +1314,22 @@
     "weight": "0"
   },
   {
+    "id": 8572,
+    "name": "1 - Piece Coconut",
+    "sku": "1_Piece_Coconut",
+    "weight": "0"
+  },
+  {
     "id": 8575,
     "name": "1 - Piece Lauki (Bottle Gourd) (Approx. 500 - 600 g)",
     "sku": "1_Piece_Lauki_(Approx._800_g)",
     "weight": "0.6"
+  },
+  {
+    "id": 8574,
+    "name": "1 - Piece Kola (Ash Gourd) (Approx. 1200 g)",
+    "sku": "1_Piece_Kola_(Approx._1200_g)",
+    "weight": "1.2"
   },
   {
     "id": 8569,
@@ -1338,6 +1356,12 @@
     "weight": "0"
   },
   {
+    "id": 8519,
+    "name": "Topop - 500 ml Alovera Juice",
+    "sku": "Topop_500_ml_Alovera_Juice",
+    "weight": "0.5"
+  },
+  {
     "id": 8518,
     "name": "Topop - 100 g Phatkery Alum",
     "sku": "Topop_100_g_Phatkery_Alum",
@@ -1350,22 +1374,10 @@
     "weight": "0.2"
   },
   {
-    "id": 8519,
-    "name": "Topop - 500 ml Alovera Juice",
-    "sku": "Topop_500_ml_Alovera_Juice",
-    "weight": "0.5"
-  },
-  {
     "id": 8513,
     "name": "Rasna - 500 g Instant Orange",
     "sku": "Rasna_500_g_Instant_Orange",
     "weight": "0.5"
-  },
-  {
-    "id": 8515,
-    "name": "Samahan - 1 Tea Pouch",
-    "sku": "Samahan_1_St\u00fcck_Tea_Pouch",
-    "weight": "0"
   },
   {
     "id": 8514,
@@ -1374,16 +1386,22 @@
     "weight": "0.1"
   },
   {
+    "id": 8517,
+    "name": "Telugu - 300 g Mango Thokku  Avakaya Pickle",
+    "sku": "Telugu_300_g_Mango_Thokku_Avakaya_Pickle",
+    "weight": "0.3"
+  },
+  {
     "id": 8516,
     "name": "Shan - 50 g Chicken Biryani Masala",
     "sku": "Shan_50_g_Chicken_Biryani_Masala",
     "weight": "0.05"
   },
   {
-    "id": 8517,
-    "name": "Telugu - 300 g Mango Thokku  Avakaya Pickle",
-    "sku": "Telugu_300_g_Mango_Thokku_Avakaya_Pickle",
-    "weight": "0.3"
+    "id": 8515,
+    "name": "Samahan - 1 Tea Pouch",
+    "sku": "Samahan_1_St\u00fcck_Tea_Pouch",
+    "weight": "0"
   },
   {
     "id": 8512,
@@ -1410,6 +1428,12 @@
     "weight": "0.25"
   },
   {
+    "id": 8510,
+    "name": "Priya - 300 g Ginger and Garlic Paste",
+    "sku": "Priya_300_g_Ginger_and_Garlic_Paste",
+    "weight": "0.3"
+  },
+  {
     "id": 8509,
     "name": "Patanjali - 100 g Body Ubtan",
     "sku": "Patanjali_100_g_Body_Ubtan",
@@ -1419,12 +1443,6 @@
     "id": 8511,
     "name": "Priya - 300 g Mango Thokku",
     "sku": "Priya_300_g_Mango_Thokku",
-    "weight": "0.3"
-  },
-  {
-    "id": 8510,
-    "name": "Priya - 300 g Ginger and Garlic Paste",
-    "sku": "Priya_300_g_Ginger_and_Garlic_Paste",
     "weight": "0.3"
   },
   {
@@ -1440,6 +1458,12 @@
     "weight": "0.08"
   },
   {
+    "id": 8503,
+    "name": "National - 80 g Jelly Pineapple",
+    "sku": "National_80_g_Jelly_Pineapple",
+    "weight": "0.08"
+  },
+  {
     "id": 8505,
     "name": "Nutramla - 100 g Amla Candy",
     "sku": "Nutramla_100_g_Amla_Candy",
@@ -1449,12 +1473,6 @@
     "id": 8504,
     "name": "National - 80 g Jelly Strawberry",
     "sku": "National_80_g_Jelly_Strawberry",
-    "weight": "0.08"
-  },
-  {
-    "id": 8503,
-    "name": "National - 80 g Jelly Pineapple",
-    "sku": "National_80_g_Jelly_Pineapple",
     "weight": "0.08"
   },
   {
@@ -1494,16 +1512,16 @@
     "weight": "0.2"
   },
   {
-    "id": 8495,
-    "name": "Idayam - 1 l Gingely Oil",
-    "sku": "Idayam_1_l_Gingely_Oil",
-    "weight": "1.0"
-  },
-  {
     "id": 8496,
     "name": "K-Pra - 100 g Garlic Chutney",
     "sku": "K-Pra_100_g_Garlic_Chutney",
     "weight": "0.1"
+  },
+  {
+    "id": 8495,
+    "name": "Idayam - 1 l Gingely Oil",
+    "sku": "Idayam_1_l_Gingely_Oil",
+    "weight": "1.0"
   },
   {
     "id": 8490,
@@ -1512,15 +1530,27 @@
     "weight": "0.1"
   },
   {
+    "id": 8492,
+    "name": "Haldiram - 200 g All in One",
+    "sku": "Haldiram_200_g_All_in_One",
+    "weight": "0.2"
+  },
+  {
     "id": 8491,
     "name": "Ganesh Bhel - 250 g Family Bhel Mix",
     "sku": "Ganesh_Bhel_250_g_Family_Bhel_Mix",
     "weight": "0.25"
   },
   {
-    "id": 8492,
-    "name": "Haldiram - 200 g All in One",
-    "sku": "Haldiram_200_g_All_in_One",
+    "id": 8488,
+    "name": "Dabur - 300 ml Amla Hair Oil",
+    "sku": "Dabur_300_ml_Amla_Hair_Oil",
+    "weight": "0.3"
+  },
+  {
+    "id": 8487,
+    "name": "Chings - 200 g Stir Fry Schezwan Sauce",
+    "sku": "Chings_200_g_Stir_Fry_Schezwan_Sauce",
     "weight": "0.2"
   },
   {
@@ -1534,18 +1564,6 @@
     "name": "Everest - 100 g Cumin Powder",
     "sku": "Everest_100_g_Cumin_Powder",
     "weight": "0.1"
-  },
-  {
-    "id": 8488,
-    "name": "Dabur - 300 ml Amla Hair Oil",
-    "sku": "Dabur_300_ml_Amla_Hair_Oil",
-    "weight": "0.3"
-  },
-  {
-    "id": 8487,
-    "name": "Chings - 200 g Stir Fry Schezwan Sauce",
-    "sku": "Chings_200_g_Stir_Fry_Schezwan_Sauce",
-    "weight": "0.2"
   },
   {
     "id": 8483,
@@ -1626,15 +1644,15 @@
     "weight": "0.5"
   },
   {
-    "id": 8377,
-    "name": "Priya - 300 g Mango Avakayi Pickle",
-    "sku": "Priya_300_g_Mango_Avakayi_Pickle",
-    "weight": "0.3"
-  },
-  {
     "id": 8376,
     "name": "Priya - 300 g Gongura Pickle",
     "sku": "Priya_300_g_Gongura_Pickle",
+    "weight": "0.3"
+  },
+  {
+    "id": 8377,
+    "name": "Priya - 300 g Mango Avakayi Pickle",
+    "sku": "Priya_300_g_Mango_Avakayi_Pickle",
     "weight": "0.3"
   },
   {
@@ -1650,16 +1668,16 @@
     "weight": "0"
   },
   {
-    "id": 8373,
-    "name": "MTR - 300 g Bhindi Masala",
-    "sku": "MTR_300_g_Bhindi_Masala",
-    "weight": "0.3"
-  },
-  {
     "id": 8372,
     "name": "MTR - 100 g Bisebele Bath Powder",
     "sku": "MTR_100_g_Bisebele_Bath_Powder",
     "weight": "0.1"
+  },
+  {
+    "id": 8373,
+    "name": "MTR - 300 g Bhindi Masala",
+    "sku": "MTR_300_g_Bhindi_Masala",
+    "weight": "0.3"
   },
   {
     "id": 8371,
@@ -1818,15 +1836,21 @@
     "weight": "0"
   },
   {
+    "id": 7934,
+    "name": "Pooja Bell - 1 Piece",
+    "sku": "Pooja_Bell_1_Piece",
+    "weight": "0"
+  },
+  {
     "id": 7935,
     "name": "Prakash - 25 g Kolhapuri Misal Rassa Masala",
     "sku": "Prakash_25_g_Kolhapuri_Misal_Rassa_Masala",
     "weight": "0.025"
   },
   {
-    "id": 7934,
-    "name": "Pooja Bell - 1 Piece",
-    "sku": "Pooja_Bell_1_Piece",
+    "id": 7933,
+    "name": "Pooja - Thali Decorated (Medium)",
+    "sku": "Pooja_Thali_Decorated_(Medium)",
     "weight": "0"
   },
   {
@@ -1852,12 +1876,6 @@
     "name": "Patanjali - 200 ml Shampoo (Reetha)",
     "sku": "Patanjali_200_ml_Shampoo_(Reetha)",
     "weight": "0.2"
-  },
-  {
-    "id": 7933,
-    "name": "Pooja - Thali Decorated (Medium)",
-    "sku": "Pooja_Thali_Decorated_(Medium)",
-    "weight": "0"
   },
   {
     "id": 7925,
@@ -3018,6 +3036,12 @@
     "weight": "0.015"
   },
   {
+    "id": 5361,
+    "name": "Satya - 15 g Jasmin Insence Sticks",
+    "sku": "Satya_15_g_Jasmin_Insence_Sticks",
+    "weight": "0.015"
+  },
+  {
     "id": 5362,
     "name": "Nagchampa - 15 g Insence Sticks",
     "sku": "Nagchampa_15_g_Insence_Sticks",
@@ -3027,12 +3051,6 @@
     "id": 5363,
     "name": "Balaji - 15 g Chandan Insence Sticks",
     "sku": "Balaji_15_g_Chandan_Insence_Sticks",
-    "weight": "0.015"
-  },
-  {
-    "id": 5361,
-    "name": "Satya - 15 g Jasmin Insence Sticks",
-    "sku": "Satya_15_g_Jasmin_Insence_Sticks",
     "weight": "0.015"
   },
   {
@@ -3331,7 +3349,7 @@
   },
   {
     "id": 5300,
-    "name": "Haldiram - 240 g Pani Puri Mix",
+    "name": "Haldiram - 360 g Pani Puri Mix",
     "sku": "Haldiram_240_g_Pani_Puri_Mix",
     "weight": "0.24"
   },
@@ -5394,10 +5412,10 @@
     "weight": "0.1"
   },
   {
-    "id": 4115,
-    "name": "Aachi - 1 kg Cumin Seeds",
-    "sku": "Aachi_1_kg_Cumin_Seeds",
-    "weight": "1.0"
+    "id": 4113,
+    "name": "TRS - 400 g Tandoori Masala",
+    "sku": "TRS_400_g_Tandoori_Masala",
+    "weight": "0.4"
   },
   {
     "id": 4115,

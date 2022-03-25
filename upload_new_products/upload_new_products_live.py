@@ -17,7 +17,7 @@ class UploadProducts(CommonFunctions):
         self.workbook = self.csv_to_excel()
         self.kassen_system_dict, row, col = self.load_kassen_system_excel_file(self.workbook)
         self.col_name, self.col_category = self.load_new_products_excel(new_products_excel_filepath)
-        credentials = self.load_wp_credentials("/common/wp_credentials_live.json")
+        credentials = self.load_wp_credentials("./common/wp_credentials_live.json")
         self.wcapi = API(
             url=credentials["url"],
             consumer_key=credentials["consumer_key"],
@@ -311,8 +311,8 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_10032022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/10032022_1.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/10032022"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_25032022.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/25032022.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/img25032022"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()

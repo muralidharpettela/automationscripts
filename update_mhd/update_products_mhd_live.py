@@ -8,7 +8,7 @@ import openpyxl as xl
 class LiveUpdateProductsMHD(CommonFunctions):
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         super().__init__(filepath_kassen_system, json_file_path)
-        credentials = self.load_wp_credentials("/common/wp_credentials_live.json")
+        credentials = self.load_wp_credentials("./common/wp_credentials_live.json")
         self.wcapi = API(
             url=credentials["url"],
             consumer_key=credentials["consumer_key"],
@@ -21,9 +21,9 @@ class LiveUpdateProductsMHD(CommonFunctions):
         #workbook = self.csv_to_excel()
         workbook = xl.load_workbook(self.filepath_kassen_system)
         kassen_system_data_dict, mr_s, mc_s = self.load_kassen_system_expiry_excel_file(workbook)
-        json_data = self.load_json_data_website_products_mhd("products_mhd.json")
+        json_data = self.load_json_data_website_products_mhd("./update_mhd/products_mhd.json")
         weight_updated_products, match_of_stock_cells_count, num_no_match_found = self.match_products_and_update_mhd(json_data, kassen_system_data_dict)
-        MAX_API_BATCH_SIZE = 100
+        MAX_API_BATCH_SIZE = 50
         def chunks(l, n):
             """Yield successive n-sized chunks from l."""
             for i in range(0, len(l), n):
@@ -34,7 +34,7 @@ class LiveUpdateProductsMHD(CommonFunctions):
                 print(self.wcapi.put("products/batch", {"update": batch}).json())
             subject = '[Staging] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
-            message = "This is an automated mail, receives this mail once the stock updates successfully. " \
+            message = "This is an automated mail, receives this mail once the MHD updated " \
                       "The statistics are as follows:\n\n\n" \
                       "Total no of Rows/Products in Source file from Shop File:{}\n " \
                       "Total no of Rows/Products in Destination file in Website:{}\n" \
@@ -62,6 +62,6 @@ class LiveUpdateProductsMHD(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"C:\Users\e04ux6p\Downloads\products_expiry_list.xlsx"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/product_expiry/products_expiry_list.xlsx"
     live_products_update = LiveUpdateProductsMHD(filepath_kassen_system)
     live_products_update.process()
