@@ -34,7 +34,13 @@ class LiveUpdateProducts(CommonFunctions):
         try:
             for batch in chunks(self.products_list, MAX_API_BATCH_SIZE):
                 print(len(batch))
-                print(self.wcapi.put("products/batch", {"update": batch}).json())
+                while True:
+                    try:
+                        print(self.wcapi.put("products/batch", {"update": batch}).json())
+                    except:
+                        print("Exception in post method of wcapi")
+                    break
+
             subject = '[Live] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
             message = "This is an automated mail, receives this mail once the stock updates successfully. " \

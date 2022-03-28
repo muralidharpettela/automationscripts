@@ -1,9 +1,5 @@
 import os
-
 import eventlet
-
-imapclient = eventlet.import_patched('imapclient')
-
 import os.path as path
 import sys
 import traceback
@@ -12,9 +8,10 @@ from logging.handlers import RotatingFileHandler
 import configparser
 import email
 from time import sleep
-from datetime import datetime, time
 from pathlib import Path
 from update_stock.update_products_data_live import LiveUpdateProducts
+imapclient = eventlet.import_patched('imapclient')
+
 
 # Setup the log handlers to stdout and file.
 log = logging.getLogger('imap_monitor')
@@ -38,8 +35,6 @@ handler_file.setLevel(logging.DEBUG)
 handler_file.setFormatter(formatter)
 log.addHandler(handler_file)
 
-
-# TODO: Support SMTP log handling for CRITICAL errors.
 
 class EmailMonitor:
     def __init__(self, path_ini_file):
@@ -133,8 +128,6 @@ class EmailMonitor:
             products_json_path = os.path.join(file_path, "update_stock/products.json")
             stock_update = LiveUpdateProducts(download_path, products_json_path)
             stock_update.process()
-            print()
-        return 'return meaningful result here'
 
     def establish_connection(self):
         log.info('connecting to IMAP server - {0}'.format(self.host))
@@ -159,8 +152,8 @@ class EmailMonitor:
         log.info('logging in to IMAP server - {0}'.format(self.username))
         while True:
             try:
-                self.result = self.imap.login(self.username, self.password)
-                log.info('login successful - {0}'.format(self.result))
+                result = self.imap.login(self.username, self.password)
+                log.info('login successful - {0}'.format(result))
             except Exception:
                 # Halt script when login fails
                 etype, evalue = sys.exc_info()[:2]
@@ -177,7 +170,7 @@ class EmailMonitor:
             # Select IMAP folder to monitor
             log.info('selecting IMAP folder - {0}'.format(self.folder))
             try:
-                self.result = self.imap.select_folder(self.folder)
+                result = self.imap.select_folder(self.folder)
                 log.info('folder selected')
             except Exception:
                 # Halt script when folder selection fails
@@ -214,7 +207,7 @@ class EmailMonitor:
                 mail = email.message_from_bytes(result[each][b'RFC822'])
                 try:
                     self.process_email(mail, self.download, log)
-                    log.info('processing email {0} - {1}'.format(
+                    log.info('processed email {0} - {1}'.format(
                         each, mail['subject']
                     ))
                 except Exception:
@@ -235,7 +228,6 @@ class EmailMonitor:
             # attempt restablishing connection instead of halting script.
             try:
                 self.imap.idle()
-                # TODO: Remove hard-coded IDLE timeout; place in config file
                 result = self.imap.idle_check(5 * 60)
                 if result:
                     self.imap.idle_done()
