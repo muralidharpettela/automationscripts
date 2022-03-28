@@ -41,109 +41,106 @@ log.addHandler(handler_file)
 
 # TODO: Support SMTP log handling for CRITICAL errors.
 
-
-def process_email(mail_, download_, log_):
-    """Email processing to be done here. mail_ is the Mail object passed to this
-    function. download_ is the path where attachments may be downloaded to.
-    log_ is the logger object.
-
-    """
-    log_.info(mail_['subject'])
-    if "BK_Artikeldaten" in mail_['subject']:
-        for part in mail_.walk():
-            if part.get_content_maintype() != 'multipart' and part.get('Content-Disposition') is not None:
-                download_path = os.path.join(download_, part.get_filename())
-                open(download_path, 'wb').write(part.get_payload(decode=True))
-        file_path = Path.cwd()
-        products_json_path = os.path.join(file_path, "update_stock/products.json")
-        stock_update = LiveUpdateProducts(download_path, products_json_path)
-        stock_update.process()
-        print()
-    return 'return meaningful result here'
-
-
-def main():
-    log.info('... script started')
-    while True:
-        # <--- Start of configuration section
-
-        # Read config file - halt script on failure
-        try:
-            config_file = open('automation/imap_monitor.ini', 'r+')
-        except IOError:
-            log.critical('configuration file is missing')
-            break
-        config = configparser.SafeConfigParser()
-        config.readfp(config_file)
-
-        # Retrieve IMAP host - halt script if section 'imap' or value
-        # missing
-        try:
-            host = config.get('imap', 'host')
-        except configparser.NoSectionError:
-            log.critical('no "imap" section in configuration file')
-            break
-        except configparser.NoOptionError:
-            log.critical('no IMAP host specified in configuration file')
-            break
-
-        # Retrieve IMAP username - halt script if missing
-        try:
-            username = config.get('imap', 'username')
-        except configparser.NoOptionError:
-            log.critical('no IMAP username specified in configuration file')
-            break
-
-        # Retrieve IMAP password - halt script if missing
-        try:
-            password = config.get('imap', 'password')
-        except configparser.NoOptionError:
-            log.critical('no IMAP password specified in configuration file')
-            break
-
-        # Retrieve IMAP SSL setting - warn if missing, halt if not boolean
-        try:
-            ssl = config.getboolean('imap', 'ssl')
-        except configparser.NoOptionError:
-            # Default SSL setting to False if missing
-            log.warning('no IMAP SSL setting specified in configuration file')
-            ssl = False
-        except ValueError:
-            log.critical('IMAP SSL setting invalid - not boolean')
-            break
-
-        # Retrieve IMAP folder to monitor - warn if missing
-        try:
-            folder = config.get('imap', 'folder')
-        except configparser.NoOptionError:
-            # Default folder to monitor to 'INBOX' if missing
-            log.warning('no IMAP folder specified in configuration file')
-            folder = 'INBOX'
-
-        # Retrieve path for downloads - halt if section of value missing
-        try:
-            download = config.get('path', 'download')
-        except configparser.NoSectionError:
-            log.critical('no "path" section in configuration')
-            break
-        except configparser.NoOptionError:
-            # If value is None or specified path not existing, warn and default
-            # to script path
-            log.warn('no download path specified in configuration')
-            download = None
-        finally:
-            download = download if (
-                    download and path.exists(download)
-            ) else path.abspath(__file__)
-        log.info('setting path for email downloads - {0}'.format(download))
-
+class EmailMonitor:
+    def __init__(self, path_ini_file):
         while True:
-            # <--- Start of IMAP server connection loop
+            # <--- Start of configuration section
 
-            # Attempt connection to IMAP server
-            log.info('connecting to IMAP server - {0}'.format(host))
+            # Read config file - halt script on failure
             try:
-                imap = imapclient.IMAPClient(host, use_uid=True, ssl=ssl)
+                self.config_file = open(path_ini_file, 'r+')
+            except IOError:
+                log.critical('configuration file is missing')
+                break
+            config = configparser.ConfigParser()
+            config.read_file(self.config_file)
+
+            # Retrieve IMAP host - halt script if section 'imap' or value
+            # missing
+            try:
+                self.host = config.get('imap', 'host')
+            except configparser.NoSectionError:
+                log.critical('no "imap" section in configuration file')
+                break
+            except configparser.NoOptionError:
+                log.critical('no IMAP host specified in configuration file')
+                break
+
+            # Retrieve IMAP username - halt script if missing
+            try:
+                self.username = config.get('imap', 'username')
+            except configparser.NoOptionError:
+                log.critical('no IMAP username specified in configuration file')
+                break
+
+            # Retrieve IMAP password - halt script if missing
+            try:
+                self.password = config.get('imap', 'password')
+            except configparser.NoOptionError:
+                log.critical('no IMAP password specified in configuration file')
+                break
+
+            # Retrieve IMAP SSL setting - warn if missing, halt if not boolean
+            try:
+                self.ssl = config.getboolean('imap', 'ssl')
+            except configparser.NoOptionError:
+                # Default SSL setting to False if missing
+                log.warning('no IMAP SSL setting specified in configuration file')
+                self.ssl = False
+            except ValueError:
+                log.critical('IMAP SSL setting invalid - not boolean')
+                break
+
+            # Retrieve IMAP folder to monitor - warn if missing
+            try:
+                self.folder = config.get('imap', 'folder')
+            except configparser.NoOptionError:
+                # Default folder to monitor to 'INBOX' if missing
+                log.warning('no IMAP folder specified in configuration file')
+                folder = 'INBOX'
+
+            # Retrieve path for downloads - halt if section of value missing
+            try:
+                self.download = config.get('path', 'download')
+            except configparser.NoSectionError:
+                log.critical('no "path" section in configuration')
+                break
+            except configparser.NoOptionError:
+                # If value is None or specified path not existing, warn and default
+                # to script path
+                log.warn('no download path specified in configuration')
+                self.download = None
+            finally:
+                self.download = self.download if (
+                        self.download and path.exists(self.download)
+                ) else path.abspath(__file__)
+            log.info('setting path for email downloads - {0}'.format(self.download))
+            break
+
+    def process_email(self, mail_, download_, log_):
+        """Email processing to be done here. mail_ is the Mail object passed to this
+        function. download_ is the path where attachments may be downloaded to.
+        log_ is the logger object.
+
+        """
+        log_.info(mail_['subject'])
+        if "BK_Artikeldaten" in mail_['subject']:
+            for part in mail_.walk():
+                if part.get_content_maintype() != 'multipart' and part.get('Content-Disposition') is not None:
+                    download_path = os.path.join(download_, part.get_filename())
+                    open(download_path, 'wb').write(part.get_payload(decode=True))
+            file_path = Path.cwd()
+            products_json_path = os.path.join(file_path, "update_stock/products.json")
+            stock_update = LiveUpdateProducts(download_path, products_json_path)
+            stock_update.process()
+            print()
+        return 'return meaningful result here'
+
+    def establish_connection(self):
+        log.info('connecting to IMAP server - {0}'.format(self.host))
+        while True:
+            try:
+                self.imap = imapclient.IMAPClient(self.host, use_uid=True, ssl=self.ssl)
             except Exception:
                 # If connection attempt to IMAP server fails, retry
                 etype, evalue = sys.exc_info()[:2]
@@ -154,13 +151,16 @@ def main():
                 log.error(logstr)
                 sleep(10)
                 continue
-            log.info('server connection established')
+            break
+        log.info('server connection established')
 
-            # Attempt login to IMAP server
-            log.info('logging in to IMAP server - {0}'.format(username))
+    def login(self):
+        # Attempt login to IMAP server
+        log.info('logging in to IMAP server - {0}'.format(self.username))
+        while True:
             try:
-                result = imap.login(username, password)
-                log.info('login successful - {0}'.format(result))
+                self.result = self.imap.login(self.username, self.password)
+                log.info('login successful - {0}'.format(self.result))
             except Exception:
                 # Halt script when login fails
                 etype, evalue = sys.exc_info()[:2]
@@ -170,11 +170,14 @@ def main():
                     logstr += '{0}; '.format(each.strip('\n'))
                 log.critical(logstr)
                 break
+            break
 
+    def select_folder(self):
+        while True:
             # Select IMAP folder to monitor
-            log.info('selecting IMAP folder - {0}'.format(folder))
+            log.info('selecting IMAP folder - {0}'.format(self.folder))
             try:
-                result = imap.select_folder(folder)
+                self.result = self.imap.select_folder(self.folder)
                 log.info('folder selected')
             except Exception:
                 # Halt script when folder selection fails
@@ -185,11 +188,18 @@ def main():
                     logstr += '{0}; '.format(each.strip('\n'))
                 log.critical(logstr)
                 break
+            break
+
+    def process_unread_emails(self):
+        while True:
+            # <--- Start of IMAP server connection loop
+
+            # Attempt connection to IMAP server
 
             # Retrieve and process all unread messages. Should errors occur due
             # to loss of connection, attempt restablishing connection
             try:
-                result = imap.search('UNSEEN')
+                result = self.imap.search('UNSEEN')
             except Exception:
                 continue
             log.info('{0} unread messages seen - {1}'.format(
@@ -211,27 +221,30 @@ def main():
                     log.error('failed to process email {0}'.format(each))
                     raise
                     continue
+            break
 
-            while True:
-                # <--- Start of mail monitoring loop
+    def start_monitoring(self):
+        while True:
+            # <--- Start of mail monitoring loop
 
-                # After all unread emails are cleared on initial login, start
-                # monitoring the folder for new email arrivals and process
-                # accordingly. Use the IDLE check combined with occassional NOOP
-                # to refresh. Should errors occur in this loop (due to loss of
-                # connection), return control to IMAP server connection loop to
-                # attempt restablishing connection instead of halting script.
-                imap.idle()
+            # After all unread emails are cleared on initial login, start
+            # monitoring the folder for new email arrivals and process
+            # accordingly. Use the IDLE check combined with occassional NOOP
+            # to refresh. Should errors occur in this loop (due to loss of
+            # connection), return control to IMAP server connection loop to
+            # attempt restablishing connection instead of halting script.
+            try:
+                self.imap.idle()
                 # TODO: Remove hard-coded IDLE timeout; place in config file
-                result = imap.idle_check(5 * 60)
+                result = self.imap.idle_check(5 * 60)
                 if result:
-                    imap.idle_done()
-                    result = imap.search('UNSEEN')
+                    self.imap.idle_done()
+                    result = self.imap.search('UNSEEN')
                     log.info('{0} new unread messages - {1}'.format(
                         len(result), result
                     ))
                     for each in result:
-                        fetch = imap.fetch(each, ['RFC822'])
+                        fetch = self.imap.fetch(each, ['RFC822'])
                         mail = email.message_from_bytes(
                             fetch[each][b'RFC822']
                         )
@@ -246,17 +259,26 @@ def main():
                             raise
                             continue
                 else:
-                    imap.idle_done()
-                    imap.noop()
+                    self.imap.idle_done()
+                    self.imap.noop()
                     log.info('no new messages seen')
                 # End of mail monitoring loop --->
                 continue
+            except self.imap.AbortError:
+                self.establish_connection()
+                self.login()
+                self.select_folder()
+                log.info('Connection Aborted and re-instantiated again')
 
-            # End of IMAP server connection loop --->
-            break
 
-        # End of configuration section --->
-        break
+def main():
+    log.info('... script started')
+    email_monitoring = EmailMonitor(path_ini_file="automation/imap_monitor.ini")
+    email_monitoring.establish_connection()
+    email_monitoring.login()
+    email_monitoring.select_folder()
+    email_monitoring.process_unread_emails()
+    email_monitoring.start_monitoring()
     log.info('script stopped ...')
 
 
