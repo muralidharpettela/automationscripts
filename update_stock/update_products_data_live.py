@@ -34,12 +34,17 @@ class LiveUpdateProducts(CommonFunctions):
         try:
             for batch in chunks(self.products_list, MAX_API_BATCH_SIZE):
                 print(len(batch))
-                while True:
+                for i in range(5):
                     try:
                         print(self.wcapi.put("products/batch", {"update": batch}).json())
                     except:
+                        # perhaps reconnect, etc.
                         print("Exception in post method of wcapi")
-                    break
+                    else:
+                        break
+                else:
+                    # we failed all the attempts - deal with the consequences.
+                    print("Completed all attempts but job didnt successful")
 
             subject = '[Live] lotus-grocery.eu - Stock Updated successfully on ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
