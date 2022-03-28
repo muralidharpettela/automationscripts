@@ -207,13 +207,13 @@ class EmailMonitor:
             ))
             for each in result:
                 try:
-                    result = imap.fetch(each, ['RFC822'])
+                    result = self.imap.fetch(each, ['RFC822'])
                 except Exception:
                     log.error('failed to fetch email - {0}'.format(each))
                     continue
                 mail = email.message_from_bytes(result[each][b'RFC822'])
                 try:
-                    process_email(mail, download, log)
+                    self.process_email(mail, self.download, log)
                     log.info('processing email {0} - {1}'.format(
                         each, mail['subject']
                     ))
@@ -249,7 +249,7 @@ class EmailMonitor:
                             fetch[each][b'RFC822']
                         )
                         try:
-                            process_email(mail, download, log)
+                            self.process_email(mail, self.download, log)
                             log.info('processing email {0} - {1}'.format(
                                 each, mail['subject']
                             ))
