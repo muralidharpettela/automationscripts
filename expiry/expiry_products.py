@@ -193,6 +193,6 @@ class ExpiryProducts(CommonFunctions):
 if __name__ == "__main__":
     kassen_system_excel_file_dir = r"/Users/muralidharpettela/Downloads/ks_dir"
     product_expiry_list_dir = r"/Users/muralidharpettela/Downloads/product_expiry"
-    onedrive_link = "https://1drv.ms/x/s!Auk2yZWl9__ZguNEYd6F4pIyaNjaZw"
+    onedrive_link = "https://1drv.ms/x/s!Auk2yZWl9__ZguU7J96x9U_HkGBDAQ?e=FYcE7A"
     expiry_products = ExpiryProducts(kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link)
     expiry_products.process()
