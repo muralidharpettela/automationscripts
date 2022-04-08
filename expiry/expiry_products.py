@@ -96,34 +96,38 @@ class ExpiryProducts(CommonFunctions):
         return kassen_system_data_dict, mr_s, mc_s
 
     def get_expiry_products(self, product_expiry_dict):
+        # load expiry date not required products
+        with open("no_expiry_products_list.txt") as txt:
+            list_expiry_date_not_req = txt.read().split("\n")
         # expiry logic
         for col_nam, expiry_date, stock_value in zip(product_expiry_dict['product_names'],
                                                      product_expiry_dict['expiry_date'],
                                                      product_expiry_dict['stock']):
-            if expiry_date.value:
-                if stock_value.value == 0:
-                    self.stock_zero_expiry_date_exists.append(col_nam.value)
-                # one month
-                if (expiry_date.value.date() <= self.one_months) and (
-                        expiry_date.value.date() >= datetime.now().date()):
-                    self.one_month_expiry_list.append(col_nam.value)
-                # two months
-                if (expiry_date.value.date() <= self.two_months) and (
-                        expiry_date.value.date() >= datetime.now().date()):
-                    self.two_month_expiry_list.append(col_nam.value)
-                # three months
-                if (expiry_date.value.date() <= self.three_months) and (
-                        expiry_date.value.date() >= datetime.now().date()):
-                    self.three_month_expiry_list.append(col_nam.value)
-                # products already expired
-                if expiry_date.value.date() <= datetime.now().date():
-                    self.products_already_expired_list.append(col_nam.value)
-                    # print("products already expired {}".format(col_nam.value))
-            else:
-                if stock_value.value == 0:
-                    self.no_expiry_date_products.append(col_nam.value)
+            if not col_nam.value in list_expiry_date_not_req:
+                if expiry_date.value:
+                    if stock_value.value == 0:
+                        self.stock_zero_expiry_date_exists.append(col_nam.value)
+                    # one month
+                    if (expiry_date.value.date() <= self.one_months) and (
+                            expiry_date.value.date() >= datetime.now().date()):
+                        self.one_month_expiry_list.append(col_nam.value)
+                    # two months
+                    if (expiry_date.value.date() <= self.two_months) and (
+                            expiry_date.value.date() >= datetime.now().date()):
+                        self.two_month_expiry_list.append(col_nam.value)
+                    # three months
+                    if (expiry_date.value.date() <= self.three_months) and (
+                            expiry_date.value.date() >= datetime.now().date()):
+                        self.three_month_expiry_list.append(col_nam.value)
+                    # products already expired
+                    if expiry_date.value.date() <= datetime.now().date():
+                        self.products_already_expired_list.append(col_nam.value)
+                        # print("products already expired {}".format(col_nam.value))
                 else:
-                    self.stock_exist_expiry_date_not_exists.append(col_nam.value)
+                    if stock_value.value == 0:
+                        self.no_expiry_date_products.append(col_nam.value)
+                    else:
+                        self.stock_exist_expiry_date_not_exists.append(col_nam.value)
 
     def notify_expiry_list(self):
 
