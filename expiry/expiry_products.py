@@ -121,51 +121,57 @@ class ExpiryProducts(CommonFunctions):
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.twenty_one_month_expiry_list.append(col_nam.value)
                         # two months
-                        if (expiry_date.value.date() <= self.two_months) and (
+                        elif (expiry_date.value.date() <= self.two_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.twenty_two_month_expiry_list.append(col_nam.value)
                         # three months
-                        if (expiry_date.value.date() <= self.three_months) and (
+                        elif (expiry_date.value.date() <= self.three_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.twenty_three_month_expiry_list.append(col_nam.value)
                         # products already expired
-                        if expiry_date.value.date() <= datetime.now().date():
+                        elif expiry_date.value.date() <= datetime.now().date():
                             self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
+                        else:
+                            continue
                     if 11 <= stock_value.value <= 20:
                         # one month
                         if (expiry_date.value.date() <= self.one_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.ten_one_month_expiry_list.append(col_nam.value)
                         # two months
-                        if (expiry_date.value.date() <= self.two_months) and (
+                        elif (expiry_date.value.date() <= self.two_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.ten_two_month_expiry_list.append(col_nam.value)
                         # three months
-                        if (expiry_date.value.date() <= self.three_months) and (
+                        elif (expiry_date.value.date() <= self.three_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.ten_three_month_expiry_list.append(col_nam.value)
                         # products already expired
-                        if expiry_date.value.date() <= datetime.now().date():
+                        elif expiry_date.value.date() <= datetime.now().date():
                             self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
+                        else:
+                            continue
                     if 1 <= stock_value.value <= 10:
                         # one month
                         if (expiry_date.value.date() <= self.one_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.below_ten_one_month_expiry_list.append(col_nam.value)
                         # two months
-                        if (expiry_date.value.date() <= self.two_months) and (
+                        elif (expiry_date.value.date() <= self.two_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.below_ten_two_month_expiry_list.append(col_nam.value)
                         # three months
-                        if (expiry_date.value.date() <= self.three_months) and (
+                        elif (expiry_date.value.date() <= self.three_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.below_ten_three_month_expiry_list.append(col_nam.value)
                         # products already expired
-                        if expiry_date.value.date() <= datetime.now().date():
+                        elif expiry_date.value.date() <= datetime.now().date():
                             self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
+                        else:
+                            continue
 
                 else:
                     if stock_value.value == 0:
@@ -175,7 +181,7 @@ class ExpiryProducts(CommonFunctions):
 
     def notify_expiry_list(self):
 
-        message = "This is an automated mail, notification of the expiry products within 3 months. \n " \
+        message = "This is an automated mail, notification of the expiry products within 3 months. \n {} \n" \
                   "Stock greater than 20:\n{}\n{}\n" \
                   "Products expiring in 1 month:\n{}\n{}\n{}\n" \
                   "Products expiring in 2 months:\n{}\n{}\n{}\n" \
@@ -190,9 +196,9 @@ class ExpiryProducts(CommonFunctions):
                   "Products expiring in 3 month:\n{}\n{}\n{}\n" \
                   "Products already expired:\n{}\n{}\n{}\n" \
                   "Case-1: Stock value 0 but the expiry date exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}" \
-                  "Case-2: Stock value is not zero but the expiry date doesnot exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}".format(
-            "==================================",
-            "==================================",
+                  "Case-2: Stock value is not zero but the expiry date doesnot exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}".format(35 * "*",
+            35 * "*",
+            35 * "*",
             "==================================",
             "\n".join(self.twenty_one_month_expiry_list),
             "==================================",
@@ -201,9 +207,9 @@ class ExpiryProducts(CommonFunctions):
             "==================================",
             "==================================",
             "\n".join(self.twenty_three_month_expiry_list),
-            "==================================",
-            "==================================",
-            "==================================",
+            35 * "*",
+            35 * "*",
+            35 * "*",
             "==================================",
             "\n".join(self.ten_one_month_expiry_list),
             "==================================",
@@ -212,9 +218,9 @@ class ExpiryProducts(CommonFunctions):
             "==================================",
             "==================================",
             "\n".join(self.ten_three_month_expiry_list),
-            "==================================",
-            "==================================",
-            "==================================",
+            35 * "*",
+            35 * "*",
+            35 * "*",
             "==================================",
             "\n".join(self.below_ten_one_month_expiry_list),
             "==================================",
@@ -247,8 +253,7 @@ class ExpiryProducts(CommonFunctions):
         print("Total no of Rows/Products in kassen_system_file:{}".format(mr_s))
         print("Number of Products Matched:{}".format(num_match_products))
         print("Number of Products are no matched:{}".format(num_no_match_products))
-        print("Stock greater than 20:\n{}\n{}".format("==================================",
-                                                                 "=================================="))
+        print("Stock greater than 20:\n{}\n{}".format(50 * "*", 50 * "*"))
         print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
                                                                  "\n".join(self.twenty_one_month_expiry_list),
                                                                  "=================================="))
@@ -258,8 +263,7 @@ class ExpiryProducts(CommonFunctions):
         print("Products expiring in 3 month:\n{}\n{}\n{}".format("==================================",
                                                                  "\n".join(self.twenty_three_month_expiry_list),
                                                                  "=================================="))
-        print("Stock ranges from 11 - 20:\n{}\n{}".format("==================================",
-                                                      "=================================="))
+        print("Stock ranges from 11 - 20:\n{}\n{}".format(50 * "*", 50 * "*"))
         print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
                                                                  "\n".join(self.ten_one_month_expiry_list),
                                                                  "=================================="))
@@ -269,8 +273,7 @@ class ExpiryProducts(CommonFunctions):
         print("Products expiring in 3 month:\n{}\n{}\n{}".format("==================================",
                                                                  "\n".join(self.ten_three_month_expiry_list),
                                                                  "=================================="))
-        print("Stock ranges from 1 - 10:\n{}\n{}".format("==================================",
-                                                          "=================================="))
+        print("Stock ranges from 1 - 10:\n{}\n{}".format(50 * "*", 50 * "*"))
         print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
                                                                  "\n".join(self.below_ten_one_month_expiry_list),
                                                                  "=================================="))

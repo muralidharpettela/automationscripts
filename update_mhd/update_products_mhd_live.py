@@ -44,7 +44,7 @@ class LiveUpdateProductsMHD(CommonFunctions):
                       "Time elasped:{} seconds".format(mr_s, len(json_data), match_of_stock_cells_count,
                                                        num_no_match_found, weight_updated_products, timeit.default_timer() - start)
             content = [message, "./no_match_products.txt", "./products_without_weight.txt"]
-            self.send_email(subject, content)
+             # self.send_email(subject, content)
         except:
             subject = '[Staging] lotus-grocery.eu - Stock Updated not successfully on ' + datetime.now().strftime(
                 "%d/%m/%Y %H:%M:%S")
