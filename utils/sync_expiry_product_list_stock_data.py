@@ -4,7 +4,7 @@ import sys
 # Source coming from shop
 # Destination products in website sheet
 # opening the source excel file
-filename_kassen_system = r"/Users/muralidharpettela/Downloads/ks_dir/BK_Artikeldaten_25032022.csv"
+filename_kassen_system = r"/Users/muralidharpettela/Downloads/ks_dir/BK_Artikeldaten_07042022.csv"
 #wb1 = xl.load_workbook(filename_kassen_system)
 #ws1 = wb1.worksheets[0]
 

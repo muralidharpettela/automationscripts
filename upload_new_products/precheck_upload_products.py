@@ -183,6 +183,10 @@ class UploadProducts(CommonFunctions):
             products_dict["categories"][0]["id"] = 106
         elif category == "HI":
             products_dict["categories"][0]["id"] = 107
+        elif category == "VEG":
+            products_dict["categories"][0]["id"] = 132
+        elif category == "AB":
+            products_dict["categories"][0]["id"] = 134
         else:
             products_dict["categories"][0]["id"] = "None"
 
@@ -276,8 +280,8 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_25032022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/25032022.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/img25032022"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09042022.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/11042022.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/11042022"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()
