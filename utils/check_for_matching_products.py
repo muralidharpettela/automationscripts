@@ -23,7 +23,7 @@ class CheckForMatchingProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_22032022.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/ks_dir/BK_Artikeldaten_14042022_2.csv"
     live_products_update = CheckForMatchingProducts(filepath_kassen_system)
     live_products_update.process()
 
