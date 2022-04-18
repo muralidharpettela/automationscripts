@@ -7,10 +7,10 @@ from datetime import datetime
 from datetime import date
 from dateutil.relativedelta import relativedelta
 from common.common_functions import CommonFunctions
-
+from tabulate import tabulate
 
 class ExpiryProducts(CommonFunctions):
-    def __init__(self, kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link):
+    def __init__(self, kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link, credentials_path):
         self.kassen_system_excel_file_dir = kassen_system_excel_file_dir
         self.product_expiry_list_dir = product_expiry_list_dir
         # onedrive file link of products expiry list
@@ -35,6 +35,53 @@ class ExpiryProducts(CommonFunctions):
         self.no_expiry_date_products = list()
         self.stock_zero_expiry_date_exists = list()
         self.stock_exist_expiry_date_not_exists = list()
+        # email script
+        self.text = """
+               Hello, Lotus Grocery.
+               This is an automated mail, notification of the expiry products within 3 months.
+               {stock201month}
+               {stock111month}
+               {stock11month}
+               {stock202month}
+               {stock112month}
+               {stock12month}
+               {stock203month}
+               {stock113month}
+               {stock13month}
+               {expiredproducts}
+               {case1}
+               {case2}
+               {stat}
+               
+               *Case-1: Stock value 0 but the expiry date exists
+               *Case-2: Stock value is not zero but the expiry date doesnot exists
+               Regards,
+
+               Your Expiry Product Script"""
+
+        self.html = """
+               <html><body><p>Hello, Lotus Grocery.</p>
+               <p> This is an automated mail, notification of the expiry products within 3 months.</p>
+               {stock201month}
+               {stock111month}
+               {stock11month}
+               {stock202month}
+               {stock112month}
+               {stock12month}
+               {stock203month}
+               {stock113month}
+               {stock13month}
+               {expiredproducts}
+               {case1}
+               {case2}
+               {stat}
+               *Case-1: Stock value 0 but the expiry date exists
+               *Case-2: Stock value is not zero but the expiry date doesnot exists
+               <p>Regards,</p>
+               <p>Your Expiry Product Script</p>
+               </body></html>
+               """
+        self.email_credentials = self.load_wp_credentials(credentials_path)
 
     def create_onedrive_directdownload(self):
         data_bytes64 = base64.b64encode(bytes(self.onedrive_link, 'utf-8'))
@@ -105,7 +152,7 @@ class ExpiryProducts(CommonFunctions):
 
     def get_expiry_products(self, product_expiry_dict):
         # load expiry date not required products
-        with open("no_expiry_products_list.txt") as txt:
+        with open("./expiry/no_expiry_products_list.txt") as txt:
             list_expiry_date_not_req = txt.read().split("\n")
         # expiry logic
         for col_nam, expiry_date, stock_value in zip(product_expiry_dict['product_names'],
@@ -179,68 +226,96 @@ class ExpiryProducts(CommonFunctions):
                     else:
                         self.stock_exist_expiry_date_not_exists.append(col_nam.value)
 
-    def notify_expiry_list(self):
-
-        message = "This is an automated mail, notification of the expiry products within 3 months. \n {} \n" \
-                  "Stock greater than 20:\n{}\n{}\n" \
-                  "Products expiring in 1 month:\n{}\n{}\n{}\n" \
-                  "Products expiring in 2 months:\n{}\n{}\n{}\n" \
-                  "Products expiring in 3 month:\n{}\n{}\n{}\n" \
-                  "Stocks ranges from 11 - 20:\n{}\n{}\n" \
-                  "Products expiring in 1 month:\n{}\n{}\n{}\n" \
-                  "Products expiring in 2 months:\n{}\n{}\n{}\n" \
-                  "Products expiring in 3 month:\n{}\n{}\n{}\n" \
-                  "Stocks ranges from 1 - 10:\n{}\n{}\n" \
-                  "Products expiring in 1 month:\n{}\n{}\n{}\n" \
-                  "Products expiring in 2 months:\n{}\n{}\n{}\n" \
-                  "Products expiring in 3 month:\n{}\n{}\n{}\n" \
-                  "Products already expired:\n{}\n{}\n{}\n" \
-                  "Case-1: Stock value 0 but the expiry date exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}" \
-                  "Case-2: Stock value is not zero but the expiry date doesnot exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}".format(35 * "*",
-            35 * "*",
-            35 * "*",
-            "==================================",
-            "\n".join(self.twenty_one_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.twenty_two_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.twenty_three_month_expiry_list),
-            35 * "*",
-            35 * "*",
-            35 * "*",
-            "==================================",
-            "\n".join(self.ten_one_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.ten_two_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.ten_three_month_expiry_list),
-            35 * "*",
-            35 * "*",
-            35 * "*",
-            "==================================",
-            "\n".join(self.below_ten_one_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.below_ten_two_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.below_ten_three_month_expiry_list),
-            "==================================",
-            "==================================",
-            "\n".join(self.products_already_expired_list),
-            "==================================", "==================================",
-            "\n".join(self.stock_zero_expiry_date_exists),
-            "==================================", "==================================",
-            "\n".join(self.stock_exist_expiry_date_not_exists),
-            "==================================")
+    def notify_expiry_list(self, mr_prod_expiry, mr_s, num_match_products, num_no_match_products):
         subject = '[Notification] lotus-grocery.eu - Expiry Products in next 3 months ' + datetime.now().strftime(
             "%d/%m/%Y %H:%M:%S")
-        content = [message]
-        self.send_email(subject, content)
+        self._text = self.text.format(
+            stock201month=tabulate(zip(range(1, len(self.twenty_one_month_expiry_list) + 1), self.twenty_one_month_expiry_list),
+                           headers=["Stock > 20 and 1 month\nno", "\nArticle Name"], tablefmt="grid"),
+            stock202month=tabulate(zip(range(1, len(self.twenty_two_month_expiry_list) + 1), self.twenty_two_month_expiry_list),
+                           headers=["Stock > 20 and 2 months\nno", "\nArticle Name"], tablefmt="grid"),
+            stock203month=tabulate(
+                zip(range(1, len(self.twenty_three_month_expiry_list) + 1), self.twenty_three_month_expiry_list),
+                headers=["Stock > 20 and 3 months\nno", "\nArticle Name"], tablefmt="grid"),
+            stock111month=tabulate(
+                zip(range(1, len(self.ten_one_month_expiry_list) + 1), self.ten_one_month_expiry_list),
+                headers=["Stock - (11-20) and 1 month\nno", "\nArticle Name"], tablefmt="grid"),
+            stock112month=tabulate(
+                zip(range(1, len(self.ten_two_month_expiry_list) + 1), self.ten_two_month_expiry_list),
+                headers=["Stock - (11-20) and 2 months\nno", "\nArticle Name"], tablefmt="grid"),
+            stock113month=tabulate(
+                zip(range(1, len(self.ten_three_month_expiry_list) + 1), self.ten_three_month_expiry_list),
+                headers=["Stock - (11-20) and 3 months\nno", "\nArticle Name"], tablefmt="grid"),
+            stock11month=tabulate(
+                zip(range(1, len(self.below_ten_one_month_expiry_list) + 1), self.below_ten_one_month_expiry_list),
+                headers=["Stock - (1-10) and 1 month\nno", "\nArticle Name"], tablefmt="grid"),
+            stock12month=tabulate(
+                zip(range(1, len(self.below_ten_two_month_expiry_list) + 1), self.below_ten_two_month_expiry_list),
+                headers=["Stock - (1-10) and 2 months\nno", "\nArticle Name"], tablefmt="grid"),
+            stock13month=tabulate(
+                zip(range(1, len(self.below_ten_three_month_expiry_list) + 1), self.below_ten_three_month_expiry_list),
+                headers=["Stock - (1-10) and 3 months\nno", "\nArticle Name"], tablefmt="grid"),
+            expiredproducts=tabulate(
+                zip(range(1, len(self.products_already_expired_list) + 1), self.products_already_expired_list),
+                headers=["Products already Expired\nno", "\nArticle Name"], tablefmt="grid"),
+            case1=tabulate(
+                zip(range(1, len(self.stock_zero_expiry_date_exists) + 1), self.stock_zero_expiry_date_exists),
+                headers=["Case-1:Stock = 0, expiry date !=0 \nno", "\nArticle Name"], tablefmt="grid"),
+            case2=tabulate(
+                zip(range(1, len(self.stock_exist_expiry_date_not_exists) + 1), self.stock_exist_expiry_date_not_exists),
+                headers=["Case-2:Stock != 0 expiry date !=1\nno", "\nArticle Name"], tablefmt="grid"),
+            stat=tabulate([['Total no of Rows/Products in product expiry list/website', mr_prod_expiry], ['Total no of Rows/Products in kassen_system_file', mr_s],
+                           ['Number of Products Matched', num_match_products],
+                           ['Number of Products are no matched', num_no_match_products]], headers=['Stat Name', 'Stat Value'],tablefmt="grid")
+        )
+        self._html = self.html.format(
+            stock201month=tabulate(
+                zip(range(1, len(self.twenty_one_month_expiry_list) + 1), self.twenty_one_month_expiry_list),
+                headers=["Stock > 20 and 1 month\nno", "\nArticle Name"], tablefmt="html"),
+            stock202month=tabulate(
+                zip(range(1, len(self.twenty_two_month_expiry_list) + 1), self.twenty_two_month_expiry_list),
+                headers=["Stock > 20 and 2 months\nno", "\nArticle Name"], tablefmt="html"),
+            stock203month=tabulate(
+                zip(range(1, len(self.twenty_three_month_expiry_list) + 1), self.twenty_three_month_expiry_list),
+                headers=["Stock > 20 and 3 months\nno", "\nArticle Name"], tablefmt="html"),
+            stock111month=tabulate(
+                zip(range(1, len(self.ten_one_month_expiry_list) + 1), self.ten_one_month_expiry_list),
+                headers=["Stock - (11-20) and 1 month\nno", "\nArticle Name"], tablefmt="html"),
+            stock112month=tabulate(
+                zip(range(1, len(self.ten_two_month_expiry_list) + 1), self.ten_two_month_expiry_list),
+                headers=["Stock - (11-20) and 2 months\nno", "\nArticle Name"], tablefmt="html"),
+            stock113month=tabulate(
+                zip(range(1, len(self.ten_three_month_expiry_list) + 1), self.ten_three_month_expiry_list),
+                headers=["Stock - (11-20) and 3 months\nno", "\nArticle Name"], tablefmt="html"),
+            stock11month=tabulate(
+                zip(range(1, len(self.below_ten_one_month_expiry_list) + 1), self.below_ten_one_month_expiry_list),
+                headers=["Stock - (1-10) and 1 month\nno", "\nArticle Name"], tablefmt="html"),
+            stock12month=tabulate(
+                zip(range(1, len(self.below_ten_two_month_expiry_list) + 1), self.below_ten_two_month_expiry_list),
+                headers=["Stock - (1-10) and 2 months\nno", "\nArticle Name"], tablefmt="html"),
+            stock13month=tabulate(
+                zip(range(1, len(self.below_ten_three_month_expiry_list) + 1), self.below_ten_three_month_expiry_list),
+                headers=["Stock - (1-10) and 3 months\nno", "\nArticle Name"], tablefmt="html"),
+            expiredproducts=tabulate(
+                zip(range(1, len(self.products_already_expired_list) + 1), self.products_already_expired_list),
+                headers=["Products already Expired\nno", "\nArticle Name"], tablefmt="html"),
+            case1=tabulate(
+                zip(range(1, len(self.stock_zero_expiry_date_exists) + 1), self.stock_zero_expiry_date_exists),
+                headers=["Case-1:Stock = 0, expiry date !=0: \nno", "\nArticle Name"], tablefmt="html"),
+            case2=tabulate(
+                zip(range(1, len(self.stock_exist_expiry_date_not_exists) + 1),
+                    self.stock_exist_expiry_date_not_exists),
+                headers=["Case-2:Stock != 0 expiry date !=1 \nno", "\nArticle Name"],
+                tablefmt="html"),
+            stat=tabulate([['Total no of Rows/Products in product expiry list/website', mr_prod_expiry],
+                           ['Total no of Rows/Products in kassen_system_file', mr_s],
+                           ['Number of Products Matched', num_match_products],
+                           ['Number of Products are no matched', num_no_match_products]],
+                          headers=['Stat Name', 'Stat Value'], tablefmt="html")
+        )
+        # content = [message]
+        # self.send_email(subject, content)
+        self.send_email_using_smtp(self._text, self._html, subject, "stocks@lotus-grocery.eu", "info@lotus-grocery.eu")
 
     def process(self):
         product_expiry_dict, mr_prod_expiry, mc_prod_expiry = self.load_product_expiry_list()
@@ -248,59 +323,14 @@ class ExpiryProducts(CommonFunctions):
         num_match_products, num_no_match_products = self.sync_stock_from_ks_to_expiry_list(product_expiry_dict,
                                                                                            kassen_system_data_dict)
         self.get_expiry_products(product_expiry_dict)
-        self.notify_expiry_list()
-        print("Total no of Rows/Products in product expiry list/website:{}".format(mr_prod_expiry))
-        print("Total no of Rows/Products in kassen_system_file:{}".format(mr_s))
-        print("Number of Products Matched:{}".format(num_match_products))
-        print("Number of Products are no matched:{}".format(num_no_match_products))
-        print("Stock greater than 20:\n{}\n{}".format(50 * "*", 50 * "*"))
-        print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.twenty_one_month_expiry_list),
-                                                                 "=================================="))
-        print("Products expiring in 2 months:\n{}\n{}\n{}".format("==================================",
-                                                                  "\n".join(self.twenty_two_month_expiry_list),
-                                                                  "=================================="))
-        print("Products expiring in 3 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.twenty_three_month_expiry_list),
-                                                                 "=================================="))
-        print("Stock ranges from 11 - 20:\n{}\n{}".format(50 * "*", 50 * "*"))
-        print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.ten_one_month_expiry_list),
-                                                                 "=================================="))
-        print("Products expiring in 2 months:\n{}\n{}\n{}".format("==================================",
-                                                                  "\n".join(self.ten_two_month_expiry_list),
-                                                                  "=================================="))
-        print("Products expiring in 3 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.ten_three_month_expiry_list),
-                                                                 "=================================="))
-        print("Stock ranges from 1 - 10:\n{}\n{}".format(50 * "*", 50 * "*"))
-        print("Products expiring in 1 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.below_ten_one_month_expiry_list),
-                                                                 "=================================="))
-        print("Products expiring in 2 months:\n{}\n{}\n{}".format("==================================",
-                                                                  "\n".join(self.below_ten_two_month_expiry_list),
-                                                                  "=================================="))
-        print("Products expiring in 3 month:\n{}\n{}\n{}".format("==================================",
-                                                                 "\n".join(self.below_ten_three_month_expiry_list),
-                                                                 "=================================="))
-        print("Products already expired:\n{}\n{}\n{}".format("==================================",
-                                                             "\n".join(self.products_already_expired_list),
-                                                             "=================================="))
-        print(
-            "Case-1: Stock value 0 but the expiry date exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}".format(
-                "==================================",
-                "\n".join(self.stock_zero_expiry_date_exists),
-                "=================================="))
-        print(
-            "Case-2: Stock value is not zero but the expiry date doesnot exists. Please recheck the products stock and update expiry dates\n{}\n{}\n{}".format(
-                "==================================",
-                "\n".join(self.stock_exist_expiry_date_not_exists),
-                "=================================="))
+        self.notify_expiry_list(mr_prod_expiry, mr_s, num_match_products, num_no_match_products)
+        print(self._text)
 
 
 if __name__ == "__main__":
     kassen_system_excel_file_dir = r"/Users/muralidharpettela/Downloads/ks_dir"
     product_expiry_list_dir = r"/Users/muralidharpettela/Downloads/product_expiry"
     onedrive_link = "https://1drv.ms/x/s!Auk2yZWl9__ZguU7J96x9U_HkGBDAQ?e=FYcE7A"
-    expiry_products = ExpiryProducts(kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link)
+    credentials_path = "./common/email_credentials.json"
+    expiry_products = ExpiryProducts(kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link, credentials_path)
     expiry_products.process()

@@ -6,9 +6,11 @@ from openpyxl.workbook import Workbook
 import yagmail
 from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
 
-
-class CommonFunctions():
+class CommonFunctions:
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         self.filepath_kassen_system = filepath_kassen_system
         self.json_file_path = json_file_path
@@ -271,3 +273,17 @@ class CommonFunctions():
         with yagmail.SMTP(user, app_password) as yag:
             yag.send(to, subject, content)
             print('Sent email successfully')
+
+    def send_email_using_smtp(self, text, html, subject, from_mail, to_mail):
+        message = MIMEMultipart(
+            "alternative", None, [MIMEText(text), MIMEText(html, 'html')])
+
+        message['Subject'] = subject
+        message['From'] = from_mail
+        message['To'] = to_mail
+        server = smtplib.SMTP(self.email_credentials["server"])
+        server.ehlo()
+        server.starttls()
+        server.login(self.email_credentials["username"], self.email_credentials["password"])
+        server.sendmail(from_mail, to_mail, message.as_string())
+        server.quit()
