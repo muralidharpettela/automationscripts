@@ -1,5 +1,143 @@
 [
   {
+    "id": 9694,
+    "name": "Balalji - 250 g Bhel Mix",
+    "sku": "Balalji_250_g_Bhel_Mix",
+    "weight": "0.25"
+  },
+  {
+    "id": 9692,
+    "name": "Balaji - 250 g Sev Murmura",
+    "sku": "Balaji_250_g_Sev_Murmura",
+    "weight": "0.25"
+  },
+  {
+    "id": 9685,
+    "name": "Priya - 300 g Cut Mango Pickle",
+    "sku": "Priya_300_g_Cut_Mango_Pickle",
+    "weight": ""
+  },
+  {
+    "id": 9682,
+    "name": "Annam - 200 g Roasted Vermicelli",
+    "sku": "Annam_200_g_Roasted_Vermicelli",
+    "weight": "0.2"
+  },
+  {
+    "id": 9680,
+    "name": "Madrasmunch - 200 g Chilli Sev",
+    "sku": "Madrasmunch_200_g_Chilli_Sev",
+    "weight": "0.2"
+  },
+  {
+    "id": 9678,
+    "name": "Annam - 750 ml Gingely Oil",
+    "sku": "Annam_750_ml_Gingely_Oil",
+    "weight": "0.75"
+  },
+  {
+    "id": 9676,
+    "name": "Annam - 2 kg Toor Dal",
+    "sku": "Annam_2_kg_Toor_Dal",
+    "weight": "2.0"
+  },
+  {
+    "id": 9674,
+    "name": "Madras Munch - 200 g Karaboondi",
+    "sku": "Madras_Munch_200_g_Karaboondi",
+    "weight": "0.2"
+  },
+  {
+    "id": 9672,
+    "name": "Annam - 50 g Bay Leaves",
+    "sku": "Annam_50_g_Bay_Leaves",
+    "weight": "0.05"
+  },
+  {
+    "id": 9670,
+    "name": "Annam - 1 kg Ragi Flour",
+    "sku": "Annam_1_kg_Ragi_Flour",
+    "weight": "1.0"
+  },
+  {
+    "id": 9668,
+    "name": "Annam - 1 kg Bansi Rava",
+    "sku": "Annam_1_kg_Bansi_Rava",
+    "weight": "1.0"
+  },
+  {
+    "id": 9666,
+    "name": "Priya - 300 g Onion Pickle",
+    "sku": "Priya_300_g_Onion_Pickle",
+    "weight": "0.3"
+  },
+  {
+    "id": 9664,
+    "name": "Amul - 500 g Ghee",
+    "sku": "Amul_500_g_Ghee",
+    "weight": "0.5"
+  },
+  {
+    "id": 9642,
+    "name": "Heera - 1 kg Chickpeas",
+    "sku": "Heera_1_kg_Chickpeas",
+    "weight": "1.0"
+  },
+  {
+    "id": 9640,
+    "name": "Heera - 5 kg Idli Rice",
+    "sku": "Heera_5_kg_Idli_Rice",
+    "weight": "5.0"
+  },
+  {
+    "id": 9638,
+    "name": "Bajaj - 200 ml Almond Hair Oil",
+    "sku": "Bajaj_200_ml_Almond_Hair_Oil",
+    "weight": "0.2"
+  },
+  {
+    "id": 9636,
+    "name": "Kurkure - 90 g Green Chutney",
+    "sku": "Kurkure_90_g_Green_Chutney",
+    "weight": "0.09"
+  },
+  {
+    "id": 9634,
+    "name": "Chings - 600 g Schezwan Chutney",
+    "sku": "Chings_600_g_Schezwan_Chutney",
+    "weight": "0.6"
+  },
+  {
+    "id": 9632,
+    "name": "Haldiram - 200 g Golden Mixture",
+    "sku": "Haldiram_200_g_Golden_Mixture",
+    "weight": "0.2"
+  },
+  {
+    "id": 9630,
+    "name": "Haldiram - 150 g Pancharattan",
+    "sku": "Haldiram_150_g_Pancharattan",
+    "weight": "0.15"
+  },
+  {
+    "id": 9628,
+    "name": "MDH - 35 g Tea Masala",
+    "sku": "MDH_35_g_Tea_Masala",
+    "weight": "0.035"
+  },
+  {
+    "id": 9626,
+    "name": "Punjab King - 5 kg Golden Sella Basmati",
+    "sku": "Punjab_King_5_kg_Golden_Sella_Basmati",
+    "weight": "5.0"
+  },
+  {
+    "id": 9624,
+    "name": "Double Horse - 5 kg Sonamasoori Rice",
+    "sku": "Double_Horse_5_kg_Sonamasoori_Rice",
+    "weight": "5.0"
+  },
+  {
     "id": 9538,
     "name": "Devgad Alphonso - 1 Box (6 Mangoes)",
     "sku": "Devgad_Alphonso_1_Box_(5-6_Mangoes)",
@@ -1188,15 +1326,15 @@
     "weight": "0.5"
   },
   {
-    "id": 8593,
-    "name": "250 g - Raw Mangoes",
-    "sku": "250_g_Raw_Mangoes",
-    "weight": "0.25"
-  },
-  {
     "id": 8594,
     "name": "250 g - Small Red Onions",
     "sku": "250_g_Small_Red_Onions",
+    "weight": "0.25"
+  },
+  {
+    "id": 8593,
+    "name": "250 g - Raw Mangoes",
+    "sku": "250_g_Raw_Mangoes",
     "weight": "0.25"
   },
   {
@@ -2874,15 +3012,15 @@
     "weight": "1.0"
   },
   {
-    "id": 6331,
-    "name": "Aachi - 1 kg Pearl Millet",
-    "sku": "Aachi_1_kg_Bajra_(Pearl_Millet)",
-    "weight": "1.0"
-  },
-  {
     "id": 6330,
     "name": "Aachi - 1 kg Little Millet",
     "sku": "Aachi_1_kg_Little_Millet_Whole",
+    "weight": "1.0"
+  },
+  {
+    "id": 6331,
+    "name": "Aachi - 1 kg Pearl Millet",
+    "sku": "Aachi_1_kg_Bajra_(Pearl_Millet)",
     "weight": "1.0"
   },
   {
@@ -2916,6 +3054,12 @@
     "weight": "1.0"
   },
   {
+    "id": 6255,
+    "name": "Maggi - 280 g Masala Noodles",
+    "sku": "Maggi_280_g_Masala_Noodles",
+    "weight": "0.28"
+  },
+  {
     "id": 6253,
     "name": "Maggi - 72 g Atta Noodles",
     "sku": "Maggi_72_g_Atta_Noodles",
@@ -2926,12 +3070,6 @@
     "name": "Maggi - 72 g Masala Noodles",
     "sku": "Maggi_72_g_Masala_Noodles",
     "weight": "0.072"
-  },
-  {
-    "id": 6255,
-    "name": "Maggi - 280 g Masala Noodles",
-    "sku": "Maggi_280_g_Masala_Noodles",
-    "weight": "0.28"
   },
   {
     "id": 6256,
@@ -3594,10 +3732,10 @@
     "weight": "0.4"
   },
   {
-    "id": 5258,
-    "name": "Chhedas - 150 g Kachori",
-    "sku": "Chhedas_150_g_Kachori",
-    "weight": "0.15"
+    "id": 5257,
+    "name": "Amar - 250 g Dried Kokam",
+    "sku": "Amar_250_g_Dried_Kokam",
+    "weight": "0.25"
   },
   {
     "id": 5258,
