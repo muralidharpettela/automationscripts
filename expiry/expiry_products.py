@@ -9,6 +9,7 @@ from dateutil.relativedelta import relativedelta
 from common.common_functions import CommonFunctions
 from tabulate import tabulate
 
+
 class ExpiryProducts(CommonFunctions):
     def __init__(self, kassen_system_excel_file_dir, product_expiry_list_dir, onedrive_link, credentials_path):
         self.kassen_system_excel_file_dir = kassen_system_excel_file_dir
@@ -31,7 +32,8 @@ class ExpiryProducts(CommonFunctions):
         self.below_ten_one_month_expiry_list = list()
         self.below_ten_two_month_expiry_list = list()
         self.below_ten_three_month_expiry_list = list()
-        self.products_already_expired_list = list()
+        self.products_already_expired_list_s0 = list()
+        self.products_already_expired_list_s1 = list()
         self.no_expiry_date_products = list()
         self.stock_zero_expiry_date_exists = list()
         self.stock_exist_expiry_date_not_exists = list()
@@ -72,6 +74,7 @@ class ExpiryProducts(CommonFunctions):
                {stock113month}
                {stock13month}
                {expiredproducts}
+               {expiredproducts1}
                {case1}
                {case2}
                {stat}
@@ -162,6 +165,13 @@ class ExpiryProducts(CommonFunctions):
                 if expiry_date.value:
                     if stock_value.value == 0:
                         self.stock_zero_expiry_date_exists.append(col_nam.value)
+                        # products already expired
+                        if expiry_date.value.date() <= datetime.now().date():
+                            self.products_already_expired_list_s0.append(col_nam.value)
+                    if stock_value.value > 0:
+                        # products already expired
+                        if expiry_date.value.date() <= datetime.now().date():
+                            self.products_already_expired_list_s1.append(col_nam.value)
                     if stock_value.value > 20:
                         # one month
                         if (expiry_date.value.date() <= self.one_months) and (
@@ -175,9 +185,6 @@ class ExpiryProducts(CommonFunctions):
                         elif (expiry_date.value.date() <= self.three_months) and (
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.twenty_three_month_expiry_list.append(col_nam.value)
-                        # products already expired
-                        elif expiry_date.value.date() <= datetime.now().date():
-                            self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
                         else:
                             continue
@@ -195,8 +202,8 @@ class ExpiryProducts(CommonFunctions):
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.ten_three_month_expiry_list.append(col_nam.value)
                         # products already expired
-                        elif expiry_date.value.date() <= datetime.now().date():
-                            self.products_already_expired_list.append(col_nam.value)
+                        #elif expiry_date.value.date() <= datetime.now().date():
+                         #   self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
                         else:
                             continue
@@ -214,8 +221,8 @@ class ExpiryProducts(CommonFunctions):
                                 expiry_date.value.date() >= datetime.now().date()):
                             self.below_ten_three_month_expiry_list.append(col_nam.value)
                         # products already expired
-                        elif expiry_date.value.date() <= datetime.now().date():
-                            self.products_already_expired_list.append(col_nam.value)
+                        #elif expiry_date.value.date() <= datetime.now().date():
+                            #self.products_already_expired_list.append(col_nam.value)
                             # print("products already expired {}".format(col_nam.value))
                         else:
                             continue
@@ -256,8 +263,11 @@ class ExpiryProducts(CommonFunctions):
                 zip(range(1, len(self.below_ten_three_month_expiry_list) + 1), self.below_ten_three_month_expiry_list),
                 headers=["Stock - (1-10) and 3 months\nno", "\nArticle Name"], tablefmt="grid"),
             expiredproducts=tabulate(
-                zip(range(1, len(self.products_already_expired_list) + 1), self.products_already_expired_list),
-                headers=["Products already Expired\nno", "\nArticle Name"], tablefmt="grid"),
+                zip(range(1, len(self.products_already_expired_list_s0) + 1), self.products_already_expired_list_s0),
+                headers=["Products already Expired Stock = 0\nno", "\nArticle Name"], tablefmt="grid"),
+            expiredproducts1=tabulate(
+                zip(range(1, len(self.products_already_expired_list_s1) + 1), self.products_already_expired_list_s1),
+                headers=["Products already Expired Stock != 1\nno", "\nArticle Name"], tablefmt="grid"),
             case1=tabulate(
                 zip(range(1, len(self.stock_zero_expiry_date_exists) + 1), self.stock_zero_expiry_date_exists),
                 headers=["Case-1:Stock = 0, expiry date !=0 \nno", "\nArticle Name"], tablefmt="grid"),
@@ -297,8 +307,11 @@ class ExpiryProducts(CommonFunctions):
                 zip(range(1, len(self.below_ten_three_month_expiry_list) + 1), self.below_ten_three_month_expiry_list),
                 headers=["Stock - (1-10) and 3 months\nno", "\nArticle Name"], tablefmt="html"),
             expiredproducts=tabulate(
-                zip(range(1, len(self.products_already_expired_list) + 1), self.products_already_expired_list),
-                headers=["Products already Expired\nno", "\nArticle Name"], tablefmt="html"),
+                zip(range(1, len(self.products_already_expired_list_s0) + 1), self.products_already_expired_list_s0),
+                headers=["Products already Expired Stock=0\nno", "\nArticle Name"], tablefmt="html"),
+            expiredproducts1=tabulate(
+                zip(range(1, len(self.products_already_expired_list_s1) + 1), self.products_already_expired_list_s1),
+                headers=["Products already Expired Stock!=0\nno", "\nArticle Name"], tablefmt="html"),
             case1=tabulate(
                 zip(range(1, len(self.stock_zero_expiry_date_exists) + 1), self.stock_zero_expiry_date_exists),
                 headers=["Case-1:Stock = 0, expiry date !=0: \nno", "\nArticle Name"], tablefmt="html"),

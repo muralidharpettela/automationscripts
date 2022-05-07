@@ -15,7 +15,7 @@
     "id": 9685,
     "name": "Priya - 300 g Cut Mango Pickle",
     "sku": "Priya_300_g_Cut_Mango_Pickle",
-    "weight": ""
+    "weight": "0.3"
   },
   {
     "id": 9682,
@@ -37,7 +37,7 @@
   },
   {
     "id": 9676,
-    "name": "Annam - 2 kg Toor Dal",
+    "name": "Annam - 1 kg Toor Dal",
     "sku": "Annam_2_kg_Toor_Dal",
     "weight": "2.0"
   },
@@ -1015,7 +1015,7 @@
   },
   {
     "id": 8919,
-    "name": "Haldiram - 200 g Kachoori",
+    "name": "Haldiram - 150 g Kachoori",
     "sku": "Haldiram_200_g_Kachoori",
     "weight": "0.2"
   },
@@ -3577,7 +3577,7 @@
   },
   {
     "id": 5289,
-    "name": "Haldiram - 150 g Kaju Mix",
+    "name": "Haldiram - 150 g Kaju Kashmiri Mix",
     "sku": "Haldiram_150_g_Kaju_Mix",
     "weight": "0.15"
   },
@@ -4135,7 +4135,7 @@
   },
   {
     "id": 4640,
-    "name": "Parachute - 250 ml Hair Oil",
+    "name": "Parachute - 200 ml Coconut Oil",
     "sku": "Parachute_250_ml_Hair_Oil",
     "weight": "0.25"
   },
