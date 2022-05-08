@@ -311,8 +311,8 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_09042022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/11042022.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/11042022"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05052022.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/05052022.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/04052022"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()
