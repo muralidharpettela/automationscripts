@@ -17,8 +17,8 @@ class CommonFunctions:
 
         self.products_list = list()
         self.no_match_products_list = list()
-        self.no_match_products_txt = open("../no_match_products.txt", "w+")
-        self.products_without_weight_txt = open("../products_without_weight.txt", "w+")
+        self.no_match_products_txt = open("./no_match_products.txt", "w+")
+        self.products_without_weight_txt = open("./products_without_weight.txt", "w+")
 
     def load_wp_credentials(self, json_file_path):
         # load the json file

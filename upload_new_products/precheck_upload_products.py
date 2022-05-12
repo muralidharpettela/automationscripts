@@ -28,7 +28,7 @@ class UploadProducts(CommonFunctions):
         self.match_found_in_ks = False
         self.image_matched = False
         self.all_products_data_list = list()
-        self.no_image_products = open("../no_image_products.txt", "w+")
+        self.no_image_products = open("./no_image_products.txt", "w+")
         self.num_no_match_found = 0
         self.match_of_stock_cells_count = 0
         self.num_no_image_match_found = 0
@@ -280,8 +280,8 @@ class UploadProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_05052022.csv"
-    new_products_excel_path = r"/Users/muralidharpettela/Downloads/05052022.xlsx"
-    images_path = r"/Users/muralidharpettela/Downloads/04052022"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_11052022_2.csv"
+    new_products_excel_path = r"/Users/muralidharpettela/Downloads/12052022.xlsx"
+    images_path = r"/Users/muralidharpettela/Downloads/12052022"
     staging_products_update = UploadProducts(filepath_kassen_system, new_products_excel_path, images_path)
     staging_products_update.process()
