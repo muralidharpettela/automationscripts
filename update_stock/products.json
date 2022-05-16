@@ -1,5 +1,53 @@
 [
   {
+    "id": 9968,
+    "name": "Euro Fine - 1 kg Red Raw rice",
+    "sku": "Euro_Fine_1_kg_Red_Raw_rice",
+    "weight": "1.0"
+  },
+  {
+    "id": 9966,
+    "name": "Motherlands - 350 g Sweet Mango Chutney",
+    "sku": "Motherlands_350_g_Sweet_Mango_Chutney",
+    "weight": "0.35"
+  },
+  {
+    "id": 9964,
+    "name": "Motherlands - 350 g Mint Chutney",
+    "sku": "Motherlands_350_g_Mint_Chutney",
+    "weight": "0.35"
+  },
+  {
+    "id": 9962,
+    "name": "TRS - 1 kg Rice Flakes (Thick)",
+    "sku": "TRS_1_kg_Rice_Flakes_(Thick)",
+    "weight": "1.0"
+  },
+  {
+    "id": 9960,
+    "name": "Adisha - 450 g Red Kidney Beans(Tin)",
+    "sku": "Adisha_450_g_Red_Kidney_Beans(Tin)",
+    "weight": "0.45"
+  },
+  {
+    "id": 9958,
+    "name": "Tea Set - 1 Ceramic",
+    "sku": "Tea_Set_1_Ceramic",
+    "weight": "0"
+  },
+  {
+    "id": 9956,
+    "name": "Vietnam - 500 g Rice Noodels",
+    "sku": "Vietnam_500_g_Rice_Noodels",
+    "weight": "0.5"
+  },
+  {
+    "id": 9954,
+    "name": "Maggi - 400 g Cubes",
+    "sku": "Maggi_400_g_Cubes",
+    "weight": "0.4"
+  },
+  {
     "id": 9938,
     "name": "Motherlands - 300 g Cornflour",
     "sku": "Motherlands_300_g_Cornflour",
@@ -1764,15 +1812,15 @@
     "weight": "0.5"
   },
   {
-    "id": 8594,
-    "name": "250 g - Small Red Onions",
-    "sku": "250_g_Small_Red_Onions",
-    "weight": "0.25"
-  },
-  {
     "id": 8593,
     "name": "250 g - Raw Mangoes",
     "sku": "250_g_Raw_Mangoes",
+    "weight": "0.25"
+  },
+  {
+    "id": 8594,
+    "name": "250 g - Small Red Onions",
+    "sku": "250_g_Small_Red_Onions",
     "weight": "0.25"
   },
   {
@@ -1788,15 +1836,15 @@
     "weight": "0.25"
   },
   {
-    "id": 8592,
-    "name": "250 g - Papdi (Broad Beans)",
-    "sku": "250_g_Papdi_(Broad_Beans)",
-    "weight": "0.25"
-  },
-  {
     "id": 8590,
     "name": "250 g - Long Beans",
     "sku": "250_g_Long_Beans",
+    "weight": "0.25"
+  },
+  {
+    "id": 8592,
+    "name": "250 g - Papdi (Broad Beans)",
+    "sku": "250_g_Papdi_(Broad_Beans)",
     "weight": "0.25"
   },
   {
@@ -4146,10 +4194,10 @@
     "weight": "0.15"
   },
   {
-    "id": 5260,
-    "name": "Chhedas - 170 g Manglori Mix",
-    "sku": "Chhedas_170_g_Manglori_Mix",
-    "weight": "0.17"
+    "id": 5262,
+    "name": "Chhedas - 200 g Maska Khari",
+    "sku": "Chhedas_200_g_Maska_Khari",
+    "weight": "0.2"
   },
   {
     "id": 5261,
@@ -5946,9 +5994,9 @@
     "weight": "0.1"
   },
   {
-    "id": 4123,
-    "name": "Aachi - 100 g Cumin Seeds",
-    "sku": "Aachi_100_g_Cumin_Seeds",
+    "id": 4125,
+    "name": "Aachi - 100 g Fenugreek Seeds",
+    "sku": "Aachi_100_g_Fenugreek_Seeds",
     "weight": "0.1"
   },
   {

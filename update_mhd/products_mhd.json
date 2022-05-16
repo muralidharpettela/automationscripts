@@ -1,5 +1,572 @@
 [
   {
+    "id": 9968,
+    "name": "Euro Fine - 1 kg Red Raw rice",
+    "sku": "Euro_Fine_1_kg_Red_Raw_rice",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9966,
+    "name": "Motherlands - 350 g Sweet Mango Chutney",
+    "sku": "Motherlands_350_g_Sweet_Mango_Chutney",
+    "weight": "0.35",
+    "attributes": []
+  },
+  {
+    "id": 9964,
+    "name": "Motherlands - 350 g Mint Chutney",
+    "sku": "Motherlands_350_g_Mint_Chutney",
+    "weight": "0.35",
+    "attributes": []
+  },
+  {
+    "id": 9962,
+    "name": "TRS - 1 kg Rice Flakes (Thick)",
+    "sku": "TRS_1_kg_Rice_Flakes_(Thick)",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9960,
+    "name": "Adisha - 450 g Red Kidney Beans(Tin)",
+    "sku": "Adisha_450_g_Red_Kidney_Beans(Tin)",
+    "weight": "0.45",
+    "attributes": []
+  },
+  {
+    "id": 9958,
+    "name": "Tea Set - 1 Ceramic",
+    "sku": "Tea_Set_1_Ceramic",
+    "weight": "0",
+    "attributes": []
+  },
+  {
+    "id": 9956,
+    "name": "Vietnam - 500 g Rice Noodels",
+    "sku": "Vietnam_500_g_Rice_Noodels",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9954,
+    "name": "Maggi - 400 g Cubes",
+    "sku": "Maggi_400_g_Cubes",
+    "weight": "0.4",
+    "attributes": []
+  },
+  {
+    "id": 9938,
+    "name": "Motherlands - 300 g Cornflour",
+    "sku": "Motherlands_300_g_Cornflour",
+    "weight": "0.3",
+    "attributes": []
+  },
+  {
+    "id": 9936,
+    "name": "Annam - 1 kg Red Boiled Rice",
+    "sku": "Annam_1_kg_Red_Boiled_Rice",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9934,
+    "name": "TRS - 300 g Dessicated Coconut (Fine)",
+    "sku": "TRS_300_g_Dessicated_Coconut_(Fine)",
+    "weight": "0.3",
+    "attributes": []
+  },
+  {
+    "id": 9932,
+    "name": "Adisha - 500 g Upwas Bhajani",
+    "sku": "Adisha_500_g_Upwas_Bhajani",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9930,
+    "name": "Heera - 15 g Sandal Insence Sticks",
+    "sku": "Heera_15_g_Sandal_Insence_Sticks",
+    "weight": "0.015",
+    "attributes": []
+  },
+  {
+    "id": 9928,
+    "name": "KTC - 250 ml Coconut Oil",
+    "sku": "KTC_250_ml_Coconut_Oil",
+    "weight": "0.25",
+    "attributes": []
+  },
+  {
+    "id": 9926,
+    "name": "Parliament - 500 ml Mustard Oil",
+    "sku": "Parliament_500_ml_Mustard_Oil",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9924,
+    "name": "MDH - 100 g Butter Chicken Masala",
+    "sku": "MDH_100_g_Butter_Chicken_Masala",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9922,
+    "name": "Aachi - 50 g Turmeric Powder",
+    "sku": "Aachi_50_g_Turmeric_Powder",
+    "weight": "0.05",
+    "attributes": []
+  },
+  {
+    "id": 9920,
+    "name": "Schani - 400 g Tamarind",
+    "sku": "Schani_400_g_Tamarind",
+    "weight": "0.4",
+    "attributes": []
+  },
+  {
+    "id": 9918,
+    "name": "TRS - 400 g Tamarind",
+    "sku": "TRS_400_g_Tamarind",
+    "weight": "0.4",
+    "attributes": []
+  },
+  {
+    "id": 9916,
+    "name": "Nagchampa - 130 g Insence Sticks",
+    "sku": "Nagchampa_130_g_Insence_Sticks",
+    "weight": "0.13",
+    "attributes": []
+  },
+  {
+    "id": 9912,
+    "name": "MDH - 50 g Biryani Masala",
+    "sku": "MDH_50_g_Biryani_Masala",
+    "weight": "0.05",
+    "attributes": []
+  },
+  {
+    "id": 9914,
+    "name": "TRS - 100 g Ajwain Seeds",
+    "sku": "TRS_100_g_Ajwain_Seeds",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9910,
+    "name": "Heera - 100 g Sugarr Coated Soonf",
+    "sku": "Heera_100_g_Sugarr_Coated_Soonf",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9906,
+    "name": "Haldiram - 200 g Long Sev",
+    "sku": "Haldiram_200_g_Long_Sev",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9908,
+    "name": "Shan - 100 g Rasmalai Mix",
+    "sku": "Shan_100_g_Rasmalai_Mix",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9904,
+    "name": "Aroy D - 150 ml Coconut Milk",
+    "sku": "Aroy_D_150_ml_Coconut_Milk",
+    "weight": "0.15",
+    "attributes": []
+  },
+  {
+    "id": 9902,
+    "name": "Aroy D - 500 ml Coconut Milk",
+    "sku": "Aroy_D_500_ml_Coconut_Milk",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9898,
+    "name": "Heera - 250 g Dried Coconut Halves",
+    "sku": "Heera_250_g_Dried_Coconut_Halves",
+    "weight": "0.25",
+    "attributes": []
+  },
+  {
+    "id": 9900,
+    "name": "Heera - 500 g Black Eye Beans",
+    "sku": "Heera_500_g_Black_Eye_Beans",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9896,
+    "name": "Annam - 200 g Ginger and Garlic Paste",
+    "sku": "Annam_200_g_Ginger_and_Garlic_Paste",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9894,
+    "name": "Haldiram - 150 g Aloo Bhujia",
+    "sku": "Haldiram_150_g_Aloo_Bhujia",
+    "weight": "0.15",
+    "attributes": []
+  },
+  {
+    "id": 9892,
+    "name": "Lijjat - 200 g Papad (Green Chilli)",
+    "sku": "Lijjat_200_g_Papad_(Green_Chilli)",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9890,
+    "name": "Lijjat - 200 g Udad Papad",
+    "sku": "Lijjat_200_g_Udad_Papad",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9886,
+    "name": "Prestige - Roti Maker",
+    "sku": "Prestige_Roti_Maker",
+    "weight": "0",
+    "attributes": []
+  },
+  {
+    "id": 9888,
+    "name": "Haldiram - 200 g Gujarati Mixture",
+    "sku": "Haldiram_200_g_Gujarati_Mixture",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9882,
+    "name": "Shan - 100 g Chicken 65 Masala",
+    "sku": "Shan_100_g_Chicken_65_Masala",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9884,
+    "name": "Prestige - 3 Liter Pressure Cooker (Induction)",
+    "sku": "Prestige_3_Liter_Pressure_Cooker_(Induction)",
+    "weight": "0",
+    "attributes": []
+  },
+  {
+    "id": 9880,
+    "name": "Shan - 100 g Pulav Biryani",
+    "sku": "Shan_100_g_Pulav_Biryani",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9878,
+    "name": "TRS - 400 g Mustard Seeds",
+    "sku": "TRS_400_g_Mustard_Seeds",
+    "weight": "0.4",
+    "attributes": []
+  },
+  {
+    "id": 9876,
+    "name": "TRS - 375 g Red Peanuts",
+    "sku": "TRS_375_g_Red_Peanuts",
+    "weight": "0.375",
+    "attributes": []
+  },
+  {
+    "id": 9874,
+    "name": "Heera - 200 g Far Far Star",
+    "sku": "Heera_200_g_Far_Far_Star",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9872,
+    "name": "Diamond - 1 kg Sonamasoori Rice",
+    "sku": "Diamond_1_kg_Sonamasoori_Rice",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9868,
+    "name": "Everest - 100 g Kitchen King",
+    "sku": "Everest_100_g_Kitchen_King",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9870,
+    "name": "Kitchen India - 285 g RTE Navaratan Korma",
+    "sku": "Kitchen_India_285_g_RTE_Navaratan_Korma",
+    "weight": "0.285",
+    "attributes": []
+  },
+  {
+    "id": 9864,
+    "name": "Heera - 15 g Rose Insence Sticks",
+    "sku": "Heera_15_g_Rose_Insence_Sticks",
+    "weight": "0.015",
+    "attributes": []
+  },
+  {
+    "id": 9866,
+    "name": "RK - 50 g Cloves",
+    "sku": "RK_50_g_Cloves",
+    "weight": "0.05",
+    "attributes": []
+  },
+  {
+    "id": 9862,
+    "name": "Heera -15 g Chandan Insence Sticks",
+    "sku": "Heera_-15_g_Chandan_Insence_Sticks",
+    "weight": "0.015",
+    "attributes": []
+  },
+  {
+    "id": 9860,
+    "name": "Metromilan - 15 g Insence Stciks",
+    "sku": "Metromilan_15_g_Insence_Stciks",
+    "weight": "0.015",
+    "attributes": []
+  },
+  {
+    "id": 9856,
+    "name": "Heera - 20 g Dry Curry Leaves",
+    "sku": "Heera_20_g_Dry_Curry_Leaves",
+    "weight": "0.02",
+    "attributes": []
+  },
+  {
+    "id": 9858,
+    "name": "Kitchen India - 280 g RTE Rajma Masala",
+    "sku": "Kitchen_India_280_g_RTE_Rajma_Masala",
+    "weight": "0.28",
+    "attributes": []
+  },
+  {
+    "id": 9854,
+    "name": "Lijjat - 200 g Punjabi Masala Papad",
+    "sku": "Lijjat_200_g_Punjabi_Masala_Papad",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9852,
+    "name": "Afroase - 1 l Palmoil",
+    "sku": "Afroase_1_l_Palmoil",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9850,
+    "name": "Dairy valley - 1 kg Gulab Jamun",
+    "sku": "Dairy_valley_1_kg_Gulab_Jamun",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9848,
+    "name": "Diamond - 500 g Jaggery (Yellow  Cubes)",
+    "sku": "Diamond_500_g_Jaggery_(Yellow_Cubes)",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9844,
+    "name": "Desai Bandhu - 200 g Chunda",
+    "sku": "Desai_Bandhu_200_g_Chunda",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9846,
+    "name": "Heera - 25 g Bright Red Food Colour",
+    "sku": "Heera_25_g_Bright_Red_Food_Colour",
+    "weight": "0.025",
+    "attributes": []
+  },
+  {
+    "id": 9840,
+    "name": "TRS - 100 g Black Seasme Seeds",
+    "sku": "TRS_100_g_Black_Seasme_Seeds",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9842,
+    "name": "Annam - 500 g Green Peas",
+    "sku": "Annam_500_g_Green_Peas",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9836,
+    "name": "Supreme -1 Piece Mehendi Cone",
+    "sku": "Supreme_-1_Piece_Mehendi_Cone",
+    "weight": "0",
+    "attributes": []
+  },
+  {
+    "id": 9838,
+    "name": "Vanadevi - 50 g Asafteoida",
+    "sku": "Vanadevi_50_g_Asafteoida",
+    "weight": "0.05",
+    "attributes": []
+  },
+  {
+    "id": 9834,
+    "name": "TRS - 300 g Rice Flakes (Thick)",
+    "sku": "TRS_300_g_Rice_Flakes_(Thick)",
+    "weight": "0.3",
+    "attributes": []
+  },
+  {
+    "id": 9832,
+    "name": "Balaji - 400 g Tikha Mitha Mix",
+    "sku": "Balaji_400_g_Tikha_Mitha_Mix",
+    "weight": "0.4",
+    "attributes": []
+  },
+  {
+    "id": 9830,
+    "name": "Birds - 300 g Custrad Powder",
+    "sku": "Birds_300_g_Custrad_Powder",
+    "weight": "0.3",
+    "attributes": []
+  },
+  {
+    "id": 9828,
+    "name": "RK - 1 kg Chana Dal",
+    "sku": "RK_1_kg_Chana_Dal",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9826,
+    "name": "Alantura - 690 g Bio Tomato Sauce",
+    "sku": "Alantura_690_g_Bio_Tomato_Sauce",
+    "weight": "0.69",
+    "attributes": []
+  },
+  {
+    "id": 9824,
+    "name": "Peak -  397 g Condensmilk",
+    "sku": "Peak_397_g_Condensmilk",
+    "weight": "0.397",
+    "attributes": []
+  },
+  {
+    "id": 9822,
+    "name": "RK - 1 kg Masoor Dal",
+    "sku": "RK_1_kg_Masoor_Dal",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9820,
+    "name": "RK - 500 g Toor Dal",
+    "sku": "RK_500_g_Toor_Dal",
+    "weight": "0.5",
+    "attributes": []
+  },
+  {
+    "id": 9818,
+    "name": "Balaji - 65 g Tangy Tomato",
+    "sku": "Balaji_65_g_Tangy_Tomato",
+    "weight": "0.065",
+    "attributes": []
+  },
+  {
+    "id": 9816,
+    "name": "Chings - 150 g Egg Hakka Noodels",
+    "sku": "Chings_150_g_Egg_Hakka_Noodels",
+    "weight": "0.15",
+    "attributes": []
+  },
+  {
+    "id": 9814,
+    "name": "Orient - 1 kg Sushi Rice",
+    "sku": "Orient_1_kg_Sushi_Rice",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9812,
+    "name": "Nutramla - 300 g Chunda",
+    "sku": "Nutramla_300_g_Chunda",
+    "weight": "0.3",
+    "attributes": []
+  },
+  {
+    "id": 9810,
+    "name": "Sakthi - 200 g Fish Fry Masala",
+    "sku": "Sakthi_200_g_Fish_Fry_Masala",
+    "weight": "0.2",
+    "attributes": []
+  },
+  {
+    "id": 9808,
+    "name": "RK - 100 g Coriander Seeds",
+    "sku": "RK_100_g_Coriander_Seeds",
+    "weight": "0.1",
+    "attributes": []
+  },
+  {
+    "id": 9806,
+    "name": "Birds - 600 g Custard Powder",
+    "sku": "Birds_600_g_Custard_Powder",
+    "weight": "0.6",
+    "attributes": []
+  },
+  {
+    "id": 9804,
+    "name": "1 Piece - Copper Round Bowl",
+    "sku": "1_Piece_Copper_Round_Bowl",
+    "weight": "0",
+    "attributes": []
+  },
+  {
+    "id": 9802,
+    "name": "Aashirvaad - 2 kg Multigrain Atta",
+    "sku": "Aashirvaad_2_kg_Multigrain_Atta",
+    "weight": "2.0",
+    "attributes": []
+  },
+  {
+    "id": 9800,
+    "name": "RK - 1 kg Urid Beans",
+    "sku": "RK_1_kg_Urid_Beans",
+    "weight": "1.0",
+    "attributes": []
+  },
+  {
+    "id": 9798,
+    "name": "Patanjali - 125 g Mud Soap",
+    "sku": "Patanjali_125_g_Mud_Soap",
+    "weight": "0.125",
+    "attributes": []
+  },
+  {
+    "id": 9796,
+    "name": "De Rica - 210 g Tomatenpuree",
+    "sku": "De_Rica_210_g_Tomatenpuree",
+    "weight": "0.21",
+    "attributes": []
+  },
+  {
+    "id": 9794,
+    "name": "Balaji - 190 g Aloo Sev",
+    "sku": "Balaji_190_g_Aloo_Sev",
+    "weight": "0.19",
+    "attributes": []
+  },
+  {
     "id": 9694,
     "name": "Balalji - 250 g Bhel Mix",
     "sku": "Balalji_250_g_Bhel_Mix",
@@ -45,7 +612,7 @@
     "id": 9676,
     "name": "Annam - 1 kg Toor Dal",
     "sku": "Annam_2_kg_Toor_Dal",
-    "weight": "2.0",
+    "weight": "1.0",
     "attributes": []
   },
   {
@@ -213,6 +780,16 @@
         "variation": false,
         "options": [
           "Rubicon"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -1000,6 +1577,16 @@
         "options": [
           "Maggi"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 30-06-2022"
+        ]
       }
     ]
   },
@@ -1159,7 +1746,7 @@
   },
   {
     "id": 9262,
-    "name": "Sapna - 150 g Pheni",
+    "name": "Danish - 200 g Pheni",
     "sku": "Sapna_150_g_Pheni",
     "weight": "0.15",
     "attributes": [
@@ -1361,6 +1948,16 @@
         "variation": false,
         "options": [
           "Everest"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 04-08-2022"
         ]
       }
     ]
@@ -2427,6 +3024,16 @@
         "options": [
           "Annam"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -2526,6 +3133,16 @@
         "variation": false,
         "options": [
           "Suhana"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -2706,7 +3323,7 @@
     "id": 8919,
     "name": "Haldiram - 150 g Kachoori",
     "sku": "Haldiram_200_g_Kachoori",
-    "weight": "0.2",
+    "weight": "0.15",
     "attributes": [
       {
         "id": 3,
@@ -2757,24 +3374,6 @@
     ]
   },
   {
-    "id": 8884,
-    "name": "Vanadevi - 100 g Asafteioda",
-    "sku": "Vanadevi_100_g_Asafteioda",
-    "weight": "0.1",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Vanadevi"
-        ]
-      }
-    ]
-  },
-  {
     "id": 8882,
     "name": "Lijjat - 200 g Papad (Jeera)",
     "sku": "Lijjat_200_g_Papad_(Jeera)",
@@ -2793,9 +3392,45 @@
     ]
   },
   {
+    "id": 8884,
+    "name": "Vanadevi - 100 g Asafteioda",
+    "sku": "Vanadevi_100_g_Asafteioda",
+    "weight": "0.1",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Vanadevi"
+        ]
+      }
+    ]
+  },
+  {
     "id": 8880,
     "name": "Telugu - 100 g Chicken Masala",
     "sku": "Telugu_100_g_Chicken_Masala",
+    "weight": "0.1",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Telugu"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8878,
+    "name": "Telugu - 100 g Garam Masala",
+    "sku": "Telugu_100_g_Garam_Masala",
     "weight": "0.1",
     "attributes": [
       {
@@ -2824,24 +3459,6 @@
         "variation": false,
         "options": [
           "Pitambari"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8878,
-    "name": "Telugu - 100 g Garam Masala",
-    "sku": "Telugu_100_g_Garam_Masala",
-    "weight": "0.1",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Telugu"
         ]
       }
     ]
@@ -2908,24 +3525,6 @@
     ]
   },
   {
-    "id": 8864,
-    "name": "Ganesh Bhel - 100 g Potato Papdi",
-    "sku": "Ganesh_Bhel_100_g_Potato_Papdi",
-    "weight": "0.1",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Ganesh Bhel"
-        ]
-      }
-    ]
-  },
-  {
     "id": 8866,
     "name": "MTR - 500 g Rava Idly Mix",
     "sku": "MTR_500_g_Rava_Idly_Mix",
@@ -2939,6 +3538,24 @@
         "variation": false,
         "options": [
           "MTR"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8864,
+    "name": "Ganesh Bhel - 100 g Potato Papdi",
+    "sku": "Ganesh_Bhel_100_g_Potato_Papdi",
+    "weight": "0.1",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Ganesh Bhel"
         ]
       }
     ]
@@ -3120,6 +3737,16 @@
         "options": [
           "Taj Mahal"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 04-08-2022"
+        ]
       }
     ]
   },
@@ -3173,6 +3800,16 @@
         "variation": false,
         "options": [
           "Red Label"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 04-08-2022"
         ]
       }
     ]
@@ -3428,6 +4065,16 @@
         "options": [
           "Maggi"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 15-07-2022"
+        ]
       }
     ]
   },
@@ -3592,16 +4239,16 @@
     "attributes": []
   },
   {
-    "id": 8594,
-    "name": "250 g - Small Red Onions",
-    "sku": "250_g_Small_Red_Onions",
+    "id": 8593,
+    "name": "250 g - Raw Mangoes",
+    "sku": "250_g_Raw_Mangoes",
     "weight": "0.25",
     "attributes": []
   },
   {
-    "id": 8593,
-    "name": "250 g - Raw Mangoes",
-    "sku": "250_g_Raw_Mangoes",
+    "id": 8594,
+    "name": "250 g - Small Red Onions",
+    "sku": "250_g_Small_Red_Onions",
     "weight": "0.25",
     "attributes": []
   },
@@ -3620,13 +4267,6 @@
     "attributes": []
   },
   {
-    "id": 8592,
-    "name": "250 g - Papdi (Broad Beans)",
-    "sku": "250_g_Papdi_(Broad_Beans)",
-    "weight": "0.25",
-    "attributes": []
-  },
-  {
     "id": 8590,
     "name": "250 g - Long Beans",
     "sku": "250_g_Long_Beans",
@@ -3634,16 +4274,16 @@
     "attributes": []
   },
   {
-    "id": 8591,
-    "name": "250 g - Okra (Ladys Finger)",
-    "sku": "250_g_Okra_(Lady's_Finger)",
+    "id": 8592,
+    "name": "250 g - Papdi (Broad Beans)",
+    "sku": "250_g_Papdi_(Broad_Beans)",
     "weight": "0.25",
     "attributes": []
   },
   {
-    "id": 8587,
-    "name": "250 g - Green Brinjal",
-    "sku": "250_g_Green_Brinjal",
+    "id": 8591,
+    "name": "250 g - Okra (Ladys Finger)",
+    "sku": "250_g_Okra_(Lady's_Finger)",
     "weight": "0.25",
     "attributes": []
   },
@@ -3658,6 +4298,13 @@
     "id": 8588,
     "name": "250 g - Green Chillies",
     "sku": "250_g_Green_Chillies",
+    "weight": "0.25",
+    "attributes": []
+  },
+  {
+    "id": 8587,
+    "name": "250 g - Green Brinjal",
+    "sku": "250_g_Green_Brinjal",
     "weight": "0.25",
     "attributes": []
   },
@@ -3690,13 +4337,6 @@
     "attributes": []
   },
   {
-    "id": 8580,
-    "name": "20 g - Curry Leaves",
-    "sku": "20_g_Curry_Leaves",
-    "weight": "0.02",
-    "attributes": []
-  },
-  {
     "id": 8579,
     "name": "1 kg - Suran (Elephant Yam)",
     "sku": "1_kg_Suran_(Elephant_Yam)",
@@ -3704,16 +4344,23 @@
     "attributes": []
   },
   {
-    "id": 8582,
-    "name": "250 g - Arbi (Tara Root)",
-    "sku": "250_g_Arbi_(Tara_Root)",
-    "weight": "0.25",
+    "id": 8580,
+    "name": "20 g - Curry Leaves",
+    "sku": "20_g_Curry_Leaves",
+    "weight": "0.02",
     "attributes": []
   },
   {
     "id": 8581,
     "name": "250 g - Amla",
     "sku": "250_g_Amla",
+    "weight": "0.25",
+    "attributes": []
+  },
+  {
+    "id": 8582,
+    "name": "250 g - Arbi (Tara Root)",
+    "sku": "250_g_Arbi_(Tara_Root)",
     "weight": "0.25",
     "attributes": []
   },
@@ -3739,10 +4386,10 @@
     "attributes": []
   },
   {
-    "id": 8574,
-    "name": "1 - Piece Kola (Ash Gourd) (Approx. 1200 g)",
-    "sku": "1_Piece_Kola_(Approx._1200_g)",
-    "weight": "1.2",
+    "id": 8572,
+    "name": "1 - Piece Coconut",
+    "sku": "1_Piece_Coconut",
+    "weight": "0",
     "attributes": []
   },
   {
@@ -3753,10 +4400,10 @@
     "attributes": []
   },
   {
-    "id": 8572,
-    "name": "1 - Piece Coconut",
-    "sku": "1_Piece_Coconut",
-    "weight": "0",
+    "id": 8574,
+    "name": "1 - Piece Kola (Ash Gourd) (Approx. 1200 g)",
+    "sku": "1_Piece_Kola_(Approx._1200_g)",
+    "weight": "1.2",
     "attributes": []
   },
   {
@@ -3767,16 +4414,16 @@
     "attributes": []
   },
   {
-    "id": 8570,
-    "name": "1 - Pack Murunga Leaves",
-    "sku": "1_Pack_Murunga_Leaves",
+    "id": 8569,
+    "name": "1 - Bunch Mint",
+    "sku": "1_Bunch_Mint",
     "weight": "0",
     "attributes": []
   },
   {
-    "id": 8569,
-    "name": "1 - Bunch Mint",
-    "sku": "1_Bunch_Mint",
+    "id": 8570,
+    "name": "1 - Pack Murunga Leaves",
+    "sku": "1_Pack_Murunga_Leaves",
     "weight": "0",
     "attributes": []
   },
@@ -3867,24 +4514,6 @@
     ]
   },
   {
-    "id": 8515,
-    "name": "Samahan - 1 Tea Pouch",
-    "sku": "Samahan_1_St\u00fcck_Tea_Pouch",
-    "weight": "0",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Samahan"
-        ]
-      }
-    ]
-  },
-  {
     "id": 8514,
     "name": "RK - 100 g Cashews",
     "sku": "RK_100_g_Cashews",
@@ -3898,6 +4527,24 @@
         "variation": false,
         "options": [
           "RK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8516,
+    "name": "Shan - 50 g Chicken Biryani Masala",
+    "sku": "Shan_50_g_Chicken_Biryani_Masala",
+    "weight": "0.05",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Shan"
         ]
       }
     ]
@@ -3921,10 +4568,10 @@
     ]
   },
   {
-    "id": 8516,
-    "name": "Shan - 50 g Chicken Biryani Masala",
-    "sku": "Shan_50_g_Chicken_Biryani_Masala",
-    "weight": "0.05",
+    "id": 8515,
+    "name": "Samahan - 1 Tea Pouch",
+    "sku": "Samahan_1_St\u00fcck_Tea_Pouch",
+    "weight": "0",
     "attributes": [
       {
         "id": 3,
@@ -3933,7 +4580,7 @@
         "visible": true,
         "variation": false,
         "options": [
-          "Shan"
+          "Samahan"
         ]
       }
     ]
@@ -3985,6 +4632,42 @@
     ]
   },
   {
+    "id": 8507,
+    "name": "Nutramla - 250 g Amla Pickle",
+    "sku": "Nutramla_250_g_Amla_Pickle",
+    "weight": "0.25",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Nutramla"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8508,
+    "name": "Nutramla - 50 g Supari Amla",
+    "sku": "Nutramla_50_g_Supari_Amla",
+    "weight": "0.05",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Nutramla"
+        ]
+      }
+    ]
+  },
+  {
     "id": 8509,
     "name": "Patanjali - 100 g Body Ubtan",
     "sku": "Patanjali_100_g_Body_Ubtan",
@@ -4013,45 +4696,9 @@
     ]
   },
   {
-    "id": 8508,
-    "name": "Nutramla - 50 g Supari Amla",
-    "sku": "Nutramla_50_g_Supari_Amla",
-    "weight": "0.05",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Nutramla"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8507,
-    "name": "Nutramla - 250 g Amla Pickle",
-    "sku": "Nutramla_250_g_Amla_Pickle",
-    "weight": "0.25",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Nutramla"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8510,
-    "name": "Priya - 300 g Ginger and Garlic Paste",
-    "sku": "Priya_300_g_Ginger_and_Garlic_Paste",
+    "id": 8511,
+    "name": "Priya - 300 g Mango Thokku",
+    "sku": "Priya_300_g_Mango_Thokku",
     "weight": "0.3",
     "attributes": [
       {
@@ -4067,9 +4714,9 @@
     ]
   },
   {
-    "id": 8511,
-    "name": "Priya - 300 g Mango Thokku",
-    "sku": "Priya_300_g_Mango_Thokku",
+    "id": 8510,
+    "name": "Priya - 300 g Ginger and Garlic Paste",
+    "sku": "Priya_300_g_Ginger_and_Garlic_Paste",
     "weight": "0.3",
     "attributes": [
       {
@@ -4141,9 +4788,9 @@
     ]
   },
   {
-    "id": 8504,
-    "name": "National - 80 g Jelly Strawberry",
-    "sku": "National_80_g_Jelly_Strawberry",
+    "id": 8503,
+    "name": "National - 80 g Jelly Pineapple",
+    "sku": "National_80_g_Jelly_Pineapple",
     "weight": "0.08",
     "attributes": [
       {
@@ -4155,13 +4802,23 @@
         "options": [
           "National"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-05-2022"
+        ]
       }
     ]
   },
   {
-    "id": 8503,
-    "name": "National - 80 g Jelly Pineapple",
-    "sku": "National_80_g_Jelly_Pineapple",
+    "id": 8504,
+    "name": "National - 80 g Jelly Strawberry",
+    "sku": "National_80_g_Jelly_Strawberry",
     "weight": "0.08",
     "attributes": [
       {
@@ -4201,16 +4858,6 @@
         "options": [
           "Nutramla"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-07-2022"
-        ]
       }
     ]
   },
@@ -4228,6 +4875,34 @@
         "variation": false,
         "options": [
           "KTC"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8498,
+    "name": "Maggi - 340 g Chilli Sauce",
+    "sku": "Maggi_340_g_Chilli_Sauce",
+    "weight": "0.34",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Maggi"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 30-06-2022"
         ]
       }
     ]
@@ -4251,24 +4926,6 @@
     ]
   },
   {
-    "id": 8498,
-    "name": "Maggi - 340 g Chilli Sauce",
-    "sku": "Maggi_340_g_Chilli_Sauce",
-    "weight": "0.34",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Maggi"
-        ]
-      }
-    ]
-  },
-  {
     "id": 8500,
     "name": "MDH - 100 g Pav Bhaji Masala",
     "sku": "MDH_100_g_Pav_Bhaji_Masala",
@@ -4287,10 +4944,10 @@
     ]
   },
   {
-    "id": 8495,
-    "name": "Idayam - 1 l Gingely Oil",
-    "sku": "Idayam_1_l_Gingely_Oil",
-    "weight": "1.0",
+    "id": 8493,
+    "name": "Haldiram - 200 g Alubhujia",
+    "sku": "Haldiram_200_g_Alubhujia",
+    "weight": "0.2",
     "attributes": [
       {
         "id": 3,
@@ -4299,7 +4956,7 @@
         "visible": true,
         "variation": false,
         "options": [
-          "Idayam"
+          "Haldiram"
         ]
       }
     ]
@@ -4323,10 +4980,10 @@
     ]
   },
   {
-    "id": 8493,
-    "name": "Haldiram - 200 g Alubhujia",
-    "sku": "Haldiram_200_g_Alubhujia",
-    "weight": "0.2",
+    "id": 8495,
+    "name": "Idayam - 1 l Gingely Oil",
+    "sku": "Idayam_1_l_Gingely_Oil",
+    "weight": "1.0",
     "attributes": [
       {
         "id": 3,
@@ -4335,7 +4992,7 @@
         "visible": true,
         "variation": false,
         "options": [
-          "Haldiram"
+          "Idayam"
         ]
       }
     ]
@@ -4413,6 +5070,24 @@
     ]
   },
   {
+    "id": 8487,
+    "name": "Chings - 200 g Stir Fry Schezwan Sauce",
+    "sku": "Chings_200_g_Stir_Fry_Schezwan_Sauce",
+    "weight": "0.2",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Chings"
+        ]
+      }
+    ]
+  },
+  {
     "id": 8486,
     "name": "Annam - 200 g Pani Puri Chips",
     "sku": "Annam_200_g_Pani_Puri_Chips",
@@ -4467,24 +5142,6 @@
     ]
   },
   {
-    "id": 8487,
-    "name": "Chings - 200 g Stir Fry Schezwan Sauce",
-    "sku": "Chings_200_g_Stir_Fry_Schezwan_Sauce",
-    "weight": "0.2",
-    "attributes": [
-      {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "Chings"
-        ]
-      }
-    ]
-  },
-  {
     "id": 8483,
     "name": "Aachi - 50 g Asafoeitda",
     "sku": "Aachi_50_g_Asafoeitda",
@@ -4499,14 +5156,24 @@
         "options": [
           "Aachi"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
   {
-    "id": 8485,
-    "name": "Annam - 100 g Dry Red Chillies",
-    "sku": "Annam_100_g_Dry_Red_Chillies",
-    "weight": "0.1",
+    "id": 8484,
+    "name": "Annam - 250 g Roasted Chick Peas (Daria)",
+    "sku": "Adisha_250_g_Roasted_Chick_Peas_(Daria)",
+    "weight": "0.25",
     "attributes": [
       {
         "id": 3,
@@ -4521,10 +5188,10 @@
     ]
   },
   {
-    "id": 8484,
-    "name": "Annam - 250 g Roasted Chick Peas (Daria)",
-    "sku": "Adisha_250_g_Roasted_Chick_Peas_(Daria)",
-    "weight": "0.25",
+    "id": 8485,
+    "name": "Annam - 100 g Dry Red Chillies",
+    "sku": "Annam_100_g_Dry_Red_Chillies",
+    "weight": "0.1",
     "attributes": [
       {
         "id": 3,
@@ -4878,6 +5545,16 @@
         "variation": false,
         "options": [
           "KPRA"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -5242,16 +5919,6 @@
         "variation": false,
         "options": [
           "Adisha"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 08-05-2022"
         ]
       }
     ]
@@ -6220,23 +6887,15 @@
         "options": [
           "Balaji"
         ]
-      }
-    ]
-  },
-  {
-    "id": 6848,
-    "name": "Balaji - 65 g Flaming Hot",
-    "sku": "Balaji_65_g_Flaming_Hot",
-    "weight": "0.065",
-    "attributes": [
+      },
       {
-        "id": 3,
-        "name": "Brand",
-        "position": 0,
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
         "visible": true,
         "variation": false,
         "options": [
-          "Balaji"
+          "MHD: 02-06-2022"
         ]
       }
     ]
@@ -6265,6 +6924,24 @@
         "variation": false,
         "options": [
           "MHD: 07-04-2022"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6848,
+    "name": "Balaji - 65 g Flaming Hot",
+    "sku": "Balaji_65_g_Flaming_Hot",
+    "weight": "0.065",
+    "attributes": [
+      {
+        "id": 3,
+        "name": "Brand",
+        "position": 0,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "Balaji"
         ]
       }
     ]
@@ -6312,16 +6989,6 @@
         "options": [
           "Balaji"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 04-06-2022"
-        ]
       }
     ]
   },
@@ -6339,16 +7006,6 @@
         "variation": false,
         "options": [
           "Balaji"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 06-06-2022"
         ]
       }
     ]
@@ -6385,16 +7042,6 @@
         "variation": false,
         "options": [
           "Balaji"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 02-06-2022"
         ]
       }
     ]
@@ -8006,16 +8653,6 @@
         "options": [
           "Suhana"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
-        ]
       }
     ]
   },
@@ -8351,16 +8988,6 @@
         "variation": false,
         "options": [
           "Adisha"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 14-06-2022"
         ]
       }
     ]
@@ -10118,16 +10745,6 @@
         "options": [
           "Rambandhu"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 06-05-2022"
-        ]
       }
     ]
   },
@@ -10145,16 +10762,6 @@
         "variation": false,
         "options": [
           "Madras Munch"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
         ]
       }
     ]
@@ -10426,16 +11033,6 @@
         "options": [
           "Haldiram"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 04-05-2022"
-        ]
       }
     ]
   },
@@ -10644,16 +11241,6 @@
         "options": [
           "Ganesh Bhel"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 07-05-2022"
-        ]
       }
     ]
   },
@@ -10858,10 +11445,10 @@
     ]
   },
   {
-    "id": 5260,
-    "name": "Chhedas - 170 g Manglori Mix",
-    "sku": "Chhedas_170_g_Manglori_Mix",
-    "weight": "0.17",
+    "id": 5262,
+    "name": "Chhedas - 200 g Maska Khari",
+    "sku": "Chhedas_200_g_Maska_Khari",
+    "weight": "0.2",
     "attributes": [
       {
         "id": 3,
@@ -10889,6 +11476,16 @@
         "variation": false,
         "options": [
           "Chhedas"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 25-07-2022"
         ]
       }
     ]
@@ -11100,6 +11697,16 @@
         "options": [
           "Chhedas"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 25-07-2022"
+        ]
       }
     ]
   },
@@ -11154,16 +11761,6 @@
         "options": [
           "Britannia"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 02-07-2022"
-        ]
       }
     ]
   },
@@ -11182,16 +11779,6 @@
         "options": [
           "Britannia"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 02-07-2022"
-        ]
       }
     ]
   },
@@ -11209,6 +11796,16 @@
         "variation": false,
         "options": [
           "Britannia"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 02-08-2022"
         ]
       }
     ]
@@ -11263,16 +11860,6 @@
         "variation": false,
         "options": [
           "Britannia"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 02-05-2022"
         ]
       }
     ]
@@ -12199,7 +12786,7 @@
     "id": 4640,
     "name": "Parachute - 200 ml Coconut Oil",
     "sku": "Parachute_250_ml_Hair_Oil",
-    "weight": "0.25",
+    "weight": "0.2",
     "attributes": [
       {
         "id": 3,
@@ -12336,6 +12923,16 @@
         "options": [
           "Heera"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -12389,6 +12986,16 @@
         "variation": false,
         "options": [
           "Mysore"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-02-2021"
         ]
       }
     ]
@@ -12626,6 +13233,16 @@
         "options": [
           "Haldiram"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -12707,16 +13324,6 @@
         "variation": false,
         "options": [
           "Haldiram"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
         ]
       }
     ]
@@ -14034,6 +14641,16 @@
         "options": [
           "TRS"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 14-07-2022"
+        ]
       }
     ]
   },
@@ -14358,6 +14975,16 @@
         "options": [
           "TRS"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -14457,6 +15084,16 @@
         "variation": false,
         "options": [
           "TRS"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -14871,16 +15508,6 @@
         "variation": false,
         "options": [
           "Heera"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
         ]
       }
     ]
@@ -15469,6 +16096,16 @@
         "variation": false,
         "options": [
           "TRS"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 24-07-2022"
         ]
       }
     ]
@@ -16118,16 +16755,6 @@
         "options": [
           "TRS"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-07-2022"
-        ]
       }
     ]
   },
@@ -16448,9 +17075,9 @@
     ]
   },
   {
-    "id": 4123,
-    "name": "Aachi - 100 g Cumin Seeds",
-    "sku": "Aachi_100_g_Cumin_Seeds",
+    "id": 4125,
+    "name": "Aachi - 100 g Fenugreek Seeds",
+    "sku": "Aachi_100_g_Fenugreek_Seeds",
     "weight": "0.1",
     "attributes": [
       {
@@ -16698,16 +17325,6 @@
         "options": [
           "Suhana"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
-        ]
       }
     ]
   },
@@ -16726,16 +17343,6 @@
         "options": [
           "Suhana"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
-        ]
       }
     ]
   },
@@ -16753,16 +17360,6 @@
         "variation": false,
         "options": [
           "Suhana"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
         ]
       }
     ]
@@ -16929,16 +17526,6 @@
         "variation": false,
         "options": [
           "Suhana"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
         ]
       }
     ]
@@ -17156,6 +17743,16 @@
         "options": [
           "MDH"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -17191,6 +17788,16 @@
         "variation": false,
         "options": [
           "MDH"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -17282,6 +17889,16 @@
         "options": [
           "MDH"
         ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
+        ]
       }
     ]
   },
@@ -17299,6 +17916,16 @@
         "variation": false,
         "options": [
           "MDH"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -17407,6 +18034,16 @@
         "variation": false,
         "options": [
           "K-Pra"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -17544,16 +18181,6 @@
         "options": [
           "Katdare"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-06-2022"
-        ]
       }
     ]
   },
@@ -17681,6 +18308,16 @@
         "variation": false,
         "options": [
           "Everest"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 01-08-2022"
         ]
       }
     ]
@@ -19026,16 +19663,6 @@
         "options": [
           "Everest"
         ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 01-05-2022"
-        ]
       }
     ]
   },
@@ -19053,16 +19680,6 @@
         "variation": false,
         "options": [
           "Everest"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "MHD",
-        "position": 1,
-        "visible": true,
-        "variation": false,
-        "options": [
-          "MHD: 15-04-2022"
         ]
       }
     ]
@@ -19887,6 +20504,16 @@
         "variation": false,
         "options": [
           "Aashirvaad"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "MHD",
+        "position": 1,
+        "visible": true,
+        "variation": false,
+        "options": [
+          "MHD: 15-07-2022"
         ]
       }
     ]

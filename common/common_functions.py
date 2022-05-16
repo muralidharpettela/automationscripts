@@ -229,13 +229,13 @@ class CommonFunctions:
                         except IndexError:
                             print("Sorry, Index of MHD not available")
                     if kassen_system_data_dict['expiry_date'][j].value:
-                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() <= (date.today() + relativedelta(months=+3)):
+                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() <= (date.today() + relativedelta(months=+2)):
                             products_kassen_system_dict['attributes'][1]["options"] = ["MHD: " + kassen_system_data_dict['expiry_date'][j].value.date().strftime("%d-%m-%Y")]
                             products_kassen_system_dict['id'] = product_website["id"]
                             if result:
                                 products_kassen_system_dict['attributes'][0]['options'] = [result.group(1)[:-3]]
                             self.products_list.append(products_kassen_system_dict)
-                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() >= (date.today() + relativedelta(months=+3)):
+                        if kassen_system_data_dict['stock'][j].value > 0 and kassen_system_data_dict['expiry_date'][j].value.date() >= (date.today() + relativedelta(months=+2)):
                             # check for existence of MHD attribute
                             # check for existence of MHD attribute
                             try:
