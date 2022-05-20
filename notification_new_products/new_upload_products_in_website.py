@@ -81,7 +81,7 @@ class NotifyNewProducts(CommonFunctions):
 
 
 if __name__ == "__main__":
-    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/BK_Artikeldaten_07052022_2.csv"
+    filepath_kassen_system = r"/Users/muralidharpettela/Downloads/ks_dir/BK_Artikeldaten_20052022_1.csv"
     json_file_path = "./update_stock/products.json"
     credentials_path = "./common/email_credentials.json"
     cls_init = NotifyNewProducts(filepath_kassen_system, json_file_path, credentials_path)

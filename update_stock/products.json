@@ -1,5 +1,11 @@
 [
   {
+    "id": 9973,
+    "name": "Banganpalli - 1 Box (4 Mangoes)",
+    "sku": "Banganpalli_1_Box_(4_Mangoes)",
+    "weight": "0"
+  },
+  {
     "id": 9968,
     "name": "Euro Fine - 1 kg Red Raw rice",
     "sku": "Euro_Fine_1_kg_Red_Raw_rice",
@@ -54,22 +60,16 @@
     "weight": "0.3"
   },
   {
-    "id": 9936,
-    "name": "Annam - 1 kg Red Boiled Rice",
-    "sku": "Annam_1_kg_Red_Boiled_Rice",
-    "weight": "1.0"
-  },
-  {
     "id": 9934,
     "name": "TRS - 300 g Dessicated Coconut (Fine)",
     "sku": "TRS_300_g_Dessicated_Coconut_(Fine)",
     "weight": "0.3"
   },
   {
-    "id": 9932,
-    "name": "Adisha - 500 g Upwas Bhajani",
-    "sku": "Adisha_500_g_Upwas_Bhajani",
-    "weight": "0.5"
+    "id": 9936,
+    "name": "Annam - 1 kg Red Boiled Rice",
+    "sku": "Annam_1_kg_Red_Boiled_Rice",
+    "weight": "1.0"
   },
   {
     "id": 9930,
@@ -78,10 +78,10 @@
     "weight": "0.015"
   },
   {
-    "id": 9928,
-    "name": "KTC - 250 ml Coconut Oil",
-    "sku": "KTC_250_ml_Coconut_Oil",
-    "weight": "0.25"
+    "id": 9932,
+    "name": "Adisha - 500 g Upwas Bhajani",
+    "sku": "Adisha_500_g_Upwas_Bhajani",
+    "weight": "0.5"
   },
   {
     "id": 9926,
@@ -90,10 +90,10 @@
     "weight": "0.5"
   },
   {
-    "id": 9924,
-    "name": "MDH - 100 g Butter Chicken Masala",
-    "sku": "MDH_100_g_Butter_Chicken_Masala",
-    "weight": "0.1"
+    "id": 9928,
+    "name": "KTC - 250 ml Coconut Oil",
+    "sku": "KTC_250_ml_Coconut_Oil",
+    "weight": "0.25"
   },
   {
     "id": 9922,
@@ -102,15 +102,21 @@
     "weight": "0.05"
   },
   {
-    "id": 9920,
-    "name": "Schani - 400 g Tamarind",
-    "sku": "Schani_400_g_Tamarind",
-    "weight": "0.4"
+    "id": 9924,
+    "name": "MDH - 100 g Butter Chicken Masala",
+    "sku": "MDH_100_g_Butter_Chicken_Masala",
+    "weight": "0.1"
   },
   {
     "id": 9918,
     "name": "TRS - 400 g Tamarind",
     "sku": "TRS_400_g_Tamarind",
+    "weight": "0.4"
+  },
+  {
+    "id": 9920,
+    "name": "Schani - 400 g Tamarind",
+    "sku": "Schani_400_g_Tamarind",
     "weight": "0.4"
   },
   {
@@ -162,28 +168,28 @@
     "weight": "0.5"
   },
   {
-    "id": 9898,
-    "name": "Heera - 250 g Dried Coconut Halves",
-    "sku": "Heera_250_g_Dried_Coconut_Halves",
-    "weight": "0.25"
-  },
-  {
     "id": 9900,
     "name": "Heera - 500 g Black Eye Beans",
     "sku": "Heera_500_g_Black_Eye_Beans",
     "weight": "0.5"
   },
   {
-    "id": 9896,
-    "name": "Annam - 200 g Ginger and Garlic Paste",
-    "sku": "Annam_200_g_Ginger_and_Garlic_Paste",
-    "weight": "0.2"
+    "id": 9898,
+    "name": "Heera - 250 g Dried Coconut Halves",
+    "sku": "Heera_250_g_Dried_Coconut_Halves",
+    "weight": "0.25"
   },
   {
     "id": 9894,
     "name": "Haldiram - 150 g Aloo Bhujia",
     "sku": "Haldiram_150_g_Aloo_Bhujia",
     "weight": "0.15"
+  },
+  {
+    "id": 9896,
+    "name": "Annam - 200 g Ginger and Garlic Paste",
+    "sku": "Annam_200_g_Ginger_and_Garlic_Paste",
+    "weight": "0.2"
   },
   {
     "id": 9892,
@@ -198,16 +204,16 @@
     "weight": "0.2"
   },
   {
-    "id": 9886,
-    "name": "Prestige - Roti Maker",
-    "sku": "Prestige_Roti_Maker",
-    "weight": "0"
-  },
-  {
     "id": 9888,
     "name": "Haldiram - 200 g Gujarati Mixture",
     "sku": "Haldiram_200_g_Gujarati_Mixture",
     "weight": "0.2"
+  },
+  {
+    "id": 9886,
+    "name": "Prestige - Roti Maker",
+    "sku": "Prestige_Roti_Maker",
+    "weight": "0"
   },
   {
     "id": 9882,
@@ -228,16 +234,16 @@
     "weight": "0.1"
   },
   {
-    "id": 9878,
-    "name": "TRS - 400 g Mustard Seeds",
-    "sku": "TRS_400_g_Mustard_Seeds",
-    "weight": "0.4"
-  },
-  {
     "id": 9876,
     "name": "TRS - 375 g Red Peanuts",
     "sku": "TRS_375_g_Red_Peanuts",
     "weight": "0.375"
+  },
+  {
+    "id": 9878,
+    "name": "TRS - 400 g Mustard Seeds",
+    "sku": "TRS_400_g_Mustard_Seeds",
+    "weight": "0.4"
   },
   {
     "id": 9874,
@@ -252,16 +258,16 @@
     "weight": "1.0"
   },
   {
-    "id": 9868,
-    "name": "Everest - 100 g Kitchen King",
-    "sku": "Everest_100_g_Kitchen_King",
-    "weight": "0.1"
-  },
-  {
     "id": 9870,
     "name": "Kitchen India - 285 g RTE Navaratan Korma",
     "sku": "Kitchen_India_285_g_RTE_Navaratan_Korma",
     "weight": "0.285"
+  },
+  {
+    "id": 9868,
+    "name": "Everest - 100 g Kitchen King",
+    "sku": "Everest_100_g_Kitchen_King",
+    "weight": "0.1"
   },
   {
     "id": 9864,
@@ -276,22 +282,16 @@
     "weight": "0.05"
   },
   {
-    "id": 9862,
-    "name": "Heera -15 g Chandan Insence Sticks",
-    "sku": "Heera_-15_g_Chandan_Insence_Sticks",
-    "weight": "0.015"
-  },
-  {
     "id": 9860,
     "name": "Metromilan - 15 g Insence Stciks",
     "sku": "Metromilan_15_g_Insence_Stciks",
     "weight": "0.015"
   },
   {
-    "id": 9856,
-    "name": "Heera - 20 g Dry Curry Leaves",
-    "sku": "Heera_20_g_Dry_Curry_Leaves",
-    "weight": "0.02"
+    "id": 9862,
+    "name": "Heera -15 g Chandan Insence Sticks",
+    "sku": "Heera_-15_g_Chandan_Insence_Sticks",
+    "weight": "0.015"
   },
   {
     "id": 9858,
@@ -306,15 +306,21 @@
     "weight": "0.2"
   },
   {
-    "id": 9852,
-    "name": "Afroase - 1 l Palmoil",
-    "sku": "Afroase_1_l_Palmoil",
-    "weight": "1.0"
+    "id": 9856,
+    "name": "Heera - 20 g Dry Curry Leaves",
+    "sku": "Heera_20_g_Dry_Curry_Leaves",
+    "weight": "0.02"
   },
   {
     "id": 9850,
     "name": "Dairy valley - 1 kg Gulab Jamun",
     "sku": "Dairy_valley_1_kg_Gulab_Jamun",
+    "weight": "1.0"
+  },
+  {
+    "id": 9852,
+    "name": "Afroase - 1 l Palmoil",
+    "sku": "Afroase_1_l_Palmoil",
     "weight": "1.0"
   },
   {
@@ -324,28 +330,28 @@
     "weight": "0.5"
   },
   {
-    "id": 9844,
-    "name": "Desai Bandhu - 200 g Chunda",
-    "sku": "Desai_Bandhu_200_g_Chunda",
-    "weight": "0.2"
-  },
-  {
     "id": 9846,
     "name": "Heera - 25 g Bright Red Food Colour",
     "sku": "Heera_25_g_Bright_Red_Food_Colour",
     "weight": "0.025"
   },
   {
-    "id": 9840,
-    "name": "TRS - 100 g Black Seasme Seeds",
-    "sku": "TRS_100_g_Black_Seasme_Seeds",
-    "weight": "0.1"
+    "id": 9844,
+    "name": "Desai Bandhu - 200 g Chunda",
+    "sku": "Desai_Bandhu_200_g_Chunda",
+    "weight": "0.2"
   },
   {
     "id": 9842,
     "name": "Annam - 500 g Green Peas",
     "sku": "Annam_500_g_Green_Peas",
     "weight": "0.5"
+  },
+  {
+    "id": 9840,
+    "name": "TRS - 100 g Black Seasme Seeds",
+    "sku": "TRS_100_g_Black_Seasme_Seeds",
+    "weight": "0.1"
   },
   {
     "id": 9836,
@@ -987,7 +993,7 @@
     "id": 9262,
     "name": "Danish - 200 g Pheni",
     "sku": "Sapna_150_g_Pheni",
-    "weight": "0.15"
+    "weight": "0.2"
   },
   {
     "id": 9260,
@@ -1522,12 +1528,6 @@
     "name": "Lijjat - 200 g Papad (Jeera)",
     "sku": "Lijjat_200_g_Papad_(Jeera)",
     "weight": "0.2"
-  },
-  {
-    "id": 8884,
-    "name": "Vanadevi - 100 g Asafteioda",
-    "sku": "Vanadevi_100_g_Asafteioda",
-    "weight": "0.1"
   },
   {
     "id": 8880,
