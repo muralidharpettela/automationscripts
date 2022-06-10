@@ -126,12 +126,6 @@
     "weight": "0.25"
   },
   {
-    "id": 10159,
-    "name": "MDH - 50 g Hyderbadi Biryani Masala",
-    "sku": "MDH_50_g_Hyderbadi_Biryani_Masala",
-    "weight": "0.05"
-  },
-  {
     "id": 10155,
     "name": "Chandan - 250 g Panmukhwas (6 in 1)",
     "sku": "Chandan_250_g_Panmukhwas_(6_in_1)",
@@ -192,16 +186,16 @@
     "weight": "0.15"
   },
   {
-    "id": 10129,
-    "name": "Haldiram - 150 g Mixture",
-    "sku": "Haldiram_150_g_Mixture",
-    "weight": "0.15"
-  },
-  {
     "id": 10131,
     "name": "Britannia - 176 g Marie Gold Biscuit",
     "sku": "Britannia_176_g_Marie_Gold_Biscuit",
     "weight": "0.176"
+  },
+  {
+    "id": 10129,
+    "name": "Haldiram - 150 g Mixture",
+    "sku": "Haldiram_150_g_Mixture",
+    "weight": "0.15"
   },
   {
     "id": 10127,
@@ -306,12 +300,6 @@
     "weight": "0.25"
   },
   {
-    "id": 10093,
-    "name": "Haldiram - 150 g Bombay Mix",
-    "sku": "Haldiram_150_g_Bombay_Mix",
-    "weight": "0.15"
-  },
-  {
     "id": 10091,
     "name": "Nutramla - 500 ml Amla Juice Pure",
     "sku": "Nutramla_500_ml_Amla_Juice_Pure",
@@ -385,7 +373,7 @@
   },
   {
     "id": 10067,
-    "name": "Annam - 500 g Jaggery White",
+    "name": "Annam - 500 g Jaggery Round",
     "sku": "Annam_500_g_Jaggery_White",
     "weight": "0.5"
   },
@@ -6681,7 +6669,7 @@
     "id": 4011,
     "name": "Everest - 50 g Shahi Biryani Masala",
     "sku": "Everest_50_g_Shahi_Biryani_Masala",
-    "weight": "0.1"
+    "weight": "0.05"
   },
   {
     "id": 4005,

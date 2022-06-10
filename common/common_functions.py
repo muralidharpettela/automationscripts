@@ -10,6 +10,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
+
 class CommonFunctions:
     def __init__(self, filepath_kassen_system, json_file_path="products.json"):
         self.filepath_kassen_system = filepath_kassen_system
@@ -135,7 +136,7 @@ class CommonFunctions:
 
         for i, product_website in enumerate(json_data_dict):
             products_kassen_system_dict = {"id": 0, "weight": "0", "stock_quantity": 0, "regular_price": 0,
-                                           "sale_price": None,
+                                           "sale_price": "",
                                            "tax_class": None}
             for j, product_kassen_system in enumerate(kassen_system_data_dict["product_names"]):
                 # check the sort id source and destination are same, if yes update the stock of destination with stock of source
