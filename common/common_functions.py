@@ -165,14 +165,22 @@ class CommonFunctions:
                     products_kassen_system_dict['stock_quantity'] = kassen_system_data_dict["stock"][j].value
                     # price update
                     # products_kassen_system_dict['price'] = str(kassen_system_data_dict["price"][j].value)
-                    # sale price
-                    if kassen_system_data_dict["sale_price"][j].value != 0:
-                        products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["price"][j].value)
-                        products_kassen_system_dict['regular_price'] = str(
-                            kassen_system_data_dict["sale_price"][j].value)
+                    if "Aachi" in str(product_website['name']).rstrip():
+                        # get regular and calculate 20 %
+                        original_price = str(kassen_system_data_dict["price"][j].value)
+                        discount = float(original_price) * 20 / 100
+                        cal_sale_price = float(original_price) - discount
+                        products_kassen_system_dict['sale_price'] = str(cal_sale_price)
+                        products_kassen_system_dict['regular_price'] = str(original_price)
                     else:
-                        # regular price update
-                        products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
+                        # sale price
+                        if kassen_system_data_dict["sale_price"][j].value != 0:
+                            products_kassen_system_dict['sale_price'] = str(kassen_system_data_dict["price"][j].value)
+                            products_kassen_system_dict['regular_price'] = str(
+                                kassen_system_data_dict["sale_price"][j].value)
+                        else:
+                            # regular price update
+                            products_kassen_system_dict['regular_price'] = str(kassen_system_data_dict["price"][j].value)
                     # tax class update
                     if kassen_system_data_dict["tax_class"][j].value == 7:
                         products_kassen_system_dict['tax_class'] = "Tax 7 Per"
